@@ -10,10 +10,11 @@ int main (void)
         cents = get_int("change owed: ");
     }
     while(cents < 0);
+    // subtract the value of the quarters from cent
 }
 int calculate_quarters(int)
 {
-    // calculate how many quarters you should give customer
+    c
     int quarters = 0;
     while(cents >= 0)
     {
