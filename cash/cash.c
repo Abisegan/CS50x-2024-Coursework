@@ -4,7 +4,7 @@ int calculate_quarters(int cents);
 int calculate_dimes(int cents);
 int calculate_nickels(int cents);
 int calculate_pennies(int cents);
-int main (void)
+int main(void)
 {
     // prompt the user for change owed, in cents
     int cents;
@@ -12,7 +12,7 @@ int main (void)
     {
         cents = get_int("change owed: ");
     }
-    while(cents < 0);
+    while (cents < 0);
     // caiculate how many quarters you should give customer
     int quarters = calculate_quarters(cents);
     // subtract the value of quarters from cent
@@ -28,28 +28,27 @@ int main (void)
     // subtract the value of the nickels from cent
     cents = cents - (nickels * 5);
 
-     //calculate how many pennies you shold give customer
+    // calculate how many pennies you shold give customer
     int pennies = calculate_pennies(cents);
-    //subtract the value of the pennies from cent
+    // subtract the value of the pennies from cent
     cents = cents - (pennies * 1);
 
     // summ the number of quarters, dimes, nickels, pennies used
     int sum = quarters + dimes + nickels + pennies;
 
-     // print the sum
+    // print the sum
     printf("%i\n", sum);
 }
 int calculate_quarters(int cents)
 {
 
     int quarters = 0;
-    while(cents >= 25)
+    while (cents >= 25)
     {
         quarters++;
         cents = cents - 25;
     }
     return quarters;
-
 }
 int calculate_dimes(int cents)
 {
@@ -60,7 +59,6 @@ int calculate_dimes(int cents)
         cents = cents - 10;
     }
     return dimes;
-
 }
 int calculate_nickels(int cents)
 {
@@ -75,18 +73,10 @@ int calculate_nickels(int cents)
 int calculate_pennies(int cents)
 {
     int pennies = 0;
-    while(cents >= 1)
+    while (cents >= 1)
     {
         pennies++;
         cents = cents - 1;
     }
     return pennies;
 }
-
-
-
-
-
-
-
-
