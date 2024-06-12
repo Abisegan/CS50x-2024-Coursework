@@ -7,14 +7,12 @@ int main(void)
 
     // prompt the user for the pyrmid's hight
     int n = get_hight();
-     // print the pyrmid of the hight
-     for (int i = 0; i < n; i++)
-     {
+    // print the pyrmid of the hight
+    for (int i = 0; i < n; i++)
+    {
         // print row of bricks and spaces
         print_row(n - i, i + 1);
-
-     }
-
+    }
 }
 void print_row(int spaces, int bricks)
 {
@@ -32,11 +30,11 @@ void print_row(int spaces, int bricks)
 }
 int get_hight(void)
 {
-      int n;
+    int n;
     do
     {
         n = get_int("Hight: ");
     }
-    while(n < 1 || n >8);
+    while (n < 1 || n > 8);
     return n;
 }
