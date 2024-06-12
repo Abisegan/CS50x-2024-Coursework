@@ -12,7 +12,7 @@ int main(void)
     digit = 0;
     while(true)
     {
-        number
+        number % 
     }
     //check which card is it
 }
