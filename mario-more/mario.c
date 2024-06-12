@@ -14,5 +14,8 @@ int main(void)
 }
 void print_row(int spaces , int bricks)
 {
-    for (int j = 1; j < )
+    for (int j = 1; j < spaces; j++)
+    {
+        printf(" ");
+    }
 }
