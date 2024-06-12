@@ -11,6 +11,9 @@ int main (void)
     }
     while(cents < 0);
     // caiculate how many quarters you should give customer
+    int quarters = calculate_quarters(cents);
+    // subtract the value of quarters from cent
+    cent = cent - (quarters * 25);
 }
 int calculate_quarters(int cents)
 {
@@ -19,7 +22,6 @@ int calculate_quarters(int cents)
     while(cents >= 0)
     {
         querters++;
-         // subtract the value of the quarters from cent
         cents = cents - 25;
     }
     return quarters;
