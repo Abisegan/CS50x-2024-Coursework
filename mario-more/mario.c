@@ -34,6 +34,8 @@ int get_hight(void)
     int n;
     do
     {
-        n = get_int("Hig)
+        n = get_int("Hight: ");
     }
+    while (n < 1 || n > 8);
+    return n;
 }
