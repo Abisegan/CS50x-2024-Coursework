@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 void print_row(int spaces, int bricks);
-int get_hight(void;)
+int get_hight(void);
 int main(void)
 {
     // prompt the user for pyrmid's hight
