@@ -1,6 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
-int calculate_quarters(int)
+int calculate_quarters(int cents);
 int main (void)
 {
     // prompt the user for change owed, in cents
@@ -12,7 +12,7 @@ int main (void)
     while(cents < 0);
     // caiculate how many quarters you should give customer
 }
-int calculate_quarters(int)
+int calculate_quarters(int cents)
 {
     c
     int quarters = 0;
