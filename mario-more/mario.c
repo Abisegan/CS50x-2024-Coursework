@@ -12,10 +12,7 @@ int main(void)
         // print row of bricks and spaces
         print_row(n - i, i + 1);
     }
-    for (int j = 0; j < n; j++)
-    {
-        print_row(2, j + 1);
-    }
+   
 
 }
 void print_row(int spaces , int bricks)
@@ -26,6 +23,11 @@ void print_row(int spaces , int bricks)
         printf(" ");
     }
     // print bricks
+    for (int i = 0; i < bricks; i++)
+    {
+        printf("#");
+    }
+    printf("  ");
     for (int i = 0; i < bricks; i++)
     {
         printf("#");
