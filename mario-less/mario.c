@@ -6,7 +6,7 @@ int main(void)
 {
 
     // prompt the user for the pyrmid's hight
-    n = get_hight();
+    int n = get_hight();
      // print the pyrmid of the hight
      for (int i = 0; i < n; i++)
      {
