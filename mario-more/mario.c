@@ -21,4 +21,7 @@ void print_row(int spaces , int bricks)
     }
     // print bricks
     for (int i = 0; i < bricks; i++)
+    {
+        
+    }
 }
