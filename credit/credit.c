@@ -10,6 +10,9 @@ int main(void)
     //check the validity of card
     checksum = 0;
     digit = 0;
-    while
+    while(true)
+    {
+        number
+    }
     //check which card is it
 }
