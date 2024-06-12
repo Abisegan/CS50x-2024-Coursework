@@ -8,10 +8,13 @@ int main (void)
     {
         cents = get_int("change owed: ");
     }
-    while(cents < 1);
+    while(cents < 0);
+}
+int calculate_quarters(int)
+{
     // calculate how many quarters you should give customer
     // subtract the value of the quarters from cent
-
+}
     // calculate how many dimes you should give customer
     // subtract the value of the dimes from cent
 
@@ -23,4 +26,4 @@ int main (void)
 
     // summ the number of quarters, dimes, nickels, pennies used
     // print the sum
-}
+
