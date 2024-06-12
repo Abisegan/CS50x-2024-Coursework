@@ -6,16 +6,14 @@ int main(void)
 {
     // prompt the user for pyrmid's hight
     int n = get_hight();
-    //print the pyrmid of the hight
+    // print the pyrmid of the hight
     for (int i = 0; i < n; i++)
     {
         // print row of bricks and spaces
         print_row(n - i, i + 1);
     }
-
-
 }
-void print_row(int spaces , int bricks)
+void print_row(int spaces, int bricks)
 {
     // print spaces
     for (int j = 1; j < spaces; j++)
@@ -29,7 +27,7 @@ void print_row(int spaces , int bricks)
     }
     // print two spaces
     printf("  ");
-     // print bricks
+    // print bricks
     for (int i = 0; i < bricks; i++)
     {
         printf("#");
