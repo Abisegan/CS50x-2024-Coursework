@@ -8,9 +8,7 @@ int main(void)
     {
         n = get_int("Hight: ");
     }
-    while(n < 0 || n <)
-
-
-
-    // print the pyrmid of the hight
+    while(n < 1);
+     // print the pyrmid of the hight
+     
 }
