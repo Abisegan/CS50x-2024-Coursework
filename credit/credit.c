@@ -11,9 +11,10 @@ int main(void)
     int checksum = 0;
     int digit = 0;
     int n = 0;
+    int x = 10 * n;
     while(true)
     {
-        number % 10 * n
+        number % x
     }
     //check which card is it
 }
