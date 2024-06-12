@@ -41,7 +41,7 @@ int main (void)
 }
 int calculate_quarters(int cents)
 {
-    c
+    
     int quarters = 0;
     while(cents >= 0)
     {
