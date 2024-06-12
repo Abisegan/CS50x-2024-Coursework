@@ -10,5 +10,8 @@ int main(void)
     }
     while(n < 1);
      // print the pyrmid of the hight
-     
+     for (int i = 0; i < n; i++)
+     {
+        
+     }
 }
