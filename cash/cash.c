@@ -15,12 +15,17 @@ int main (void)
     // caiculate how many quarters you should give customer
     int quarters = calculate_quarters(cents);
     // subtract the value of quarters from cent
-    cent = cent - (quarters * 25);
+    cents = cents - (quarters * 25);
 
     // calculate how many dimes you should give customer
     int dimes = calculate_dimes(cents);
     // subtract the value of the dimes from cent
-    cent = cent - (dimes * 10);
+    cents = cents - (dimes * 10);
+
+    // calculate how many nickels you should give customer
+    int nickels = calculate_nickels(cents);
+    // subtract the value of the nickels from cent
+    cents = cents - (nickels * 5);
 }
 int calculate_quarters(int cents)
 {
@@ -55,8 +60,8 @@ int calculate_nickels(int cents)
     }
     return nickels;
 }
-    // calculate how many nickels you should give customer
-    // subtract the value of the nickels from cent
+
+
 
     //calculate how many pennies you shold give customer
     //subtract the value of the pennies from cent
