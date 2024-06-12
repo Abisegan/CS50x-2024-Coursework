@@ -14,7 +14,7 @@ int main(void)
     int x = 10 * n;
     while(true)
     {
-        checksum = checksum + number % x
+        checksum = checksum + number % x;
         n++;
     }
     printf("%i", checksum);
