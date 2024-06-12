@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+void print_row(int bricks);
 int main(void)
 {
     // prompt the user for the pyrmid's hight
