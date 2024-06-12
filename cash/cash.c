@@ -45,7 +45,7 @@ int calculate_quarters(int cents)
     int quarters = 0;
     while(cents >= 25)
     {
-        querters++;
+        quarters++;
         cents = cents - 25;
     }
     return quarters;
@@ -54,7 +54,7 @@ int calculate_quarters(int cents)
 int calculate_dimes(int cents)
 {
     int dimes = 0;
-    while (cent >= 10)
+    while (cents >= 10)
     {
         dimes++;
         cents = cents - 10;
