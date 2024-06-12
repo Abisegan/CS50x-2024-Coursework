@@ -6,6 +6,6 @@ int main(void)
     int n = get_hight()
 
     //printing pyrmid
-    for 
+    for (int i = 0; i < )
 
 }
