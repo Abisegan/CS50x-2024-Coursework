@@ -9,6 +9,7 @@ int main(void)
 
     //check the validity of card
     checksum = 0;
+    digit = 0;
     
     //check which card is it
 }
