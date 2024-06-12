@@ -2,6 +2,7 @@
 #include <stdio.h>
 int calculate_quarters(int cents);
 int calculate_dimes(int cents);
+int calculate_nickels(int cents);
 int main (void)
 {
     // prompt the user for change owed, in cents
@@ -43,6 +44,16 @@ int calculate_dimes(int cents)
     }
     return dimes;
 
+}
+int calculate_nickels(int cents)
+{
+    int nickels = 0;
+    while (cents >= 5)
+    {
+        nickels++;
+        cents = cents - 5;
+    }
+    return nickels;
 }
     // calculate how many nickels you should give customer
     // subtract the value of the nickels from cent
