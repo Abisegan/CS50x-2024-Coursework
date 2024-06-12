@@ -12,7 +12,7 @@ int main(void)
     }
 
 }
-print_row(int spaces , int bricks)
+void print_row(int spaces , int bricks)
 {
-    for (int i = 0; i < )
+    for (int j = 1; j < )
 }
