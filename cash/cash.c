@@ -34,7 +34,7 @@ int main (void)
     cents = cents - (pennies * 1);
 
     // summ the number of quarters, dimes, nickels, pennies used
-    int sum = (quarters + dimes + nickels + pennies);
+    int sum = quarters + dimes + nickels + pennies;
 
      // print the sum
      ptintf("%i", sum);
