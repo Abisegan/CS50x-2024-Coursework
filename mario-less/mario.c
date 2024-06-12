@@ -38,4 +38,5 @@ int get_hight(void)
         n = get_int("Hight: ");
     }
     while(n < 1);
+    return n;
 }
