@@ -8,11 +8,12 @@ int main(void)
 
 
     //check the validity of card
-    checksum = 0;
-    digit = 0;
+    int checksum = 0;
+    int digit = 0;
+    int n = 0;
     while(true)
     {
-        number % 
+        number % 10 * n
     }
     //check which card is it
 }
