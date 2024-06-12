@@ -3,13 +3,9 @@
 void print_row(int spaces, int bricks);
 int main(void)
 {
+
     // prompt the user for the pyrmid's hight
-    int n;
-    do
-    {
-        n = get_int("Hight: ");
-    }
-    while(n < 1);
+    n = get_hight();
      // print the pyrmid of the hight
      for (int i = 0; i < n; i++)
      {
