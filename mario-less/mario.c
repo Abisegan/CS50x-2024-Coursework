@@ -14,6 +14,7 @@ int main(void)
      for (int i = 0; i < n; i++)
      {
         // print row of bricks
+        print_row(i + 1);
      }
 }
 void print_row(int bricks)
