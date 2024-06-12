@@ -13,9 +13,11 @@ int main(void)
      // print the pyrmid of the hight
      for (int i = 0; i < n; i++)
      {
-        // print row of bricks
-        print_row(i + 1);
+        // print row of bricks and spaces
+        print_row(n-1 , i + 1);
+
      }
+
 }
 void print_row(int spaces, int bricks)
 {
