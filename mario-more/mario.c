@@ -4,8 +4,8 @@ int main(void)
 {
     // prompting for pyrmid's hight
     int n = get_hight()
-    
-    //printing pyrmid
 
+    //printing pyrmid
+    for 
 
 }
