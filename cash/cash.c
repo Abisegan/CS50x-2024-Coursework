@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+int calculate_quarters(int)
 int main (void)
 {
     // prompt the user for change owed, in cents
