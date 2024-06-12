@@ -15,3 +15,7 @@ int main(void)
         // print row of bricks
      }
 }
+void print_row(int bricks)
+{
+    // print row of bricks
+}
