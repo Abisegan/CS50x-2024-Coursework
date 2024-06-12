@@ -37,7 +37,7 @@ int main (void)
     int sum = quarters + dimes + nickels + pennies;
 
      // print the sum
-    printf("%i", sum);
+    printf("%i\n", sum);
 }
 int calculate_quarters(int cents)
 {
