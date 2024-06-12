@@ -17,5 +17,6 @@ int main(void)
         checksum = checksum + number % x
         n++;
     }
+    printf("%i", checksum);
     //check which card is it
 }
