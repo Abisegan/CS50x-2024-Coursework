@@ -11,7 +11,8 @@ int main(void)
     {
         // print row of bricks and spaces
         print_row(n - i, i + 1);
-        print_row()
+        print_row(2, );
+
     }
 
 }
