@@ -33,3 +33,12 @@ void print_row(int spaces, int bricks)
     }
     printf("\n");
 }
+int get_hight(void)
+{
+      int n;
+    do
+    {
+        n = get_int("Hight: ");
+    }
+    while(n < 1);
+}
