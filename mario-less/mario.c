@@ -11,7 +11,7 @@ int main(void)
      for (int i = 0; i < n; i++)
      {
         // print row of bricks and spaces
-        print_row(n-i , i + 1);
+        print_row(n - i, i + 1);
 
      }
 
