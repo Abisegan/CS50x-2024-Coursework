@@ -4,13 +4,14 @@ void print_row(int spaces, int bricks);
 int get_hight(void;)
 int main(void)
 {
-    // prompting for pyrmid's hight
-    int n = get_hight()
+    // prompt the user for pyrmid's hight
+    int n = get_hight();
 
-    //printing pyrmid
+    //printing pyrmid of hight
     for (int i = 0; i < n; i++)
     {
-        print_row()
+        // print row of bricks and spaces
+        print_row(n - i, i + 1);
     }
 
 }
@@ -25,5 +26,14 @@ void print_row(int spaces , int bricks)
     for (int i = 0; i < bricks; i++)
     {
         printf("#");
+    }
+    printf("\n");
+}
+int get_hight(void)
+{
+    int n;
+    do
+    {
+        n = get_int("Hig)
     }
 }
