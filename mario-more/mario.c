@@ -6,6 +6,13 @@ int main(void)
     int n = get_hight()
 
     //printing pyrmid
-    for (int i = 0; i < )
+    for (int i = 0; i < n; i++)
+    {
+        print_row()
+    }
 
+}
+print_row(int spaces , int bricks)
+{
+    for (int i = 0; i < )
 }
