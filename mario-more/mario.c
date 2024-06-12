@@ -14,10 +14,11 @@ int main(void)
 }
 void print_row(int spaces , int bricks)
 {
-    
+    // print spaces
     for (int j = 1; j < spaces; j++)
     {
         printf(" ");
     }
-
+    // print bricks
+    for (int i = 0; i < bricks; i++)
 }
