@@ -30,6 +30,8 @@ int calculate_quarters(int cents)
 int calculate_dimes(int)
 {
     // calculate how many dimes you should give customer
+    int dimes = 0;
+    while (cent >= )
     // subtract the value of the dimes from cent
 }
     // calculate how many nickels you should give customer
