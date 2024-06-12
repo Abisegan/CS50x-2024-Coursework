@@ -17,14 +17,17 @@ int calculate_quarters(int)
     while(cents >= 0)
     {
         querters++;
+         // subtract the value of the quarters from cent
         cents = cents - 25;
     }
     return quarters;
-    // subtract the value of the quarters from cent
+
 }
+int calculate_dimes(int)
+{
     // calculate how many dimes you should give customer
     // subtract the value of the dimes from cent
-
+}
     // calculate how many nickels you should give customer
     // subtract the value of the nickels from cent
 
