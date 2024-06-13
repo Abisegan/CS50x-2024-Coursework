@@ -1,6 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
-int checksum(int number);
+int sub_checksum(int number);
 
 
 int main(void)
@@ -23,7 +23,7 @@ int main(void)
     {
         if (n % 2 == 0)
         {
-            checksum1 = checksum1 + checksum(number % 10 * 2);
+            checksum1 = checksum1 + sub_checksum(number % 10 * 2);
             n++;
         }
         else
@@ -40,7 +40,7 @@ int main(void)
 
 
 }
-int checksum(int number)
+int sub_checksum(int number)
 {
 
     int checksum = 0;
