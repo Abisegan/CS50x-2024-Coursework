@@ -37,9 +37,7 @@ int main(void)
 
 
 }
-int checksum(int number)
-{
-    int checksum = checksum + number % 10;
-    return checksum;
-}
+
+
+
 
