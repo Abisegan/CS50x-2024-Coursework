@@ -30,12 +30,12 @@ int main(void)
         }
         number = number - number % 10;
     }
-    while (number <= 0);
+    while (number = 0);
     printf("%i\n",n%2);
 }
 int check_digits(int number)
 {
-    int n = 0;
+    int n = 1;
     int digits=0;
 
     int x = 10;
