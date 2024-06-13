@@ -43,10 +43,10 @@ int checksum(int number)
 {
 
     int checksum = 0;
-    do
+    while(number > 0)
     {
     checksum = checksum + number % 10 ;
-    return checksum;
+    
     }
-    while(n%2 ==0)
+    return checksum;
 }
