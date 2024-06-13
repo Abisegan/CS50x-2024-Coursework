@@ -17,7 +17,7 @@ int main(void)
 
         checksum = checksum + number % x;
         x*10;
-        digit = 
+        digit = number % x;
     }
 
     while(digit >=0);
