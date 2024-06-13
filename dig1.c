@@ -35,7 +35,7 @@ int main(void)
         number = number/10;
 
     }
-    printf("%i\n",checksum(13));
+    printf("%i\n",checksum1;
 
 
 }
