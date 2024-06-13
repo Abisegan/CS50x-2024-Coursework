@@ -11,13 +11,15 @@ int main(void)
 
     //check the validity of card
     int digits= check_digits(number);
-    int checksum = validity_check(number,digits);
-    printf("%i\n",checksum);
+
+
     //check which card is it
+    checksum = 0;
     for (int i = 0; i <= digits/2; i++)
     {
-        
+        checksum = checksum + number
     }
+    printf("%i\n",checksum);
 }
 int check_digits(int number)
 {
