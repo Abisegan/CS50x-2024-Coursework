@@ -25,7 +25,7 @@ int main(void)
         }
         else
         {
-            checksum = ckecksum + number % 10;
+            checksum = checksum + number % 10;
             n++;
         }
         number = number - number % 10;
