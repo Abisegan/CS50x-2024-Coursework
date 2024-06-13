@@ -14,6 +14,7 @@ int main(void)
     int x = 10 * n;
     while(true)
     {
+        digit = 
         checksum = checksum + number % x;
         n++;
     }
