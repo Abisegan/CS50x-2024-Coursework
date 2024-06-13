@@ -16,8 +16,9 @@ int main(void)
     {
 
         checksum = checksum + number % x;
-        x = x * 10;
         digit = number % x;
+        x = x * 10;
+        
     }
 
 
