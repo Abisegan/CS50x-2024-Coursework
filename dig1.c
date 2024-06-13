@@ -41,9 +41,12 @@ int main(void)
 }
 int checksum(int number)
 {
-    if ()
+
     int checksum = 0;
+    do
+    {
     checksum = checksum + number % 10 ;
     return checksum;
-
+    }
+    while(n%2 ==0)
 }
