@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 int check_digits(int number);
+int validity_check(int number,int digits);
 int main(void)
 {
     // prompt the user for card number
@@ -10,7 +11,8 @@ int main(void)
 
     //check the validity of card
     int digits= check_digits(number);
-    printf("%i\n",digits);
+    int checksum = validity_check(number,digits);
+    printf("%i\n",checksum);
 
 
 
