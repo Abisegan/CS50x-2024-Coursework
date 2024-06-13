@@ -24,7 +24,6 @@ int checksum(long number)
     int checksum1 = 0;
     int checksum2 = 0;
     int n = 1;
-    int digit = 0;
     while (number > 0)
     {
         if (n % 2 == 0)
@@ -38,7 +37,6 @@ int checksum(long number)
             n++;
         }
         number = number - number % 10;
-        digit++;
         number = number/10;
 
     }
@@ -59,3 +57,4 @@ int sub_checksum(int number)
     }
     return checksum;
 }
+int digit
