@@ -31,7 +31,7 @@ int main(void)
         }
         number = number - number % x;
         x = x * 10;
-        printf("%i\n",number);
+        printf("%i\n",x);
     }
     while (number <= 0);
 
