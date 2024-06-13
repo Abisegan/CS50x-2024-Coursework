@@ -12,14 +12,14 @@ int main(void)
     int digit=0;
     int n = 10;
     int x = 10 * n;
-    while(digit >=0)
+    do
     {
 
         checksum = checksum + number % x;
         n * 10;
-        
-    }
 
+    }
+    while(digit >=0);
     printf("%i", checksum);
     //check which card is it
 }
