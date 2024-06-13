@@ -15,8 +15,8 @@ int main(void)
     //check which card is it
     int checksum = 0;
     int n = 1;
-    int x = 10;
-    do
+
+    while (number = 0)
     {
         if (n % 2 == 0)
         {
@@ -33,7 +33,7 @@ int main(void)
         number = number/10;
 
     }
-    while (number <= 0);
+
     printf("%i\n",number);
 
 }
