@@ -34,7 +34,8 @@ int main(void)
 
     }
     while (number <= 0);
-    
+    printf("%i\n",number);
+
 }
-printf("%i\n",number);
+
 
