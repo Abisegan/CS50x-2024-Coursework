@@ -10,14 +10,14 @@ int main(void)
     //check the validity of card
     int checksum = 0;
     int digit=0;
-    int n = 0;
+    int n = 10;
     int x = 10 * n;
     while(digit >=0)
     {
 
         checksum = checksum + number % x;
-        n++;
-        digit = number % x;
+        n * 10;
+        
     }
 
     printf("%i", checksum);
