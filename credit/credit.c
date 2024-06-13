@@ -35,7 +35,11 @@ int check_digits(int number)
 }
 int validity_check(int number,int digits)
 {
-    for (int i= 0;)
+    checksum = 0;
+    for (int i= 0;i = digits; i++)
+    {
+        checksum = checksum + 
+    }
 
 
 }
