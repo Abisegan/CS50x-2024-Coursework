@@ -22,7 +22,7 @@ int main(void)
     {
         if (n % 2 == 0)
         {
-            checksum1 = checksum1 + checksum(number % 10 * 2);
+            checksum1 = checksum1 + checksum(5);
             n++;
         }
         else
