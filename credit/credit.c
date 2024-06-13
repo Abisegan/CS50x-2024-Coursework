@@ -15,10 +15,10 @@ int main(void)
     while(digit >=0)
     {
 
-        checksum = checksum + number % x;
+        checksum = checksum + number / x;
         digit = number % x;
         x = x * 10;
-        
+
     }
 
 
