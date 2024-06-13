@@ -10,7 +10,7 @@ int main(void)
 
 
     //check the validity of card
-    
+
 
     //check which card is it
     int checksum = 0;
@@ -34,7 +34,7 @@ int main(void)
 
     }
     while (number <= 0);
-    printf("%i\n",number);
+    
 }
-
+printf("%i\n",number);
 
