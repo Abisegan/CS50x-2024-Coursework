@@ -9,15 +9,17 @@ int main(void)
 
     //check the validity of card
     int checksum = 0;
-    int digit = 0;
+    int digit ;
     int n = 0;
     int x = 10 * n;
-    while(true)
+    do
     {
-        
+
         checksum = checksum + number % x;
         n++;
+        digit = number % x;
     }
+    while(digit >=0);
     printf("%i", checksum);
     //check which card is it
 }
