@@ -16,11 +16,11 @@ int main(void)
     {
 
         checksum = checksum + number % x;
-        x*10;
+        x * 10;
         digit = number % x;
     }
 
-    
+
     printf("%i", checksum);
     //check which card is it
 }
