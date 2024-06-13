@@ -8,7 +8,7 @@ int main(void)
 {
     // prompt the user for card number
     long number;
-    number = get_int("Number: ");
+    number = get_long("Number: ");
     int k = checksum(number);
     printf("%i\n)", k);
 
