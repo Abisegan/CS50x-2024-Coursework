@@ -10,13 +10,13 @@ int main(void)
     //check the validity of card
     int checksum = 0;
     int digit=0;
-    int n = 10;
-    int x = 10 * n;
+
+    int x = 10;
     do
     {
 
         checksum = checksum + number % x;
-        n * 10;
+        x * 10;
 
     }
     while(digit >=0);
