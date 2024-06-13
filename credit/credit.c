@@ -15,7 +15,7 @@ int main(void)
 
     //check which card is it
     int checksum = 0;
-    int n = 1;
+    int n = 2;
     do
     {
         if (n % 2 == 0)
@@ -47,7 +47,7 @@ int check_digits(int number)
         x = x * 10;
 
     }
-    while(n <=1);
+    while(n <= 0);
     return digits;
 }
 
