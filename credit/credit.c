@@ -9,7 +9,7 @@ int main(void)
 
     //check the validity of card
     int checksum = 0;
-    int digit;
+    int digit=0;
     int n = 0;
     int x = 10 * n;
     while(digit >=0)
