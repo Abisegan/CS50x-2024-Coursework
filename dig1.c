@@ -46,7 +46,8 @@ int checksum(int number)
     while(number > 0)
     {
     checksum = checksum + number % 10 ;
-    
+    number = number - number % 10;
+    number = number % 10;
     }
     return checksum;
 }
