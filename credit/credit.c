@@ -21,7 +21,7 @@ int main(void)
         checksum = checksum + number % x;
         x = x * 100;
     }
-    printf("%i\n",checksum);
+    printf("%i\n",number % );
 }
 int check_digits(int number)
 {
