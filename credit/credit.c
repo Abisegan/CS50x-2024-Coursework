@@ -31,7 +31,7 @@ int main(void)
         number = number - number % 10;
     }
     while (number <= 0);
-    printf("%i\n",checksum);
+    printf("%i\n",n%2);
 }
 int check_digits(int number)
 {
