@@ -18,7 +18,7 @@ int main(void)
     int n = 2;
     do
     {
-        if (n % 2 = 0)
+        if (n % 2 == 0)
         {
             checksum = checksum + number % 10 * 2;
             n++;
