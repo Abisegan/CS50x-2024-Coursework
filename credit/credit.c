@@ -22,6 +22,6 @@ int main(void)
     }
     while(digit >=1);
 
-    printf("%i", n);
+    printf("%i\n", n);
     //check which card is it
 }
