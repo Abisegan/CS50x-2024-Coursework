@@ -12,7 +12,7 @@ int main(void)
     int digit=0;
 
     int x = 10;
-    while(digit >=0)
+    do
     {
 
         digit = number / x;
@@ -20,7 +20,7 @@ int main(void)
         x = x * 10;
 
     }
-
+    while(digit >=1);
 
     printf("%i", n);
     //check which card is it
