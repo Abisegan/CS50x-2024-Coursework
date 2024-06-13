@@ -12,7 +12,7 @@ int main(void)
     int digit=0;
 
     int x = 10;
-    do
+    while(digit >=0)
     {
 
         checksum = checksum + number % x;
@@ -20,7 +20,7 @@ int main(void)
         digit = number % x;
     }
 
-    while(digit >=0);
+    
     printf("%i", checksum);
     //check which card is it
 }
