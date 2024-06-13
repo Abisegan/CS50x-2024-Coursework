@@ -28,8 +28,8 @@ int main(void)
             checksum = checksum + number % 10;
             n++;
         }
-        number = number - number % x;
-        x = x * 10;
+        number = number - number % 10;
+
         number = number/10;
 
     }
