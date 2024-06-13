@@ -19,9 +19,9 @@ int main(void)
     for (int i = 0; i <= digits/2; i++)
     {
         checksum = checksum + number % x;
-        x = x * 100;
+
     }
-    printf("%i\n",number % );
+    printf("%i\n",number % x);
 }
 int check_digits(int number)
 {
