@@ -8,12 +8,16 @@ int main(void)
     int number;
     number = get_int("Number: ");
 
-
+}
     //check the validity of card
 
 
     //check which card is it
+int checksum(long number)
+{
     int checksum = 0;
+    int checksum1 = 0;
+    int checksum2 = 0;
     int n = 1;
 
     while (number > 0)
