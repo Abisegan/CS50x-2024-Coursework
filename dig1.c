@@ -41,6 +41,7 @@ int main(void)
 }
 int checksum(int number)
 {
+    if ()
     int checksum = 0;
     checksum = checksum + number % 10 ;
     return checksum;
