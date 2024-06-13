@@ -4,7 +4,7 @@ int main(void)
 {
     // prompt the user for card number
     int number;
-    number = get_long("Number: ");
+    number = get_int("Number: ");
 
 
     //check the validity of card
