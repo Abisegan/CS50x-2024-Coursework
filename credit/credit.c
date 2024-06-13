@@ -9,8 +9,8 @@ int main(void)
 
 
     //check the validity of card
-    int digit= check_digits(number);
-    printf("%i\n",digit);
+    int digits= check_digits(number);
+    printf("%i\n",digits);
 
 
 
@@ -32,4 +32,9 @@ int check_digits(int number)
     }
     while(n >=1);
     return digits;
+}
+int validity_check(int number,int digits)
+{
+
+    
 }
