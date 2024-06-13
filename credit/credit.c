@@ -16,7 +16,7 @@ int main(void)
     int checksum = 0;
     int n = 1;
 
-    while (number <= 0)
+    while (number > 0)
     {
         if (n % 2 == 0)
         {
