@@ -14,7 +14,7 @@ int main(void)
 
 
     //check which card is it
-    
+    int checksum = checksum1 + checksum2;
     int checksum1 = 0;
     int checksum2 = 0;
     int n = 1;
@@ -36,7 +36,7 @@ int main(void)
         number = number/10;
 
     }
-    printf("%i\n",checksum1 + checksum2);
+    printf("%i\n",checksum);
 
 
 }
