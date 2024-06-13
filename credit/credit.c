@@ -9,7 +9,7 @@ int main(void)
 
 
     //check the validity of card
-    int digit= check_digit(number);
+    int digit= check_digits(number);
     printf("%i\n",digit);
 
 
