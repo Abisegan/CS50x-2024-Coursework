@@ -15,7 +15,7 @@ int main(void)
 
     //check which card is it
     int checksum = 0;
-    int n = 3;
+    int n = 5;
     do
     {
         if (n % 2 == 0)
