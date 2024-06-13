@@ -10,8 +10,14 @@ int main(void)
     long number;
     number = get_long("Number: ");
     int k = checksum(number);
-    printf("%i\n)", k);
-
+    if (k % 10 == 0)
+    {
+        printf("valid: \n");
+    }
+    else
+    {
+        printf("not valid: \n");
+    }
 }
     //check the validity of card
 
