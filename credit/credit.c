@@ -29,8 +29,8 @@ int main(void)
             n++;
         }
         number = number - number % 10;
+        printf("%i",number);
     }
-    printf("%i",number);
     while (number <= 0);
 
 }
