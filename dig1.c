@@ -16,7 +16,7 @@ int main(void)
     //check which card is it
     int checksum1 = 0;
     int checksum2 = 0;
-    int n = 1;
+    int n = 2;
 
     while (number > 0)
     {
