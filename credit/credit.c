@@ -14,7 +14,7 @@ int main(void)
 
 
     //check which card is it
-    checksum = 0;
+    int checksum = 0;
     int x = 100;
     for (int i = 0; i <= digits/2; i++)
     {
@@ -43,6 +43,6 @@ int check_digits(int number)
 int validity_check(int number,int digits)
 {
 
-    return checksum;
+
 
 }
