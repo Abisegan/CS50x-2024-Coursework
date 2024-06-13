@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 int check_digits(int number);
-int validity_check(int number,int digits);
+
 int main(void)
 {
     // prompt the user for card number
@@ -40,9 +40,4 @@ int check_digits(int number)
     while(n >=1);
     return digits;
 }
-int validity_check(int number,int digits)
-{
 
-
-
-}
