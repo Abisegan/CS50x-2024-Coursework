@@ -9,11 +9,13 @@ int main(void)
     int number;
     number = get_int("Number: ");
 
-
+}
     //check the validity of card
 
 
     //check which card is it
+int checksum(int number)
+{
     int checksum = 0;
     int checksum1 = 0;
     int checksum2 = 0;
@@ -37,10 +39,10 @@ int main(void)
 
     }
     checksum = checksum1 + checksum2;
-    printf("%i\n",checksum);
-
-
+    return checksum;
 }
+
+
 int sub_checksum(int number)
 {
 
