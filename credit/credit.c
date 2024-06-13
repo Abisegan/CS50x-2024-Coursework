@@ -32,10 +32,10 @@ int main(void)
         number = number - number % x;
         x = x * 10;
         number = number/10;
-        printf("%i\n",number);
+        
     }
     while (number <= 0);
-
+    printf("%i\n",number);
 }
 int check_digits(int number)
 {
