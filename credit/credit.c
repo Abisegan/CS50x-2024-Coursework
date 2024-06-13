@@ -23,7 +23,8 @@ int check_digits(int number)
 
     }
     while(n >=1);
+    return digits;
 }
-    
+
     //check which card is it
 }
