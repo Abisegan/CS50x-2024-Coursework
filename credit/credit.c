@@ -41,7 +41,7 @@ int validity_check(int number,int digits)
     int x = 100;
     for (int i= 0;i == digits / 2; i++)
     {
-        checksum = checksum + number%x * 2;
+        checksum = checksum + number % x ;
         x = x * 100;
     }
     return checksum;
