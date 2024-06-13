@@ -1,15 +1,16 @@
 #include <cs50.h>
 #include <stdio.h>
-int checksum(int number);
+int checksum(long number);
 int sub_checksum(int number);
 
 
 int main(void)
 {
     // prompt the user for card number
-    int number;
-    number = get_int("Number: ");
+    long number;
+    number = get_long("Number: ");
     int k = checksum(number);
+
     printf("%i\n", k);
 
 }
@@ -17,7 +18,7 @@ int main(void)
 
 
     //check which card is it
-int checksum(int number)
+int checksum(long number)
 {
     int checksum = 0;
     int checksum1 = 0;
