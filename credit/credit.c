@@ -8,20 +8,22 @@ int main(void)
 
 
     //check the validity of card
+int check_digits(int number)
+{
     int n = 0;
-    int digit=0;
+    int digits=0;
 
     int x = 10;
     do
     {
 
-        digit = number / x;
-        n++;
+        n = number / x;
+        digits++;
         x = x * 10;
 
     }
-    while(digit >=1);
-
-    printf("%i\n", n);
+    while(n >=1);
+}
+    
     //check which card is it
 }
