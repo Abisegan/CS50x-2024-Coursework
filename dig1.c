@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+int checksum(int number);
 int sub_checksum(int number);
 
 
@@ -8,6 +9,8 @@ int main(void)
     // prompt the user for card number
     int number;
     number = get_int("Number: ");
+    int k = checksum(number);
+    printf("%i\n", k);
 
 }
     //check the validity of card
