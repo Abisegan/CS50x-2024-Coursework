@@ -31,9 +31,9 @@ int main(void)
         number = number - number % 10;
 
         number = number/10;
-        printf("%i\n",checksum);
+        
     }
-
+    printf("%i\n",checksum);
 
 
 }
