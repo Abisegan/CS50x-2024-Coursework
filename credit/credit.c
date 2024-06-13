@@ -1,6 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
-int check_digits(int number);
+
 
 int main(void)
 {
@@ -10,8 +10,7 @@ int main(void)
 
 
     //check the validity of card
-    int digits= check_digits(number);
-
+    
 
     //check which card is it
     int checksum = 0;
