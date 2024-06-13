@@ -38,7 +38,7 @@ int validity_check(int number,int digits)
     checksum = 0;
     for (int i= 0;i = digits; i++)
     {
-        checksum = checksum + 
+        checksum = checksum + number%10 * 2
     }
 
 
