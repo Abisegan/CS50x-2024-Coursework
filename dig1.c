@@ -13,19 +13,20 @@ int main(void)
 
 
     //check which card is it
-    int checksum = 0;
+    int checksum1 = 0;
+    int checksum2 = 0;
     int n = 1;
 
     while (number > 0)
     {
         if (n % 2 == 0)
         {
-            checksum = checksum + number % 10 * 2;
+            checksum1 = checksum1 + number % 10 * 2;
             n++;
         }
         else
         {
-            checksum = checksum + number % 10;
+            checksum2 = checksum2 + number % 10;
             n++;
         }
         number = number - number % 10;
