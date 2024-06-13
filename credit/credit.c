@@ -31,11 +31,11 @@ int main(void)
         number = number - number % 10;
 
         number = number/10;
-        
+
     }
     printf("%i\n",checksum);
 
 
 }
-
+int checksum(int number)
 
