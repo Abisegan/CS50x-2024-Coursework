@@ -15,12 +15,22 @@ int main(void)
 
     //check which card is it
     int checksum = 0;
-    int n = 0;
+    int n = 2;
     do
     {
-        if ()
-
+        if (n % 2 = 0)
+        {
+            checksum = checksum + number % 10 * 2;
+            n++;
+        }
+        else
+        {
+            checksum = ckecksum + number % 10;
+            n++;
+        }
+        number = number - number % 10;
     }
+    while (number >= 0);
     printf("%i\n",number % x);
 }
 int check_digits(int number)
