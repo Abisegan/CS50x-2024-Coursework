@@ -13,10 +13,11 @@ int main(void)
     int digits= check_digits(number);
     int checksum = validity_check(number,digits);
     printf("%i\n",checksum);
-
-
-
     //check which card is it
+    for (int i = 0; i <= digits/2; i++)
+    {
+        
+    }
 }
 int check_digits(int number)
 {
@@ -37,13 +38,7 @@ int check_digits(int number)
 }
 int validity_check(int number,int digits)
 {
-    int checksum = 0;
-    int x = 100;
-    for (int i= 0;i <= digits / 2; i++)
-    {
-        checksum = checksum + number % x ;
-        x = x * 100;
-    }
+
     return checksum;
 
 }
