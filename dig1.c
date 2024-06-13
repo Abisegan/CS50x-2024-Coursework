@@ -14,7 +14,7 @@ int main(void)
 
 
     //check which card is it
-    int checksum = checksum1 + checksum2;
+    int checksum3 = checksum1 + checksum2;
     int checksum1 = 0;
     int checksum2 = 0;
     int n = 1;
