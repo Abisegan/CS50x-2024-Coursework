@@ -35,6 +35,7 @@ int check_digits(int number)
 }
 int validity_check(int number,int digits)
 {
-    while(d)
+    for (int i= 0;)
+
 
 }
