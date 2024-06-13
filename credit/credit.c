@@ -24,12 +24,12 @@ int checksum(long number)
     {
         if (n % 2 == 0)
         {
-            checksum = checksum + number % 10 * 2;
+            checksum1 = checksum1 + sub_checksum(number % 10 * 2);
             n++;
         }
         else
         {
-            checksum = checksum + number % 10;
+            checksum2 = checksum2 + number % 10;
             n++;
         }
         number = number - number % 10;
@@ -37,11 +37,22 @@ int checksum(long number)
         number = number/10;
 
     }
-    printf("%i\n",checksum);
+    checksum = checksum1 + checksum2;
+    return checksum;
 
 
 }
-
+int sub_checksum(int number)
+{
+    int checksum = 0;
+    while(number > 0)
+    {
+        checksum = checksum + number % 10;
+        number = number - number % 10;
+        number = number / 10;
+    }
+    return checksum;
+}
 
 
 
