@@ -30,7 +30,7 @@ int main(void)
         }
         number = number - number % 10;
     }
-    printf("%i",)
+    printf("%i",number);
     while (number <= 0);
 
 }
