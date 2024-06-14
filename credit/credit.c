@@ -14,6 +14,7 @@ int main(void)
     int last= checksum(number);
     int digit = digit_count(number);
     s_digit = start_digit(number,digit);
+    printf("s_digit");
     if (last % 10 == 0)
     {
         printf("valid: \n");
@@ -72,8 +73,21 @@ int digit_count(long number)
     int digit = 0;
     while(number > 0)
     {
-        number = number
+        number = number - number % 10;
+        number = number / 10;
+        digit++;
     }
+    return digit;
 }
-
+int start_digit(long number,int digit)
+{
+    int n = 0;
+    while(n < digit-2)
+    {
+        number = number - number % 10;
+        number = number / 10;
+        n++;
+    }
+    return number;
+}
 
