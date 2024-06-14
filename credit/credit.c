@@ -14,7 +14,7 @@ int main(void)
     int last= checksum(number);
     int digit = digit_count(number);
     int s_digit = start_digit(number,digit);
-    printf("%i\n",digit);
+    
     //check the validity of card
     if (last % 10 == 0)
     {
@@ -29,7 +29,10 @@ int main(void)
     {
         printf("%s" ,visa);
     }
-    else if (digit == 16 && s_digit == 51 ||52 ||)
+    else if (digit == 16 && s_digit == 51 ||52 ||53);
+    {
+        printf("%s",kosa);
+    }
 }
 
 
