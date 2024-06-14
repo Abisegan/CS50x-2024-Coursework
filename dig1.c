@@ -2,7 +2,7 @@
 #include <stdio.h>
 int checksum(long number);
 int sub_checksum(int number);
-int digit_count(int number);
+int digit_count(long number);
 
 
 int main(void)
@@ -56,7 +56,7 @@ int sub_checksum(int number)
     }
     return checksum;
 }
-int digit_count(int number)
+int digit_count(long number)
 {
     int digit = 0;
     while(number > 0)
