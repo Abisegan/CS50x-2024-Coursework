@@ -58,9 +58,12 @@ int sub_checksum(int number)
 }
 int digit_count(int number)
 {
-    int digit = 0;
-    number = number - number % 10;
-    number = number / 10;
-    digit++;
-    return digit;
+    while(number > 0)
+    {
+        int digit = 0;
+        number = number - number % 10;
+        number = number / 10;
+        digit++;
+        return digit;
+    }
 }
