@@ -25,7 +25,10 @@ int main(void)
         printf("not valid: \n");
     }
     //check which card is it
-    if (digit == 16 || digit)
+    if (digit == 16 || digit == 13 && s_digit == 40)
+    {
+        printf(")
+    }
 }
 
 
