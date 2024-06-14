@@ -27,7 +27,7 @@ int main(void)
     //check which card is it
     if (digit == 16 )
     {
-        if (50 < s_digit < 56)
+        if (50 < s_digit && s_digit < 56)
         {
             printf("master");
         }
