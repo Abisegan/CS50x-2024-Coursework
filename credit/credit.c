@@ -15,6 +15,7 @@ int main(void)
     int digit = digit_count(number);
     int s_digit = start_digit(number,digit);
     printf("%i\n",digit);
+    //check the validity of card
     if (last % 10 == 0)
     {
         printf("valid: \n");
@@ -23,11 +24,13 @@ int main(void)
     {
         printf("not valid: \n");
     }
-}
-    //check the validity of card
-
-
     //check which card is it
+    
+}
+
+
+
+
 int checksum(long number)
 {
     int checksum = 0;
