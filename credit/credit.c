@@ -25,13 +25,30 @@ int main(void)
         printf("not valid: \n");
     }
     //check which card is it
-    if ((digit == 16  )&& (s_digit == 40))
+    if (digit == 16 )
     {
-        printf("visa");
+        if (50 < s_digit < 56)
+        {
+            printf("master");
+        }
     }
-    else if ((digit == 16 )&& (s_digit == 51 ))
+    else if (digit == 13 )
     {
-        printf("kosa");
+        if (s_digit/10 == 4)
+        {
+            printf("visa");
+        }
+    }
+    else if (digit == 15)
+    {
+        if (s_digit ==34 || s_digit == 37)
+        {
+            printf("AME");
+        }
+    }
+    else
+    {
+        printf("invalid: ");
     }
 }
 
