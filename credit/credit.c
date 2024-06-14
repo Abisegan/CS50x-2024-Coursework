@@ -48,7 +48,7 @@ int main(void)
         {
             if (s_digit ==34 || s_digit == 37)
             {
-                printf("AME");
+                printf("AMEX\n");
             }
             else
             {
@@ -65,7 +65,7 @@ int main(void)
         printf("not valid: \n");
     }
 }
-    
+
 int checksum(long number)
 {
     int checksum = 0;
