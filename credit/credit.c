@@ -25,7 +25,7 @@ int main(void)
         printf("not valid: \n");
     }
     //check which card is it
-    
+    if (digit == 16 || digit)
 }
 
 
