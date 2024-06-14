@@ -13,7 +13,7 @@ int main(void)
     number = get_long("Number: ");
     int last= checksum(number);
     int digit = digit_count(number);
-    s_digit = start_digit(number,digit);
+    int s_digit = start_digit(number,digit);
     printf("s_digit");
     if (last % 10 == 0)
     {
