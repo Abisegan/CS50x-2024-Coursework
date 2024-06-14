@@ -31,6 +31,14 @@ int main(void)
         {
             printf("master");
         }
+        else if (s_digit/10 == 4)
+        {
+            printf("visa");
+        }
+        else
+        {
+            printf("invalid: ");
+        }
     }
     else if (digit == 13 )
     {
@@ -38,12 +46,20 @@ int main(void)
         {
             printf("visa");
         }
+        else
+        {
+            printf("invalid: ");
+        }
     }
     else if (digit == 15)
     {
         if (s_digit ==34 || s_digit == 37)
         {
             printf("AME");
+        }
+        else
+        {
+            printf("invalid: ");
         }
     }
     else
