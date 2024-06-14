@@ -68,3 +68,10 @@ int digit_count(long number)
     }
     return digit;
 }
+int start_digit(long number , int digit)
+{
+    int n = 0;
+    while(n )
+    number = number - number % 10;
+
+}
