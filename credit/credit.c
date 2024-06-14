@@ -27,8 +27,9 @@ int main(void)
     //check which card is it
     if (digit == 16 || digit == 13 && s_digit == 40)
     {
-        printf(")
+        printf("%s" ,visa);
     }
+    else if (digit == 16 && s_digit == 51 ||52 ||)
 }
 
 
