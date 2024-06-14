@@ -3,28 +3,27 @@
 int checksum(long number);
 int sub_checksum(int number);
 int digit_count(long number);
-int start_digit(long number,int digit);
-
+int start_digit(long number, int digit);
 
 int main(void)
 {
     // prompt the user for card number
     long number;
     number = get_long("Number: ");
-    int last= checksum(number);
+    int last = checksum(number);
     int digit = digit_count(number);
-    int s_digit = start_digit(number,digit);
+    int s_digit = start_digit(number, digit);
 
-    //check the validity of card
+    // check the validity of card
     if (last % 10 == 0)
     {
-        if (digit == 16 )
+        if (digit == 16)
         {
             if (50 < s_digit && s_digit < 56)
             {
                 printf("MASTERCARD\n");
             }
-            else if (s_digit/10 == 4)
+            else if (s_digit / 10 == 4)
             {
                 printf("VISA\n");
             }
@@ -33,9 +32,9 @@ int main(void)
                 printf("INVALID\n");
             }
         }
-        else if (digit == 13 )
+        else if (digit == 13)
         {
-            if (s_digit/10 == 4)
+            if (s_digit / 10 == 4)
             {
                 printf("VISA\n");
             }
@@ -46,7 +45,7 @@ int main(void)
         }
         else if (digit == 15)
         {
-            if (s_digit ==34 || s_digit == 37)
+            if (s_digit == 34 || s_digit == 37)
             {
                 printf("AMEX\n");
             }
@@ -87,18 +86,15 @@ int checksum(long number)
         }
         number = number - number % 10;
 
-        number = number/10;
-
+        number = number / 10;
     }
     checksum = checksum1 + checksum2;
     return checksum;
-
-
 }
 int sub_checksum(int number)
 {
     int checksum = 0;
-    while(number > 0)
+    while (number > 0)
     {
         checksum = checksum + number % 10;
         number = number - number % 10;
@@ -109,7 +105,7 @@ int sub_checksum(int number)
 int digit_count(long number)
 {
     int digit = 0;
-    while(number > 0)
+    while (number > 0)
     {
         number = number - number % 10;
         number = number / 10;
@@ -117,10 +113,10 @@ int digit_count(long number)
     }
     return digit;
 }
-int start_digit(long number,int digit)
+int start_digit(long number, int digit)
 {
     int n = 0;
-    while(n < digit-2)
+    while (n < digit - 2)
     {
         number = number - number % 10;
         number = number / 10;
@@ -128,4 +124,3 @@ int start_digit(long number,int digit)
     }
     return number;
 }
-
