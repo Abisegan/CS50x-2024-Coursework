@@ -29,7 +29,7 @@ int main(void)
     {
         printf("visa");
     }
-    else if ((digit == 16 )&& (s_digit == 51 ));
+    else if ((digit == 16 )&& (s_digit == 51 ))
     {
         printf("kosa");
     }
