@@ -60,6 +60,7 @@ int main(void)
         printf("invalid: ");
     }
     }
+
     else
     {
         printf("not valid: \n");
