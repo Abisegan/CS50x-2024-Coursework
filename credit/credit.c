@@ -2,6 +2,8 @@
 #include <stdio.h>
 int checksum(long number);
 int sub_checksum(int number);
+int digit_count(long number);
+int start_digit(long number,int digit);
 
 
 int main(void)
@@ -9,8 +11,10 @@ int main(void)
     // prompt the user for card number
     long number;
     number = get_long("Number: ");
-    int k = checksum(number);
-    if (k % 10 == 0)
+    int last= checksum(number);
+    int digit = digit_count(number);
+    s_digit = start_digit(number,digit);
+    if (last % 10 == 0)
     {
         printf("valid: \n");
     }
