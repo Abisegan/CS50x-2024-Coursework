@@ -67,6 +67,13 @@ int sub_checksum(int number)
     }
     return checksum;
 }
-
+int digit_count(long number)
+{
+    int digit = 0;
+    while(number > 0)
+    {
+        number = number
+    }
+}
 
 
