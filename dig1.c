@@ -72,7 +72,7 @@ int digit_count(long number)
 int start_digit(long number,int digit)
 {
     int n = 0;
-    while(n <= digit-2)
+    while(n < digit-2)
     {
         number = number - number % 10;
         number = number / 10;
