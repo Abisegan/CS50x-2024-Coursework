@@ -18,49 +18,48 @@ int main(void)
     //check the validity of card
     if (last % 10 == 0)
     {
-         if (digit == 16 )
-    {
-        if (50 < s_digit && s_digit < 56)
+        if (digit == 16 )
         {
-            printf("master");
+            if (50 < s_digit && s_digit < 56)
+            {
+                printf("master");
+            }
+            else if (s_digit/10 == 4)
+            {
+                printf("visa");
+            }
+            else
+            {
+                printf("invalid: ");
+            }
         }
-        else if (s_digit/10 == 4)
+        else if (digit == 13 )
         {
-            printf("visa");
+            if (s_digit/10 == 4)
+            {
+                printf("visa");
+            }
+            else
+            {
+                printf("invalid: ");
+            }
+        }
+        else if (digit == 15)
+        {
+            if (s_digit ==34 || s_digit == 37)
+            {
+                printf("AME");
+            }
+            else
+            {
+                printf("invalid: ");
+            }
         }
         else
         {
             printf("invalid: ");
         }
     }
-    else if (digit == 13 )
-    {
-        if (s_digit/10 == 4)
-        {
-            printf("visa");
-        }
-        else
-        {
-            printf("invalid: ");
-        }
-    }
-    else if (digit == 15)
-    {
-        if (s_digit ==34 || s_digit == 37)
-        {
-            printf("AME");
-        }
-        else
-        {
-            printf("invalid: ");
-        }
-    }
-    else
-    {
-        printf("invalid: ");
-    }
-    }
-
     else
     {
         printf("not valid: \n");
