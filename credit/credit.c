@@ -14,7 +14,7 @@ int main(void)
     int last= checksum(number);
     int digit = digit_count(number);
     int s_digit = start_digit(number,digit);
-    printf("%i\n",s_digit);
+    printf("%i\n",digit);
     if (last % 10 == 0)
     {
         printf("valid: \n");
