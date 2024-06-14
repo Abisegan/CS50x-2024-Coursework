@@ -22,26 +22,26 @@ int main(void)
         {
             if (50 < s_digit && s_digit < 56)
             {
-                printf("master");
+                printf("MASTERCARD\n");
             }
             else if (s_digit/10 == 4)
             {
-                printf("visa");
+                printf("VISA\n");
             }
             else
             {
-                printf("invalid: ");
+                printf("INVALID\n");
             }
         }
         else if (digit == 13 )
         {
             if (s_digit/10 == 4)
             {
-                printf("visa");
+                printf("VISA\n");
             }
             else
             {
-                printf("invalid: ");
+                printf("INVALID\n");
             }
         }
         else if (digit == 15)
@@ -52,17 +52,17 @@ int main(void)
             }
             else
             {
-                printf("invalid: ");
+                printf("INVALID\n");
             }
         }
         else
         {
-            printf("invalid: ");
+            printf("INVALID\n");
         }
     }
     else
     {
-        printf("not valid: \n");
+        printf("INVALID\n");
     }
 }
 
