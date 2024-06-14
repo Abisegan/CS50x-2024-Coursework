@@ -3,14 +3,15 @@
 int checksum(long number);
 int sub_checksum(int number);
 int digit_count(long number);
-
+int start_digit(long number,int digit);
 
 int main(void)
 {
     // prompt the user for card number
     long number;
     number = get_long("Number: ");
-    int k = digit_count(number);
+    int digit = digit_count( number);
+    int k = start_digit(number, digit);
     printf("%i\n", k);
 }
     //check the validity of card
@@ -68,10 +69,14 @@ int digit_count(long number)
     }
     return digit;
 }
-int start_digit(long number , int digit)
+int start_digit(long number,int digit)
 {
     int n = 0;
-    while(n )
-    number = number - number % 10;
-
+    while(n <= digit-2)
+    {
+        number = number - number % 10;
+        number = number / 10;
+        n++;
+    }
+    return number;
 }
