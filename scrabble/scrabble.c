@@ -26,7 +26,12 @@ int compute_score(string word)
     {
         if (isupper(word[i]))
         {
-            score = 
+            score += point[word[i] - 'A'];
         }
+        else if (islower(word[i]))
+        {
+            score += point[word[i] - 'a'];
+        }
+
     }
 }
