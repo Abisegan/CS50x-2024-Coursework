@@ -16,6 +16,10 @@ int main(void)
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
     // print the winner
+    if (score1 > score2)
+    {
+        
+    }
 }
 int compute_score(string word)
 {
