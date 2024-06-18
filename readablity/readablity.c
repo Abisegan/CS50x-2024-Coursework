@@ -83,3 +83,4 @@ float Index(int letters,int words,int sentences)
     float index = 0.0588 * L - 0.296 * S - 15.8;
     return index;
 }
+
