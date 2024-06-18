@@ -22,6 +22,7 @@ int count_letters(string text)
     // return the number of letters in the text
     for (int i = 0, len = strlen(text); i < len; i++)
     {
+        int n;
         if(text[i] == isspace)
     }
 
