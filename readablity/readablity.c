@@ -10,7 +10,8 @@ int main(void)
     string text = get_string("Text: ");
     // count the number of letters, words and the sentences in the text
     int letters = count_letters(text);
-    
+    int words = count_words(text);
+    int sentences = count_sentences(text);
     // compute the colemen-liau index
     // print the grade level
 
