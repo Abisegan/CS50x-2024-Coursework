@@ -22,9 +22,10 @@ int main(void)
     // print the grade level
     int grade_level = round(index);
 
-    printf("%i\n",grade_level);
+    
     printf("%f\n",index);
-
+    printf("%i\n",grade_level);
+    printf("%i\n",grade_level);
 }
 int count_letters(string text)
 {
