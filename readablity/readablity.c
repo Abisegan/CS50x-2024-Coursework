@@ -15,8 +15,9 @@ int main(void)
     int sentences = count_sentences(text);
     // compute the colemen-liau index
     // print the grade level
-    printf("%i",letters);
-    printf("%i",words);
+    printf("%i\n",letters);
+    printf("%i\n",words);
+    printf("%i\n",sentences);
 
 }
 int count_letters(string text)
@@ -47,9 +48,12 @@ int count_words(string text)
 }
 int count_sentences(string text)
 {
+     // return the number of sentences in the text
     int n = 0;
     for (int i = 0,len = strlen(text); i < len; i++)
-    if ()
-    // return the number of sentences in the text
+    if (ispunct(text[i]))
+    {
+        n++;
+    }
     return n;
 }
