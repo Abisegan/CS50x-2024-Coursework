@@ -1,8 +1,9 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
-
-
+#include <string.h>
+int count_sentences(string text);
+int count_words(string text);
 int count_letters(string text);
 int main(void)
 {
