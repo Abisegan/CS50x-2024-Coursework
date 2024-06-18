@@ -37,7 +37,7 @@ int count_words(string text)
     int n = 0;
     // return the number of words in the text
     for (int i = 0, len = strlen(text); i < len; i++)
-    if (isspace)
+    if (isspace())
     return n;
 
 }
