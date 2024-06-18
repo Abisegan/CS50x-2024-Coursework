@@ -34,10 +34,14 @@ int count_letters(string text)
 }
 int count_words(string text)
 {
+    int n = 0;
     // return the number of words in the text
+    return n;
 
 }
 int count_sentences(string text)
 {
+    int n = 0;
     // return the number of sentences in the text
+    return n;
 }
