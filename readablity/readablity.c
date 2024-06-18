@@ -20,7 +20,10 @@ int main(void)
 int count_letters(string text)
 {
     // return the number of letters in the text
-    
+    for (int i = 0, len = strlen(text); i < len; i++)
+    {
+        if(text[i] == )
+    }
 
 }
 int count_words(string text)
