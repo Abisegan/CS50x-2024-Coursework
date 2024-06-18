@@ -16,7 +16,7 @@ int main(void)
     int sentences = count_sentences(text);
     // compute the colemen-liau index
     float L = ((float)letters / (float)words) * 100.0;
-    float S = ((float)sentences / (float)words) * 100;
+    float S = ((float)sentences / (float)words) * 100.0;
     float index = 0.0588 * L - 0.296 * S - 15.8;
 
     // print the grade level
