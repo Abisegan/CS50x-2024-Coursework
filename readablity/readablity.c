@@ -23,7 +23,7 @@ int main(void)
     int grade_level = round(index);
     if (grade_level < 1)
     {
-        printf(")
+        printf("Before Grade 1");
     }
 
 
