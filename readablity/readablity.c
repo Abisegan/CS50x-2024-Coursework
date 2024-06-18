@@ -21,6 +21,10 @@ int main(void)
 
     // print the grade level
     int grade_level = round(index);
+    if (grade_level < 1)
+    {
+        printf(")
+    }
 
 
     printf("%i\n",grade_level);
