@@ -16,6 +16,7 @@ int main(void)
     // compute the colemen-liau index
     // print the grade level
     printf("%i",letters);
+    printf("%i",words);
 
 }
 int count_letters(string text)
