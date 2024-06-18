@@ -16,7 +16,7 @@ int main(void)
     // compute the colemen-liau index
     int L = letters / words * 100;
     int S = sentences / words * 100;
-    int index = 0.0588 * L - 0.296 * S - 15.8
+    int index = 0.0588 * L - 0.296 * S - 15.8;
 
     // print the grade level
     printf("%i\n",index);
