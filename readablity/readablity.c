@@ -20,6 +20,7 @@ int main(void)
 int count_letters(string text)
 {
     // return the number of letters in the text
+    
 
 }
 int count_words(string text)
