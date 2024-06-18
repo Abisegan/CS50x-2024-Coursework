@@ -70,7 +70,7 @@ int count_sentences(string text)
     for (int i = 0,len = strlen(text); i < len; i++)
     if (ispunct(text[i]))
     {
-        n++;
+        if (text[i] != ')
     }
     return n;
 }
