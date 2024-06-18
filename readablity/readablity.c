@@ -23,7 +23,7 @@ int main(void)
     int grade_level = round(index);
 
 
-    printf("%f\n",index);
+    printf("%i\n",L);
     printf("%i\n",letters);
     printf("%i\n",words);
     printf("%i\n",sentences);
