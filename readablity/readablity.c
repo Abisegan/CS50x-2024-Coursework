@@ -23,13 +23,16 @@ int main(void)
     int grade_level = round(index);
     if (grade_level < 1)
     {
-        printf("Before Grade 1");
+        printf("Before Grade 1\n");
     }
     else if (grade_level >= 1 && grade_level <= 16)
     {
-        printf("Grade %s",)
+        printf("Grade %i\n",grade_level);
     }
-
+    else
+    {
+        printf(")
+    }
     printf("%i\n",grade_level);
     printf("%i\n",letters);
     printf("%i\n",words);
