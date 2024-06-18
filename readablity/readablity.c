@@ -77,4 +77,9 @@ int count_sentences(string text)
     }
     return n;
 }
-float colemen-liau
+float colemen-liau(int Letters,int words,int sentences)
+{
+    float L = ((float)letters / (float)words) * 100.0;
+    float S = ((float)sentences / (float)words) * 100.0;
+    return float index = 0.0588 * L - 0.296 * S - 15.8;
+}
