@@ -22,6 +22,7 @@ int main(void)
     int grade_level = round(intex);
 
     printf("%i\n",grade_level);
+    printf("%f\n",index);
 
 }
 int count_letters(string text)
