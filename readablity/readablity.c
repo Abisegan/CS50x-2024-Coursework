@@ -77,4 +77,4 @@ int count_sentences(string text)
     }
     return n;
 }
-float 
+float colemen-liau
