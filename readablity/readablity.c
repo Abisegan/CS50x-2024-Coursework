@@ -15,7 +15,7 @@ int main(void)
     int words = count_words(text);
     int sentences = count_sentences(text);
     // compute the colemen-liau index
-    int L = (letters / words) * 100.0;
+    float L = (letters / words) * 100.0;
     int S = (sentences / words) * 100;
     float index = 0.0588 * L - 0.296 * S - 15.8;
 
@@ -23,7 +23,7 @@ int main(void)
     int grade_level = round(index);
 
 
-    printf("%i\n",L);
+    printf("%f\n",L);
     printf("%i\n",letters);
     printf("%i\n",words);
     printf("%i\n",sentences);
