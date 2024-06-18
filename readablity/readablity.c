@@ -31,7 +31,7 @@ int main(void)
     }
     else
     {
-        printf(")
+        printf("Grade 16+\n");
     }
     printf("%i\n",grade_level);
     printf("%i\n",letters);
