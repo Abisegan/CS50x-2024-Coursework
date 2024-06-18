@@ -22,8 +22,9 @@ int count_letters(string text)
 {
     // return the number of letters in the text
     for (int i = 0, len = strlen(text); i < len; i++)
+    int n = 0;
     {
-        int n = 0;
+
         if (isalpha(text[i]))
         {
             n++;
