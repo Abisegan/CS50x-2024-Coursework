@@ -6,6 +6,7 @@
 int count_sentences(string text);
 int count_words(string text);
 int count_letters(string text);
+float colemen-liau(int Letters,int words,int sentences);
 int main(void)
 {
     // prompt the user for some text
@@ -15,9 +16,7 @@ int main(void)
     int words = count_words(text);
     int sentences = count_sentences(text);
     // compute the colemen-liau index
-    float L = ((float)letters / (float)words) * 100.0;
-    float S = ((float)sentences / (float)words) * 100.0;
-    float index = 0.0588 * L - 0.296 * S - 15.8;
+    float index = float colemen-liau(Letters, words, sentences);
 
     // print the grade level
     int grade_level = round(index);
