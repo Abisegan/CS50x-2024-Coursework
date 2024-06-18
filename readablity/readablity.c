@@ -25,7 +25,10 @@ int main(void)
     {
         printf("Before Grade 1");
     }
-
+    else if (grade_level >= 1 && grade_level <= 16)
+    {
+        printf("Grade %s",)
+    }
 
     printf("%i\n",grade_level);
     printf("%i\n",letters);
