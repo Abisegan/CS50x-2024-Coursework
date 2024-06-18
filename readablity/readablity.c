@@ -17,3 +17,17 @@ int main(void)
 
 
 }
+int count_letters(string text)
+{
+    // return the number of letters in the text
+
+}
+int count_words(string text)
+{
+    // return the number of words in the text
+
+}
+int count_sentences(string text)
+{
+    // return the number of sentences in the text
+}
