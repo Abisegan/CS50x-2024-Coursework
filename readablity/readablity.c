@@ -1,9 +1,9 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <ctype.h>
 
 
-
-
+int count_letters(string text);
 int main(void)
 {
     // prompt the user for some text
@@ -22,10 +22,13 @@ int count_letters(string text)
     // return the number of letters in the text
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        int n;
-        if(text[i] == isspace)
+        int n = 0;
+        if(text[i] == isalpha)
+        {
+            n++;
+        }
     }
-
+    return n;
 }
 int count_words(string text)
 {
