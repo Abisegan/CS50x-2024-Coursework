@@ -4,7 +4,7 @@
 int main(int argc,string argv[])
 {
     // get key
-    string key = argv[2];
+    string key = argv[1];
     printf("%s",key);
     // get plaintext
     // encipher
