@@ -4,7 +4,8 @@
 int main(int argc,string argv[])
 {
     // get key
-    string 
+    string key = argv[2];
+    
     // get plaintext
     // encipher
     // print ciphertext
