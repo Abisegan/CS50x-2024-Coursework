@@ -63,7 +63,7 @@ int count_sentences(string text)
      // return the number of sentences in the text
     int n = 0;
     for (int i = 0,len = strlen(text); i < len; i++)
-    if ((text[i]))
+    if ((text[i] == ".") || (text[i] == "!") || (text[i] == "?") )
     {
         if (text[i] != 39)
         {
