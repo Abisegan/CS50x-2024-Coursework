@@ -6,7 +6,7 @@
 int count_sentences(string text);
 int count_words(string text);
 int count_letters(string text);
-float Index(int letters,int words,int sentences);
+float Index(int letters, int words, int sentences);
 int main(void)
 {
     // prompt the user for some text
@@ -26,7 +26,7 @@ int main(void)
     }
     else if (grade_level >= 1 && grade_level <= 16)
     {
-        printf("Grade %i\n",grade_level);
+        printf("Grade %i\n", grade_level);
     }
     else
     {
@@ -39,7 +39,7 @@ int count_letters(string text)
     // return the number of letters in the text
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-      if (isalpha(text[i]))
+        if (isalpha(text[i]))
         {
             n++;
         }
@@ -51,31 +51,28 @@ int count_words(string text)
     int n = 0;
     // return the number of words in the text
     for (int i = 0, len = strlen(text); i < len; i++)
-    if (isspace(text[i]))
-    {
-        n++;
-    }
+        if (isspace(text[i]))
+        {
+            n++;
+        }
     return n + 1;
-
 }
 int count_sentences(string text)
 {
-     // return the number of sentences in the text
+    // return the number of sentences in the text
     int n = 0;
-    for (int i = 0,len = strlen(text); i < len; i++)
-    if ((text[i] == '.') || (text[i] == '!') || (text[i] == '?') )
-    {
+    for (int i = 0, len = strlen(text); i < len; i++)
+        if ((text[i] == '.') || (text[i] == '!') || (text[i] == '?'))
+        {
 
             n++;
-
-    }
+        }
     return n;
 }
-float Index(int letters,int words,int sentences)
+float Index(int letters, int words, int sentences)
 {
-    float L = ((float)letters / (float)words) * 100.0;
-    float S = ((float)sentences / (float)words) * 100.0;
+    float L = ((float) letters / (float) words) * 100.0;
+    float S = ((float) sentences / (float) words) * 100.0;
     float index = 0.0588 * L - 0.296 * S - 15.8;
     return index;
 }
-
