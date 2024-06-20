@@ -24,15 +24,15 @@ int main(int argc, string argv[])
     if ((argc == 2) && (digit == true))
     {
         int key2 = atoi(key1);
-         // get plaintext
+        // get plaintext
         string text = get_string("plaintext:  ");
         char ctext[strlen(text)];
-        for (int i = 0,len = strlen( text); i <= len; i++)
+        for (int i = 0, len = strlen(text); i <= len; i++)
         {
-           ctext[i] = rotate( text[i], key2);
+            ctext[i] = rotate(text[i], key2);
         }
         // print ciphertext
-        printf("ciphertext: %s\n",ctext);
+        printf("ciphertext: %s\n", ctext);
         return 0;
     }
     else
