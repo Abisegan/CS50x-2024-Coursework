@@ -30,7 +30,8 @@ int main(int argc,string argv[])
         return 1;
     }
     int key2 = atoi(key1);
-
+    string text = get_string("plaintext:  ");
+    
     // get plaintext
     // encipher
     // print ciphertext
