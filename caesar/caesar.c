@@ -25,10 +25,10 @@ int main(int argc,string argv[])
     {
         int key2 = atoi(key1);
         string text = get_string("plaintext:  ");
-        string ctext[strlen(text)];
+        char ctext[strlen(text)];
         for (int i = 0,len = strlen( text); i < len; i++)
         {
-           (char)ctext[i] = rotate( text[i], key2);
+           ctext[i] = rotate( text[i], key2);
         }
         printf("%s\n",ctext);
         return 0;
