@@ -27,16 +27,17 @@ int main(int argc,string argv[])
 }
 bool only_digit(string key)
 {
-      for (int i = 0, len = strlen(key); i < len; i++)
+    bool n = false;
+    for (int i = 0, len = strlen(key); i < len; i++)
+    {
+        if (isdigit(key[i]))
         {
-            if (isdigit(key[i]))
-                {
-
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+            n = true;
         }
+        else
+        {
+            n = false;
+        }
+    }
+    return n;
 }
