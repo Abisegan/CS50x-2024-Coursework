@@ -5,7 +5,7 @@
 #include <stdlib.h>
 int main(void)
 {
-    char c;
+    char c ='s';
     char p = 'a';
     int n = 2;
     if (isalpha(p))
