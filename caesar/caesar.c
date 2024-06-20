@@ -12,13 +12,16 @@ int main(int argc,string argv[])
         for (int i = 0, len = strlen(key); i < len; i++)
             if (isdigit(key[i]))
             {
-                return 0;
+                printf("%s",key);
+
             }
+            return 0;
             else
             {
                 printf("usage:  ");
-                return 1;
+                
             }
+            return 1;
     }
     printf("%s",key);
     // get plaintext
