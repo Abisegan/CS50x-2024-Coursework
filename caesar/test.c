@@ -6,11 +6,12 @@
 int main(void)
 {
     char c ='s';
-    char p = 'a';
+    char p = '7';
     int n = 2;
-    printf("%c\n",c);
+
     if (isalpha(p))
     {
+        printf("%c\n",c);
         if (isupper(p))
         {
             c = ((p - 'A') + n) % 26;
