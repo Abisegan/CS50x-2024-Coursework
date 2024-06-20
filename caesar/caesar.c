@@ -8,6 +8,7 @@ int main(int argc,string argv[])
     // get key
     string key = argv[1];
     if (argc == 2)
+    {
         for (int i = 0, len = strlen(key); i < len; i++)
             if (isdigit(key[i]))
             {
@@ -18,6 +19,7 @@ int main(int argc,string argv[])
                 printf("usage:  ");
                 return 1;
             }
+    }
     printf("%s",key);
     // get plaintext
     // encipher
