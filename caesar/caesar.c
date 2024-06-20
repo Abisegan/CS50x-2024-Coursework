@@ -28,7 +28,7 @@ int main(int argc,string argv[])
         string ctext[strlen(text)];
         for (int i = 0,len = strlen( text); i < len; i++)
         {
-            ctext[i] = rotate( text[i], key2);
+           (char)ctext[i] = rotate( text[i], key2);
         }
         printf("%s\n",ctext);
         return 0;
