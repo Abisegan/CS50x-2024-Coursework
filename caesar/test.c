@@ -5,7 +5,7 @@
 #include <stdlib.h>
 int main(void)
 {
-    char c =;
+    char c = 0;
     char p = 'a';
     int n = 1;
 
@@ -13,5 +13,5 @@ int main(void)
     {
         c = ((p -'a')+ n) % 26;
     }
-    printf("%i\n",c);
+    printf("%c\n",c);
 }
