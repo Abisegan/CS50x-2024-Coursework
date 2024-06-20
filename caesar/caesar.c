@@ -7,6 +7,7 @@ int main(int argc,string argv[])
 {
     // get key
     string key;
+    if (argc )
     if ((argc == 2) && (digit == true))
     {
         key = argv[1]
