@@ -9,10 +9,12 @@ int main(int argc,string argv[])
     string key;
     if (argc == 1)
     {
-        
+        printf("usage:  ");
+        return 1;
     }
-    if ((argc == 2) && (digit == true))
+    else if ((argc == 2) && (digit == true))
     {
+        key = argv[1];
         printf("%s",key);
         return 0;
     }
