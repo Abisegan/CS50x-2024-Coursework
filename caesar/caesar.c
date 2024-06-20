@@ -24,8 +24,8 @@ int main(int argc,string argv[])
     if ((argc == 2) && (digit == true))
     {
         int key2 = atoi(key1);
-        string ctext = NULL;
         string text = get_string("plaintext:  ");
+        string ctext = [strlen(text)] ;
         for (int i = 0,len = strlen( text); i < len; i++)
         {
             ctext[i] = rotate( text[i], key2);
