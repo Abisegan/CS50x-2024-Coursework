@@ -8,7 +8,7 @@ char rotate(char p, int n);
 int main(int argc,string argv[])
 {
     int key2;
-    char p;
+    
     // get key
     string key1;
     bool digit;
@@ -25,7 +25,7 @@ int main(int argc,string argv[])
     if ((argc == 2) && (digit == true))
     {
         key2 = atoi(key1);
-        p = 'A';
+        char p = 'A';
         string text = get_string("plaintext:  ");
         char v = rotate( p, key2);
         printf("%c",v);
