@@ -30,7 +30,7 @@ int main(int argc,string argv[])
         return 1;
     }
     int key2 = atoi(key1);
-    char p = a;
+    char p = A;
     string text = get_string("plaintext:  ");
     char v = rotate( p, key2);
     printf("%c",v);
