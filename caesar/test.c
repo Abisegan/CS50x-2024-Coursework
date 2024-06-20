@@ -23,5 +23,5 @@ int main(void)
     {
         c = p;
     }
-    printf("%c",c);
+    printf("%c\n",c);
 }
