@@ -24,7 +24,7 @@ int main(int argc,string argv[])
     if ((argc == 2) && (digit == true))
     {
         int key2 = atoi(key1);
-        char p = '';
+        char p = 'H';
         string text = get_string("plaintext:  ");
         char v = rotate( p, key2);
         printf("%i\n",v);
