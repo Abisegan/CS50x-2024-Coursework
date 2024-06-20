@@ -6,7 +6,7 @@ bool only_digit(string key);
 int main(int argc,string argv[])
 {
     // get key
-    string key = argv[1];
+    string key;
     bool digit = only_digit(key);
     if ((argc == 2) && (digit == true))
     {
