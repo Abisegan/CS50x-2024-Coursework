@@ -13,5 +13,5 @@ int main(void)
     {
         c = ('p' + n) % 26;
     }
-    printf("%c\n",c);
+    printf("%i\n",c);
 }
