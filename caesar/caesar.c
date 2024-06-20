@@ -16,8 +16,9 @@ int main(int argc,string argv[])
     else
     {
         key = argv[1];
+        digit = only_digit(key);
     }
-    else if ((argc == 2) && (digit == true))
+    if ((argc == 2) && (digit == true))
     {
         printf("%s",key);
         return 0;
