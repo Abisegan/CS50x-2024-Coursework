@@ -13,17 +13,18 @@ int main(int argc,string argv[])
             if (isdigit(key[i]))
             {
                 printf("%s",key);
-
+                return 0;
             }
-            return 0;
             else
             {
                 printf("usage:  ");
-                
+                return 1;
             }
-            return 1;
     }
-    printf("%s",key);
+    else
+    {
+        return 1;
+    }
     // get plaintext
     // encipher
     // print ciphertext
