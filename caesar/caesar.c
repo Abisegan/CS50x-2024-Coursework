@@ -1,11 +1,11 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <ctype.h>
-#include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 bool only_digit(string key);
 char rotate(char p, int n);
-int main(int argc,string argv[])
+int main(int argc, string argv[])
 {
 
     // get key
