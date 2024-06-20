@@ -4,6 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 bool only_digit(string key);
+char rotate(char p, int n);
 int main(int argc,string argv[])
 {
     // get key
@@ -21,7 +22,6 @@ int main(int argc,string argv[])
     }
     if ((argc == 2) && (digit == true))
     {
-        printf("%s",key1);
         return 0;
     }
     else
@@ -30,8 +30,10 @@ int main(int argc,string argv[])
         return 1;
     }
     int key2 = atoi(key1);
+    char p = a;
     string text = get_string("plaintext:  ");
-
+    char v = rotate( p, key2);
+    printf("%c",v);
     // get plaintext
     // encipher
     // print ciphertext
