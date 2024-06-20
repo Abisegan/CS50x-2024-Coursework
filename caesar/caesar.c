@@ -9,8 +9,8 @@ int main(int argc,string argv[])
     string key = argv[1];
     if (argc == 2)
     {
-        if (isdigit(key[i]))
-                for (int i = 0, len = strlen(key); i < len; i++)
+    if (isdigit(key[i]))
+        for (int i = 0, len = strlen(key); i < len; i++)
                 {
                     printf("%s",key);
                     return 0;
