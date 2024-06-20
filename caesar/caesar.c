@@ -26,6 +26,10 @@ int main(int argc,string argv[])
         int key2 = atoi(key1);
         char p = 'H';
         string text = get_string("plaintext:  ");
+        for (int i = 0,len = strlen(string text); i < len; i++)
+        {
+            
+        }
         char v = rotate( p, key2);
         printf("%i\n",v);
         return 0;
