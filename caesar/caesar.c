@@ -54,7 +54,8 @@ bool only_digit(string key)
     }
     return n;
 }
-char rotate(char c, int n)
+char rotate(char p, int n)
 {
-    
+    char c;
+    if(is)
 }
