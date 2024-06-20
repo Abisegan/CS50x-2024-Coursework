@@ -14,9 +14,9 @@ int main(int argc,string argv[])
             if (isdigit(key[i]))
                 {
                     printf("%s",key);
-                    return 0;
+                    
                 }
-
+                return 0;
                 else
                 {
                     printf("usage:  ");
