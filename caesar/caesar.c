@@ -32,7 +32,7 @@ int main(int argc,string argv[])
            ctext[i] = rotate( text[i], key2);
         }
         // print ciphertext
-        printf("%s\n",ctext);
+        printf("ciphertext: %s\n",ctext);
         return 0;
     }
     else
