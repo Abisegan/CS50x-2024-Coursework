@@ -16,9 +16,8 @@ int main(int argc,string argv[])
 
                     return 0;
                 }
-            printf("%s",key);
         }
-
+        printf("%s",key);
     }
     else
     {
