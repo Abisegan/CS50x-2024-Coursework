@@ -30,7 +30,11 @@ bool only_digit(string key)
             if (isdigit(key[i]))
                 {
 
-                    return 0;
+                    return true;
+                }
+                else
+                {
+                    return false;
                 }
         }
 }
