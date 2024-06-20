@@ -7,11 +7,11 @@ int main(void)
 {
     char c ='s';
     char p = 't';
-    int n = 2;
+    int n = 1;
 
     if (isalpha(p))
     {
-        c = ('p' + n) % 26;
+        c = ((p -'a')+ n) % 26;
     }
     printf("%i\n",c);
 }
