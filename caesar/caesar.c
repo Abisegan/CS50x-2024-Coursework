@@ -31,7 +31,7 @@ int main(int argc,string argv[])
     }
     int key2 = atoi(key1);
     string text = get_string("plaintext:  ");
-    
+
     // get plaintext
     // encipher
     // print ciphertext
@@ -53,4 +53,8 @@ bool only_digit(string key)
         }
     }
     return n;
+}
+char rotate(char c, int n)
+{
+    
 }
