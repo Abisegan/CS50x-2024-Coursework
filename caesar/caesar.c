@@ -8,9 +8,11 @@ int main(int argc,string argv[])
     // get key
     string key;
     if (argc == 1)
+    {
+        
+    }
     if ((argc == 2) && (digit == true))
     {
-        key = argv[1]
         printf("%s",key);
         return 0;
     }
