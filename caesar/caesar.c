@@ -6,7 +6,7 @@ bool only_digit(string key);
 int main(int argc,string argv[])
 {
     // get key
-    string key;
+    string s-key;
     bool digit;
     if (argc == 1)
     {
@@ -15,12 +15,12 @@ int main(int argc,string argv[])
     }
     else
     {
-        key = argv[1];
-        digit = only_digit(key);
+        s-key = argv[1];
+        digit = only_digit(s-key);
     }
     if ((argc == 2) && (digit == true))
     {
-        printf("%s",key);
+        printf("%s",s-key);
         return 0;
     }
     else
