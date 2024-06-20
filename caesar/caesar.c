@@ -28,6 +28,7 @@ int main(int argc,string argv[])
         printf("usage:  ");
         return 1;
     }
+
     // get plaintext
     // encipher
     // print ciphertext
