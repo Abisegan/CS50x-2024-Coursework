@@ -24,14 +24,13 @@ int main(int argc,string argv[])
     if ((argc == 2) && (digit == true))
     {
         int key2 = atoi(key1);
-        char p = 'H';
+        string ctext;
         string text = get_string("plaintext:  ");
         for (int i = 0,len = strlen(string text); i < len; i++)
         {
-            
+            ctext = rotate( string text[i], key2);
         }
-        char v = rotate( p, key2);
-        printf("%i\n",v);
+        printf("%s\n",ctext);
         return 0;
     }
     else
