@@ -74,6 +74,7 @@ char rotate(char p, int n)
         else
         {
            c = ((p - 'a') + n) % 26;
+           c = c + 96;
         }
     }
     else
