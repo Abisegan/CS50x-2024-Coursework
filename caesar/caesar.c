@@ -7,7 +7,7 @@ int main(int argc,string argv[])
 {
     // get key
     string key = argv[1];
-    bool only_digit = only_digit( key);
+    bool only_digit = only_digit(key);
     if ((argc == 2) && (only_digit == true))
     {
 
