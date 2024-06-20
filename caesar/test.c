@@ -11,7 +11,7 @@ int main(void)
 
     if (isalpha(p))
     {
-        c = ((p  + n) % 26;
+        c = ('p' + n) % 26;
     }
     printf("%c\n",c);
 }
