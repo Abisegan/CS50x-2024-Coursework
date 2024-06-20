@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
 bool only_digit(string key);
 int main(int argc,string argv[])
 {
