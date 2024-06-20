@@ -12,6 +12,7 @@ int main(void)
     if (isalpha(p))
     {
         c = ((p -'a')+ n) % 26;
+        c = c + 64;
     }
     printf("%c\n",c);
 }
