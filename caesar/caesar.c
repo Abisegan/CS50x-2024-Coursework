@@ -24,10 +24,10 @@ int main(int argc,string argv[])
     if ((argc == 2) && (digit == true))
     {
         int key2 = atoi(key1);
-        char p = 'A';
+        char p = '';
         string text = get_string("plaintext:  ");
         char v = rotate( p, key2);
-        printf("%i",v);
+        printf("%i\n",v);
         return 0;
     }
     else
