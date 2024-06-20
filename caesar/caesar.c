@@ -57,5 +57,19 @@ bool only_digit(string key)
 char rotate(char p, int n)
 {
     char c;
-    if(is)
+    if (isalpha(p))
+    {
+        if (isupper(p))
+        {
+            c = 
+        }
+        else
+        {
+
+        }
+    }
+    else
+    {
+        c = p
+    }
 }
