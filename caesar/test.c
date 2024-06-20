@@ -8,6 +8,7 @@ int main(void)
     char c ='s';
     char p = 'a';
     int n = 2;
+    printf("%c\n",c);
     if (isalpha(p))
     {
         if (isupper(p))
