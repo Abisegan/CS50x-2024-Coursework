@@ -61,7 +61,7 @@ char rotate(char p, int n)
     {
         if (isupper(p))
         {
-            c = ('p' - 'A')
+            c = (('p' - 'A') + n) % 26
         }
         else
         {
