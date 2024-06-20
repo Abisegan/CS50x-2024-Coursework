@@ -8,7 +8,7 @@ int main(int argc,string argv[])
     // get key
     string key = argv[1];
     bool digit = only_digit(key);
-    else if ((argc == 2) && (digit == true))
+    if ((argc == 2) && (digit == true))
     {
 
         printf("%s",key);
