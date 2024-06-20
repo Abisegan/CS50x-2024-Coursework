@@ -7,14 +7,18 @@ int main(int argc,string argv[])
 {
     // get key
     string key;
+    bool digit;
     if (argc == 1)
     {
         printf("usage:  ");
         return 1;
     }
-    else if ((argc == 2) && (digit == true))
+    else
     {
         key = argv[1];
+    }
+    else if ((argc == 2) && (digit == true))
+    {
         printf("%s",key);
         return 0;
     }
@@ -23,7 +27,6 @@ int main(int argc,string argv[])
         printf("usage:  ");
         return 1;
     }
-    bool digit = only_digit(key);
     // get plaintext
     // encipher
     // print ciphertext
