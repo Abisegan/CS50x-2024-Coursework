@@ -26,9 +26,9 @@ int main(int argc,string argv[])
         int key2 = atoi(key1);
         string ctext;
         string text = get_string("plaintext:  ");
-        for (int i = 0,len = strlen(string text); i < len; i++)
+        for (int i = 0,len = strlen( text); i < len; i++)
         {
-            ctext = rotate( string text[i], key2);
+            ctext = rotate( text[i], key2);
         }
         printf("%s\n",ctext);
         return 0;
