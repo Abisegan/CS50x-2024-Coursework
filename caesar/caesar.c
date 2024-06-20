@@ -28,7 +28,7 @@ int main(int argc,string argv[])
         string text = get_string("plaintext:  ");
         for (int i = 0,len = strlen( text); i < len; i++)
         {
-            ctext = rotate( text[i], key2);
+            ctext[i] = rotate( text[i], key2);
         }
         printf("%s\n",ctext);
         return 0;
