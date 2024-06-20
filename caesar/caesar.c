@@ -74,4 +74,5 @@ char rotate(char p, int n)
     {
         c = p;
     }
+    return c;
 }
