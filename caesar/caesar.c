@@ -27,7 +27,7 @@ int main(int argc,string argv[])
         char p = 'A';
         string text = get_string("plaintext:  ");
         char v = rotate( p, key2);
-        printf("%c",v);
+        printf("%i",v);
         return 0;
     }
     else
