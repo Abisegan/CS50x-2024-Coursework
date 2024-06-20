@@ -30,7 +30,7 @@ int main(int argc,string argv[])
         return 1;
     }
     int key2 = atoi(key1);
-    char p = A;
+    char p = 'A';
     string text = get_string("plaintext:  ");
     char v = rotate( p, key2);
     printf("%c",v);
@@ -63,15 +63,15 @@ char rotate(char p, int n)
     {
         if (isupper(p))
         {
-            c = (('p' - 'A') + n) % 26
+            c = (('p' - 'A') + n) % 26;
         }
         else
         {
-            c = (('p' - 'a') + n) % 26
+            c = (('p' - 'a') + n) % 26;
         }
     }
     else
     {
-        c = p
+        c = p;
     }
 }
