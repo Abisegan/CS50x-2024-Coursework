@@ -28,6 +28,7 @@ int main(int argc,string argv[])
         printf("usage:  ");
         return 1;
     }
+     int key2 = atoi()
 
     // get plaintext
     // encipher
