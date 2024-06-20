@@ -23,6 +23,7 @@ int main(int argc,string argv[])
     }
     else
     {
+        printf("usage:  ");
         return 1;
     }
     // get plaintext
