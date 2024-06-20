@@ -24,7 +24,7 @@ int main(int argc,string argv[])
     if ((argc == 2) && (digit == true))
     {
         int key2 = atoi(key1);
-        string ctext = NULL;
+        string ctext = [];
         string text = get_string("plaintext:  ");
         for (int i = 0,len = strlen( text); i < len; i++)
         {
