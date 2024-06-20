@@ -14,15 +14,11 @@ int main(int argc,string argv[])
             if (isdigit(key[i]))
                 {
                     printf("%s",key);
-                    
+
                 }
-                return 0;
-                else
-                {
-                    printf("usage:  ");
-                    return 1;
-                }
+
         }
+        return 0;
     }
     else
     {
