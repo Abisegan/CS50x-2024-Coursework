@@ -10,7 +10,7 @@ int main(int argc, string argv[])
     // get key
     if(argc != 2)
     {
-        
+        printf("Usage: ./substitution KEY");
     }
     string key = tolower(argv[1])
     // validate key
