@@ -13,9 +13,17 @@ int main(int argc, string argv[])
     if (strlen(key) == 26)
     {
 
-        if ()
+        if (alpha == TRUE)
         {
-
+            if(repeat == TRUE)
+            {
+                    
+            }
+            else
+            {
+                printf("key must not contain repeated characters");
+                return 1;
+            }
         }
         else
         {
