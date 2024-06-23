@@ -1,25 +1,28 @@
 # include <cs50.h>
 # include <stdio.h>
 # include <ctype.h>
+bool alpha_check(string key)
+bool repeat_check(string key)
 int main(int argc, string argv[])
 {
     // get key
     string key = argv[1]
     // validate key
+    bool alpha = alpa_check(key);
+    bool repeat = repeat_check(key);
     if (strlen(key) == 26)
     {
-        for (int i = 0, len = argc; i < len; i++)
-        {
-            if (isalpha(key[i]))
-            {
 
-            }
-            else
-            {
-                printf("key must only contain alphabatic characters");
-                return 1;
-            }
+        if ()
+        {
+
         }
+        else
+        {
+            printf("key must only contain alphabatic characters");
+            return 1;
+        }
+
     }
     else
     {
