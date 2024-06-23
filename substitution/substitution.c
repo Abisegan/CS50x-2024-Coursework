@@ -1,13 +1,15 @@
 # include <cs50.h>
 # include <stdio.h>
 # include <ctype.h>
+string tolower(string key)
 bool alpha_check(string key)
 bool repeat_check(string key)
+
 int main(int argc, string argv[])
 {
     // get key
-    string key = argv[1]
-    string key =
+    string key = tolower(argv[1])
+
 
     // validate key
     bool alpha = alpa_check(key);
