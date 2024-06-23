@@ -9,7 +9,7 @@ int main(int argc, string argv[])
 {
     // get key
     string key = tolower(argv[1])
-
+    if (argc == 2)
 
     // validate key
     bool alpha = alpa_check(key);
