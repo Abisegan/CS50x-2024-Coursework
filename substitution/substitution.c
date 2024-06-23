@@ -8,8 +8,11 @@ bool repeat_check(string key)
 int main(int argc, string argv[])
 {
     // get key
+    if(argc != 2)
+    {
+        
+    }
     string key = tolower(argv[1])
-
     // validate key
     bool alpha = alpa_check(key);
     bool repeat = repeat_check(key);
