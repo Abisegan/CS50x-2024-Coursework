@@ -1,6 +1,6 @@
 # include <cs50.h>
 # include <stdio.h>
-
+# include <ctype.h>
 int main(int argc, string argv[])
 {
     // get key
@@ -10,7 +10,15 @@ int main(int argc, string argv[])
     {
         for (int i = 0, len = argc; i < len; i++)
         {
-            if ()
+            if (isalpha(key[i]))
+            {
+
+            }
+            else
+            {
+                printf("key must only contain alphabatic characters");
+                return 1;
+            }
         }
     }
     else
