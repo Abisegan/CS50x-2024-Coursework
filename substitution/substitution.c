@@ -10,7 +10,7 @@ int main(int argc, string argv[])
     {
         for (int i = 0, len = argc; i < len; i++)
         {
-            
+            if ()
         }
     }
     else
