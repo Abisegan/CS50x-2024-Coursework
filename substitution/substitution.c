@@ -7,7 +7,7 @@ int main(int argc, string argv[])
     // validate key
     if (argc == 25)
     {
-        if ()
+        for (int i = 0, len = strlen())
     }
     else
     {
