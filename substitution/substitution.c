@@ -4,7 +4,7 @@
 int main(int argc, string argv[])
 {
     // get key
-    string key = argv[1]
+    string key[] = argv[1]
     // validate key
     if (strlen(key) == 25)
     {
