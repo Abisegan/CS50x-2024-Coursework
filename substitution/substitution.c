@@ -7,6 +7,8 @@ int main(int argc, string argv[])
 {
     // get key
     string key = argv[1]
+    string key =
+
     // validate key
     bool alpha = alpa_check(key);
     bool repeat = repeat_check(key);
@@ -17,7 +19,7 @@ int main(int argc, string argv[])
         {
             if(repeat == TRUE)
             {
-                    
+
             }
             else
             {
