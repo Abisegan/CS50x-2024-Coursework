@@ -1,6 +1,7 @@
 # include <cs50.h>
 # include <stdio.h>
 # include <ctype.h>
+# include <stdlib.h>
 bool alpha_check(string key2);
 bool repeat_check(string key2);
 string to_lower(string key1);
