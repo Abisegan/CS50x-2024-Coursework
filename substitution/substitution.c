@@ -3,7 +3,7 @@
 # include <ctype.h>
 bool alpha_check(string key2);
 bool repeat_check(string key2);
-string to_lower(key1);
+string to_lower(string key1);
 int main(int argc, string argv[])
 {
     // get key
@@ -12,7 +12,6 @@ int main(int argc, string argv[])
         printf("Usage: ./substitution KEY");
     }
     string key1 = argv[1];
-    string key2 = to_lower(key1);
     // validate key
     bool alpha = alpa_check(key2);
     bool repeat = repeat_check(key2);
@@ -32,7 +31,7 @@ int main(int argc, string argv[])
                 return 1;
     }
 
-    string key2 = tolower(key1)
+    string key2 = to_lower(key1);
     // get plain text
     // enciper
     // print cipher text
@@ -69,7 +68,7 @@ bool alpha_check(string key2)
         }
     }
 }
-string to_lower(key1)
+string to_lower(string key1)
 {
     for (int x = 0; x < 26; x++)
     {
