@@ -13,7 +13,7 @@ int main(int argc, string argv[])
     while(argc != 2)
     {
         printf("Usage: ./substitution KEY\n");
-        return 1;
+        
     }
 
 
