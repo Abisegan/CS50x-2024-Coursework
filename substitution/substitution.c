@@ -17,7 +17,7 @@ int main(int argc, string argv[])
     }
 
 
-    string key1 = argv[0];
+    string key1 = argv[1];
     string key2 = to_lower(key1);
     bool alpha = alpha_check(key2);
     bool repeat = repeat_check(key2);
