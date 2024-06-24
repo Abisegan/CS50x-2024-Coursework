@@ -5,7 +5,7 @@
 char alphabatic[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 bool alpha_check(string key2);
 bool repeat_check(string key2);
-string to_lower(string key1);
+
 
 int main(int argc, string argv[])
 {
@@ -14,6 +14,14 @@ int main(int argc, string argv[])
 
 
     string key1 = argv[1];
+    string key[1];
+    for (int x = 0; x < 25; x++)
+    {
+        key[0][x] = tolower(key1[x]);
+
+    }
+    printf("%s",key[0]);
+
     string key2 = to_lower(key1);
     bool alpha = alpha_check(key2);
     bool repeat = repeat_check(key2);
