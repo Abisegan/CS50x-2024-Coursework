@@ -3,9 +3,9 @@
 # include <ctype.h>
 # include <string.h>
 char alphabatic[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-bool alpha_check(char key2[]);
-bool repeat_check(char key2[]);
-char to_lower(string key1);
+bool alpha_check(string key2[]);
+bool repeat_check(string key2[]);
+string to_lower(string key1);
 
 int main(int argc, string argv[])
 {
@@ -42,7 +42,7 @@ int main(int argc, string argv[])
     // enciper
     // print cipher text
 }
- bool repeat_check(char key2)
+ bool repeat_check(string key2)
  {
     bool n;
     for (int i = 0; i < 26; i++)
