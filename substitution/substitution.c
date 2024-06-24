@@ -61,7 +61,7 @@ int main(int argc, string argv[])
     }
     return n;
  }
-bool alpha_check(char key2)
+bool alpha_check(string key2)
 {
     bool n;
     for (int i = 0; i < 26; i++)
@@ -77,9 +77,9 @@ bool alpha_check(char key2)
     }
     return n;
 }
-char to_lower(string key1)
+string to_lower(string key1)
 {
-    char key2[25];
+    string key2[25];
     for (int x = 0; x < 26; x++)
     {
         key2[x] = tolower(key1[x]);
