@@ -13,6 +13,7 @@ int main(int argc, string argv[])
         printf("Usage: ./substitution KEY");
     }
     string key1 = argv[1];
+    string key2 = to_lower(key1);
     // validate key
     bool alpha = alpa_check(key2);
     bool repeat = repeat_check(key2);
@@ -32,7 +33,7 @@ int main(int argc, string argv[])
                 return 1;
     }
 
-    string key2 = to_lower(key1);
+
     // get plain text
     // enciper
     // print cipher text
