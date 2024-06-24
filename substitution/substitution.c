@@ -5,6 +5,7 @@
 bool alpha_check(string key2);
 bool repeat_check(string key2, char alphabatic[]);
 string to_lower(string key1);
+char alphabatic[] = {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z};
 int main(int argc, string argv[])
 {
     // get key
@@ -12,7 +13,7 @@ int main(int argc, string argv[])
     {
         printf("Usage: ./substitution KEY");
     }
-    char alphabatic[] = {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z};
+
     string key1 = argv[1];
     string key2 = to_lower(key1);
     bool alpha = alpha_check(key2);
