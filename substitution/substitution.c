@@ -85,5 +85,5 @@ string to_lower(string key1)
         string key2[0][x] = tolower(key1[x]);
 
     }
-    return key2;
+    return key2[1];
 }
