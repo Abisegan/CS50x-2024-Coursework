@@ -12,7 +12,7 @@ int main(int argc, string argv[])
     // get key
     if(argc != 2)
     {
-        printf("Usage: ./substitution KEY");
+        printf("Usage: ./substitution KEY\n");
     }
 
     string key1 = argv[1];
