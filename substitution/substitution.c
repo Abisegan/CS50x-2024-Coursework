@@ -15,7 +15,7 @@ int main(int argc, string argv[])
         printf("Usage: ./substitution KEY\n");
         return 1;
     }
-    while((argc = 2));
+    while(argc == 2);
 
     string key1 = argv[1];
     string key2 = to_lower(key1);
