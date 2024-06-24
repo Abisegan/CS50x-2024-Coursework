@@ -1,7 +1,7 @@
 # include <cs50.h>
 # include <stdio.h>
 # include <ctype.h>
-# include <stdlib.h>
+# include <string.h>
 bool alpha_check(string key2);
 bool repeat_check(string key2);
 string to_lower(string key1);
@@ -17,7 +17,7 @@ int main(int argc, string argv[])
     // validate key
     bool alpha = alpha_check(key2);
     bool repeat = repeat_check(key2);
-    if (strlen(key) != 26)
+    if (strlen(key1) != 26)
     {
          printf("key must contain 26 characters");
         return 1;
