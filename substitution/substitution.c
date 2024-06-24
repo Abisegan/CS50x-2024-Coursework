@@ -83,7 +83,7 @@ string to_lower(string key1)
     for (int x = 0; x < 26; x++)
     {
         key2[x] = tolower(key1[x]);
-        
+
     }
-     return key2;
+    return key2;
 }
