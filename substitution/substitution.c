@@ -38,6 +38,7 @@ int main(int argc, string argv[])
 }
  bool repeat_check(string key2)
  {
+    bool n;
     char alphabatic[] = {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z}
     for (int i = 0; i < 26; i++)
     {
@@ -45,14 +46,15 @@ int main(int argc, string argv[])
         {
             if (alphabatic[i] == key2[j])
             {
-                return false;
+                n = false;
             }
             else
             {
-                return true;
+                n = true;
             }
         }
     }
+    return n;
  }
 bool alpha_check(string key2)
 {
