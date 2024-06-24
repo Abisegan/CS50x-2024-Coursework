@@ -13,10 +13,8 @@ int main(int argc, string argv[])
         printf("Usage: ./substitution KEY");
     }
     string key1 = argv[1];
-    string key2 = to_lower(key1);
     // validate key
-    bool alpha = alpha_check(key2);
-    bool repeat = repeat_check(key2);
+
     if (strlen(key1) != 26)
     {
          printf("key must contain 26 characters");
@@ -32,7 +30,9 @@ int main(int argc, string argv[])
          printf("key must not contain repeated characters");
                 return 1;
     }
-
+    string key2 = to_lower(key1);
+    bool alpha = alpha_check(key2);
+    bool repeat = repeat_check(key2);
 
     // get plain text
     // enciper
