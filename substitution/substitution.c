@@ -16,6 +16,7 @@ int main(int argc, string argv[])
     string key2 = to_lower(key1);
     bool alpha = alpha_check(key2);
     bool repeat = repeat_check(key2);
+    char alphabatic[] = {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z};
     // validate key
 
     if (strlen(key1) != 26)
@@ -39,7 +40,7 @@ int main(int argc, string argv[])
     // enciper
     // print cipher text
 }
- bool repeat_check(string key2)
+ bool repeat_check(string key2, char alphabatic[])
  {
     bool n;
     char alphabatic[] = {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z};
