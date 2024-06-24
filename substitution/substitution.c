@@ -1,9 +1,8 @@
 # include <cs50.h>
 # include <stdio.h>
 # include <ctype.h>
-string tolower(string key)
-bool alpha_check(string key)
-bool repeat_check(string key)
+bool alpha_check(string key2);
+bool repeat_check(string key2);
 
 int main(int argc, string argv[])
 {
@@ -12,11 +11,11 @@ int main(int argc, string argv[])
     {
         printf("Usage: ./substitution KEY");
     }
-    string key1 = argv[1]
-    string key2 = tolower(key1)
+    string key1 = argv[1];
+    string key2 = tolower(key1);
     // validate key
-    bool alpha = alpa_check(key);
-    bool repeat = repeat_check(key);
+    bool alpha = alpa_check(key2);
+    bool repeat = repeat_check(key2);
     if (strlen(key) != 26)
     {
          printf("key must contain 26 characters");
@@ -27,7 +26,7 @@ int main(int argc, string argv[])
         printf("key must only contain alphabatic characters");
         return 1;
     }
-    if(repeat == TRUE)
+    if(repeat != TRUE)
     {
          printf("key must not contain repeated characters");
                 return 1;
@@ -37,4 +36,36 @@ int main(int argc, string argv[])
     // get plain text
     // enciper
     // print cipher text
+}
+ bool repeat_check(string key2)
+ {
+    char alphabatic[] = {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z}
+    for (int i = 0; i < 26; i++)
+    {
+        for ( int j = 0; j < 26; j++)
+        {
+            if (alphabatic[i] == key2[j])
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+    }
+ }
+bool alpha_check(string key2)
+{
+    for (int i = 0; i < 26; i++)
+    {
+        if (isalpha(key2[i]))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
