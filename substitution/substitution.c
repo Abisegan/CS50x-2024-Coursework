@@ -3,7 +3,7 @@
 # include <ctype.h>
 # include <string.h>
 bool alpha_check(string key2);
-bool repeat_check(string key2);
+bool repeat_check(string key2, char alphabatic[]);
 string to_lower(string key1);
 int main(int argc, string argv[])
 {
@@ -12,11 +12,11 @@ int main(int argc, string argv[])
     {
         printf("Usage: ./substitution KEY");
     }
+    char alphabatic[] = {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z};
     string key1 = argv[1];
     string key2 = to_lower(key1);
     bool alpha = alpha_check(key2);
-    bool repeat = repeat_check(key2);
-    char alphabatic[] = {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z};
+    bool repeat = repeat_check(key2, alphabatic[]);
     // validate key
 
     if (strlen(key1) != 26)
@@ -43,7 +43,6 @@ int main(int argc, string argv[])
  bool repeat_check(string key2, char alphabatic[])
  {
     bool n;
-    char alphabatic[] = {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z};
     for (int i = 0; i < 26; i++)
     {
         for ( int j = 0; j < 26; j++)
