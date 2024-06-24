@@ -80,7 +80,7 @@ string to_lower(string key1)
     string key[1];
     for (int x = 0; x < 25; x++)
     {
-        key[0][x] = tolower('key1[x]');
+        key[0][x] = tolower(key1[x]);
 
     }
     return key[0];
