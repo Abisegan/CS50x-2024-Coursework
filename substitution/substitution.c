@@ -3,7 +3,7 @@
 # include <ctype.h>
 bool alpha_check(string key2);
 bool repeat_check(string key2);
-
+string to_lower(key1);
 int main(int argc, string argv[])
 {
     // get key
@@ -12,7 +12,7 @@ int main(int argc, string argv[])
         printf("Usage: ./substitution KEY");
     }
     string key1 = argv[1];
-    string key2 = tolower(key1);
+    string key2 = to_lower(key1);
     // validate key
     bool alpha = alpa_check(key2);
     bool repeat = repeat_check(key2);
@@ -67,5 +67,13 @@ bool alpha_check(string key2)
         {
             return false;
         }
+    }
+}
+string to_lower(key1)
+{
+    for (int x = 0; x < 26; x++)
+    {
+        key2 = tolower(key1[x]);
+        return key2;
     }
 }
