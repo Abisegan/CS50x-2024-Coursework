@@ -59,11 +59,9 @@ int main(int argc, string argv[])
             {
                 n = false;
             }
-            else
-            {
-                n = true;
-            }
+
         }
+        
     }
     return n;
  }
