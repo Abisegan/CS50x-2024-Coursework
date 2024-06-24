@@ -79,10 +79,11 @@ bool alpha_check(string key2)
 }
 string to_lower(string key1)
 {
+    string key2;
     for (int x = 0; x < 26; x++)
     {
-        string key2;
         key2[x] = tolower(key1[x]);
-        return key2;
+        
     }
+     return key2;
 }
