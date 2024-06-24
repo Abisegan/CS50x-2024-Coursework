@@ -6,7 +6,7 @@
 int main(int argc,string argv[])
 {
 
-
+    key1 = argv[1];
     string key[1];
     for (int x = 0; x < 25; x++)
     {
