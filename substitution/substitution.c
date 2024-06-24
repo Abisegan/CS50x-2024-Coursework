@@ -63,7 +63,7 @@ int main(int argc, string argv[])
  }
 bool alpha_check(string key2)
 {
-    bool = n;
+    bool n;
     for (int i = 0; i < 26; i++)
     {
         if (isalpha(key2[i]))
