@@ -25,7 +25,7 @@ int main(int argc, string argv[])
     bool alpha = alpha_check(key2);
     bool repeat = repeat_check(key2);
     // validate key
-
+    printf("%s\n",key2);
     if (strlen(key1) != 26)
     {
          printf("key must contain 26 characters");
