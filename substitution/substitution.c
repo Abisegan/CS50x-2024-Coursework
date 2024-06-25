@@ -17,9 +17,9 @@ int main(int argc, string argv[])
     for (int x = 0; x < 26; x++)
     {
         key[0][x] = tolower(key1[x]);
+        printf("%c",key[0][x]);
 
     }
-    printf("%s\n",key[0]);
 
     string key2 = key[0];
     bool alpha = alpha_check(key2);
