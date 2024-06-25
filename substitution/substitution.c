@@ -52,7 +52,7 @@ int main(int argc, string argv[])
     bool n;
     for (int i = 0; ( i < 26) && (n == true); i++)
     {
-        for ( int j = 0;( j < 26) && (n == true); j++)
+        for ( int j = 0; ( j < 26); j++)
         {
             if (key2[i] == key2[j])
             {
