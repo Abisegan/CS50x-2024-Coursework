@@ -17,7 +17,6 @@ int main(int argc, string argv[])
     for (int x = 0; x < 26; x++)
     {
         key[0][x] = tolower(key1[x]);
-        printf("%i\n",x);
 
     }
     printf("%s\n",key[0]);
