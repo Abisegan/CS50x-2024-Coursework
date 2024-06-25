@@ -58,6 +58,7 @@ int main(int argc, string argv[])
             {
                 n = false;
                 i = 27;
+                j = 27;
             }
             else
             {
