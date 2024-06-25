@@ -58,8 +58,8 @@ int main(int argc, string argv[])
             if (key2[i] == key2[j])
             {
                 n = false;
-                i = 27;
-                j = 27;
+                i = 26;
+                j = 26;
             }
             else
             {
@@ -82,7 +82,7 @@ bool alpha_check(string key2)
         else
         {
             n = false;
-            i = 27;
+            i = 26;
         }
     }
     return n;
