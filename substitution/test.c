@@ -12,6 +12,7 @@ int main(int argc,string argv[])
         if (isalpha(key2[i]))
         {
             n = 0;
+            printf("%c",key2[i]);
         }
         else
         {
