@@ -57,8 +57,12 @@ int main(int argc, string argv[])
             if (key2[i] == key2[j])
             {
                 n = false;
+                i = 27;
             }
-
+            else
+            {
+                n = true;
+            }
         }
 
     }
