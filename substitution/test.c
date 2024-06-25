@@ -7,17 +7,16 @@ int main(int argc,string argv[])
 {
     string key2 = argv[1];
     int n = 0;
-    for (int i = 0; i < )
+    for (int i = 0; i < 26; i++)
     {
         if (isalpha(key2[i]))
         {
             n = 0;
-            z++;
-            i++;
         }
         else
         {
             n = 1;
+            i = 27;
         }
 
     }
