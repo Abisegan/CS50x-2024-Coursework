@@ -16,8 +16,8 @@ int main(int argc, string argv[])
     string key[1];
     for (int x = 0; x < 26; x++)
     {
-        key3 = key[0];
-        key3[x] = tolower(key1[x]);
+
+        key[0][x] = tolower(key1[x]);
 
 
     }
