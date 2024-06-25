@@ -7,9 +7,7 @@ int main(int argc,string argv[])
 {
     string key2 = argv[1];
     int n = 0;
-    int i = 0;
-    int z = 0;
-    while (z < 5)
+    for (int i = 0; i < )
     {
         if (isalpha(key2[i]))
         {
