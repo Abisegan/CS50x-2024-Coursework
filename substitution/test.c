@@ -5,14 +5,22 @@
 
 int main(int argc,string argv[])
 {
-
-    string key1 = argv[1];
-    string key[1];
-    for (int x = 0; x < 25; x++)
+    string key2 = argv[1];
+    int n = 0;
+    int i =  1;
+    while ( n < 5)
     {
-        key[0][x] = tolower(key1[x]);
+        if (isalpha(key2[i]))
+        {
+            n = 0;
+            i++;
+        }
+        else
+        {
+            n = 1;
+        }
 
     }
-    printf("%s",key[0]);
+    printf("%i",n);
 
 }

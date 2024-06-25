@@ -2,7 +2,6 @@
 # include <stdio.h>
 # include <ctype.h>
 # include <string.h>
-char alphabatic[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 bool alpha_check(string key2);
 bool repeat_check(string key2);
 
@@ -20,7 +19,7 @@ int main(int argc, string argv[])
         key[0][x] = tolower(key1[x]);
 
     }
-    printf("%s",key[0]);
+    printf("%s\n",key[0]);
 
     string key2 = key[0];
     bool alpha = alpha_check(key2);
@@ -32,7 +31,7 @@ int main(int argc, string argv[])
          printf("key must contain 26 characters");
         return 1;
     }
-    if (alpha != true)
+    if (alpha == false)
     {
         printf("key must only contain alphabatic characters");
         return 1;
@@ -51,24 +50,24 @@ int main(int argc, string argv[])
  bool repeat_check(string key2)
  {
     bool n;
-    for (int i = 0; i < 26; i++)
+    for (int i = 0; ( i < 26) && (n == true); i++)
     {
-        for ( int j = 0; j < 26; j++)
+        for ( int j = 0;( j < 26) && (n == true); j++)
         {
-            if (alphabatic[i] == key2[j])
+            if (key2[i] == key2[j])
             {
                 n = false;
             }
 
         }
-        
+
     }
     return n;
  }
 bool alpha_check(string key2)
 {
     bool n;
-    for (int i = 0; i < 26; i++)
+    for ( int i = 0; ((i < 26) && (n == true)); i++)
     {
         if (isalpha(key2[i]))
         {
