@@ -7,13 +7,15 @@ int main(int argc,string argv[])
 {
     string key2 = argv[1];
     int n = 0;
-    int i =  6;
-    while (i > 5)
+    int i = 0;
+    int z = 0;
+    while (z < 5)
     {
         if (isalpha(key2[i]))
         {
             n = 0;
-            i--;
+            z++;
+            i++;
         }
         else
         {
