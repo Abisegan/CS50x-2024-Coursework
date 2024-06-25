@@ -50,7 +50,7 @@ int main(int argc, string argv[])
  bool repeat_check(string key2)
  {
     bool n;
-    for (int i = 0; ( i < 26) && (n == true); i++)
+    for (int i = 0; ( i < 26); i++)
     {
         for ( int j = 0; ( j < 26); j++)
         {
