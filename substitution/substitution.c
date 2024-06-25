@@ -22,7 +22,7 @@ int main(int argc, string argv[])
 
     }
 
-    string key2 = key[0];
+    string key2 = key;
     bool alpha = alpha_check(key2);
     bool repeat = repeat_check(key2);
     // validate key
