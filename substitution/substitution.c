@@ -14,10 +14,10 @@ int main(int argc, string argv[])
 
     string key1 = argv[1];
     string key[1];
-    for (int x = 0; x < 26; x++)
+    for (int x = 0; x < 25; x++)
     {
         key[0][x] = tolower(key1[x]);
-        printf("%c\n",key[0][26]);
+
 
     }
 
