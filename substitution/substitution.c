@@ -36,7 +36,7 @@ int main(int argc, string argv[])
         printf("key must only contain alphabatic characters");
         return 1;
     }
-    if(repeat != true)
+    if(repeat == false)
     {
          printf("key must not contain repeated characters");
                 return 1;
