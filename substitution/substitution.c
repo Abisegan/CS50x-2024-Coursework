@@ -46,9 +46,9 @@ int main(int argc, string argv[])
     // get plain text
     string plaintext = get_string("plaintext: ");
     // enciper
-    const int len = strlen(plaintext);
+    int len = strlen(plaintext);
     char ciphertext[len];
-    for(int i = 0; i < len; i++)
+    for(int i = 0; i <= len; i++)
     {
         if (islower(plaintext[i]))
         {
@@ -64,7 +64,7 @@ int main(int argc, string argv[])
         }
     }
     // print cipher text
-    
+
     printf("ciphertext: %s\n",ciphertext);
 }
  bool repeat_check(string key2)
