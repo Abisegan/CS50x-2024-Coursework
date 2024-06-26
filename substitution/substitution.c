@@ -4,7 +4,7 @@
 # include <string.h>
 bool alpha_check(string key2);
 bool repeat_check(string key2);
-string cipher_text(string plaintext,string key2);
+
 
 
 
@@ -51,7 +51,7 @@ int main(int argc, string argv[])
     // get plain text
     string plaintext = get_string("plaintext: ");
     // enciper
-    string ciphertext
+    string ciphertext[1][26];
     for(int i = 0; i < 26; i++)
     {
         ciphertext[0][i] = key2[plaintext[i] - 'a'];
