@@ -54,7 +54,7 @@ int main(int argc, string argv[])
     string ciphertext[1][26];
     for(int i = 0; i < 26; i++)
     {
-        ciphertext[0][i] = key2[plaintext[i] - 'a'];
+        ciphertext[0][i] = key2[(plaintext[i] - 'a')];
     }
     // print cipher text
 }
