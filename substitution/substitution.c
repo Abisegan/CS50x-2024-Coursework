@@ -64,9 +64,9 @@ int main(int argc, string argv[])
     bool n;
     for (int i = 0;  i < 26; i++)
     {
-        for ( int j = 0;  j < 26; j++)
+        for ( int j = 0;  j < 25; j++)
         {
-            if (key2[i] == key2[j])
+            if (key2[i] == key2[j + 1])
             {
                 n = false;
                 i = 26;
