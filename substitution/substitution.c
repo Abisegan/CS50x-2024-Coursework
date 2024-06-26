@@ -9,7 +9,11 @@ bool repeat_check(string key2);
 int main(int argc, string argv[])
 {
     // get key
-    if ()
+    if (argc != 2)
+    {
+        printf("Usage: ");
+        return 1;
+    }
 
 
     string key1 = argv[1];
