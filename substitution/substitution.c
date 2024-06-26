@@ -51,12 +51,12 @@ int main(int argc, string argv[])
     // get plain text
     string plaintext = get_string("plaintext: ");
     // enciper
-    string ciphertext[1];
+    char ciphertext[strlen(plaintext)];
     for(int i = 0,len = strlen(plaintext); i < len; i++)
     {
         ciphertext[0][i] = key2[plaintext[i] - 'a'];
     }
-    printf("%s",ciphertext[0]);
+    printf("%s",ciphertext);
     // print cipher text
 }
  bool repeat_check(string key2)
