@@ -51,7 +51,11 @@ int main(int argc, string argv[])
     // get plain text
     string plaintext = get_string("plaintext: ");
     // enciper
-    string ciphertext = cipher_text(plaintext,key2);
+    string ciphertext
+    for(int i = 0; i < 26; i++)
+    {
+        ciphertext[0][i] = key2[plaintext[i] - 'a'];
+    }
     // print cipher text
 }
  bool repeat_check(string key2)
@@ -93,15 +97,4 @@ bool alpha_check(string key2)
     }
     return n;
 }
-string cipher_text(string plaintext,string key2)
-{
-    string ciphertext[1];
 
-    for(int i = 0; i < 26; i++)
-    {
-        int a = plaintext[i];
-        ciphertext[0][i] = key2[a - 'a'];
-    }
-    return ciphertext[0];
-
-}
