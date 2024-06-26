@@ -62,9 +62,9 @@ int main(int argc, string argv[])
  bool repeat_check(string key2)
  {
     bool n;
-    for (int i = 0;  i < 25; i++)
+    for (int i = 0;  i < 26; i++)
     {
-        for ( int j = 0;  j < 25; j++)
+        for ( int j = 0;  j < 26; j++)
         {
             if (key2[i] == key2[j])
             {
