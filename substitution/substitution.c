@@ -23,10 +23,10 @@ int main(int argc, string argv[])
 
 
     }
-
+     // validate key
     string key2 = key;
     bool alpha = alpha_check(key2);
-    bool repeat = repeat_check(key2)
+    bool repeat = repeat_check(key2);
 
     if (strlen(key1) != 26)
     {
@@ -62,8 +62,8 @@ int main(int argc, string argv[])
             ciphertext[i] = plaintext[i];
         }
     }
-    printf("%s\n",ciphertext);
     // print cipher text
+    printf("ciphertext: %s\n",ciphertext);
 }
  bool repeat_check(string key2)
  {
