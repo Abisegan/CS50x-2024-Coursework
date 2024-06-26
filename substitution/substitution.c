@@ -99,7 +99,8 @@ string cipher_text(string plaintext,string key2)
 
     for(int i = 0; i < 26; i++)
     {
-        ciphertext[0][i] = key2[plaintext[i] - 'a'];
+        int a = plaintext[i];
+        ciphertext[0][i] = key2[a - 'a'];
     }
     return ciphertext[0];
 
