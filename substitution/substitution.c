@@ -19,16 +19,16 @@ int main(int argc, string argv[])
 
 
     string key1 = argv[1];
-    string key[1];
+    char key[26];
     for (int x = 0; x < 26; x++)
     {
 
-        key[0][x] = tolower(key1[x]);
+        key[x] = tolower(key1[x]);
 
 
     }
 
-    string key2 = key[0];
+    string key2 = key;
     bool alpha = alpha_check(key2);
     bool repeat = repeat_check(key2);
     // validate key
@@ -56,7 +56,7 @@ int main(int argc, string argv[])
     {
         ciphertext[i] = key2[plaintext[i] - 'a'];
     }
-    printf("%s",ciphertext);
+    printf("%s\n",ciphertext);
     // print cipher text
 }
  bool repeat_check(string key2)
