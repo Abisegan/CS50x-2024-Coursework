@@ -15,6 +15,6 @@ int main(int argc,string argv[])
     }
     printf("%s",ciphertext[0]);
     // print cipher text
-    printf("%i",n);
+
 
 }
