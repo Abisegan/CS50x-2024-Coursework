@@ -52,7 +52,7 @@ int main(int argc, string argv[])
     string plaintext = get_string("plaintext: ");
     // enciper
     string ciphertext[1];
-    for(int i = 0,len = strlen(plaintext); i < len; i++)
+    for(int i = 0,len = strlen(plaintext); i < len-1; i++)
     {
         ciphertext[0][i] = key2[(plaintext[i] - 'a')];
     }
