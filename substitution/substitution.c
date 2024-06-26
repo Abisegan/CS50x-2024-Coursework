@@ -9,7 +9,7 @@ bool repeat_check(string key2);
 int main(int argc, string argv[])
 {
     // get key
-
+    if ()
 
 
     string key1 = argv[1];
