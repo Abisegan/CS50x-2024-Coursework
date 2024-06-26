@@ -51,7 +51,7 @@ int main(int argc, string argv[])
     // get plain text
     string plaintext = get_string("plaintext: ");
     // enciper
-    ciphertext = cipher_text(plaintext,key2);
+    string ciphertext = cipher_text(plaintext,key2);
     // print cipher text
 }
  bool repeat_check(string key2)
