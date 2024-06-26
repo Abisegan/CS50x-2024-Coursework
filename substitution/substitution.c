@@ -60,7 +60,7 @@ int main(int argc, string argv[])
         }
         else if (isupper(plaintext[i]))
         {
-            ciphertext[i] = key2[plaintext[i] - 'A'];
+            ciphertext[i] = toupper(key2[plaintext[i] - 'A']);
         }
         else
         {
