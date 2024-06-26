@@ -46,9 +46,8 @@ int main(int argc, string argv[])
          printf("key must not contain repeated characters");
                 return 1;
     }
-
-
     // get plain text
+    
     // enciper
     // print cipher text
 }
