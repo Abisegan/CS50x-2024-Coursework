@@ -47,7 +47,7 @@ int main(int argc, string argv[])
     // get plain text
     string plaintext = get_string("plaintext: ");
     // enciper
-    int len = strlen(plaintext);
+    const int len = strlen(plaintext);
     char ciphertext[len];
     for(int i = 0; i < len; i++)
     {
