@@ -95,7 +95,7 @@ bool alpha_check(string key2)
 }
 string cipher_text(string plaintext,string key2)
 {
-    string ciphertext[1][26];
+    string ciphertext[1];
 
     for(int i = 0; i < 26; i++)
     {
