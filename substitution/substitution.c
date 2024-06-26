@@ -56,6 +56,7 @@ int main(int argc, string argv[])
     {
         ciphertext[0][i] = key2[(plaintext[i] - 'a')];
     }
+    printf("%s",ciphertext[0]);
     // print cipher text
 }
  bool repeat_check(string key2)
