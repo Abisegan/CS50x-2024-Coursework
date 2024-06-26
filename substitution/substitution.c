@@ -32,7 +32,7 @@ int main(int argc, string argv[])
     bool alpha = alpha_check(key2);
     bool repeat = repeat_check(key2);
     // validate key
-    printf("%s\n",key2);
+   
     if (strlen(key1) != 26)
     {
          printf("key must contain 26 characters");
@@ -51,7 +51,7 @@ int main(int argc, string argv[])
     // get plain text
     string plaintext = get_string("plaintext: ");
     // enciper
-    string ciphertext[1][26];
+    string ciphertext[1];
     for(int i = 0; i < 26; i++)
     {
         ciphertext[0][i] = key2[(plaintext[i] - 'a')];
