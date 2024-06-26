@@ -5,7 +5,7 @@
 bool alpha_check(string key2);
 bool repeat_check(string key2);
 string cipher_text(string plaintext);
-char array
+char array[26] = 
 
 
 int main(int argc, string argv[])
