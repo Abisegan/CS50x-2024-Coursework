@@ -54,8 +54,10 @@ int main(int argc, string argv[])
     char ciphertext[strlen(plaintext)];
     for(int i = 0,len = strlen(plaintext); i < len; i++)
     {
-        if (islower(plaintext))
-        ciphertext[i] = key2[plaintext[i] - 'a'];
+        if (islower(plaintext[i]))
+        {
+            ciphertext[i] = key2[plaintext[i] - 'a'];
+        }
     }
     printf("%s\n",ciphertext);
     // print cipher text
