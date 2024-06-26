@@ -54,7 +54,7 @@ int main(int argc, string argv[])
     string ciphertext[1];
     for(int i = 0,len = strlen(plaintext); i < len; i++)
     {
-        ciphertext[0][i] = key2[(plaintext[i] - 'a')];
+        ciphertext[0][i] = key2[plaintext[i] - 'a'];
     }
     printf("%s",ciphertext[0]);
     // print cipher text
