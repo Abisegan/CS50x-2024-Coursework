@@ -4,10 +4,6 @@
 # include <string.h>
 bool alpha_check(string key2);
 bool repeat_check(string key2);
-
-
-
-
 int main(int argc, string argv[])
 {
     // get key
@@ -30,8 +26,7 @@ int main(int argc, string argv[])
 
     string key2 = key;
     bool alpha = alpha_check(key2);
-    bool repeat = repeat_check(key2);
-    // validate key
+    bool repeat = repeat_check(key2)
 
     if (strlen(key1) != 26)
     {
