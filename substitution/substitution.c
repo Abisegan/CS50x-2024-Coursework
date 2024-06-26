@@ -47,10 +47,10 @@ int main(int argc, string argv[])
     // get plain text
     string plaintext = get_string("plaintext: ");
     // enciper
-    char ciphertext[strlen(plaintext)];
-    int c = strlen(plaintext);
-    printf("%i\n",c);
-    for(int i = 0,len = strlen(plaintext); i < len; i++)
+    int len = strlen(plaintext);
+    char ciphertext[len];
+    printf("%i\n",len);
+    for(int i = 0; i < len; i++)
     {
         if (islower(plaintext[i]))
         {
