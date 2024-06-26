@@ -49,7 +49,6 @@ int main(int argc, string argv[])
     // enciper
     int len = strlen(plaintext);
     char ciphertext[len];
-    printf("%i\n",len);
     for(int i = 0; i < len; i++)
     {
         if (islower(plaintext[i]))
