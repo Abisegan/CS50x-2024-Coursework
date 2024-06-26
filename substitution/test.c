@@ -13,7 +13,7 @@ int main(int argc,string argv[])
     {
         ciphertext[i] = key2[plaintext[i] - 'a'];
     }
-    printf("%c",ciphertext);
+    printf("%s",ciphertext);
     // print cipher text
 
 
