@@ -9,7 +9,7 @@ int main(int argc, string argv[])
     // get key
     if (argc != 2)
     {
-        printf("Usage: ");
+        printf("Usage: ./substitution key\n");
         return 1;
     }
 
@@ -30,17 +30,17 @@ int main(int argc, string argv[])
 
     if (strlen(key1) != 26)
     {
-         printf("key must contain 26 characters");
+         printf("key must contain 26 characters.\n");
         return 1;
     }
     if (alpha == false)
     {
-        printf("key must only contain alphabatic characters");
+        printf("key must only contain alphabatic characters.\n");
         return 1;
     }
     if(repeat == false)
     {
-        printf("key must not contain repeated characters");
+        printf("key must not contain repeated characters.\n");
         return 1;
     }
     // get plain text
