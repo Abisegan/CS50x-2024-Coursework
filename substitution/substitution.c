@@ -64,6 +64,7 @@ int main(int argc, string argv[])
         }
     }
     // print cipher text
+    
     printf("ciphertext: %s\n",ciphertext);
 }
  bool repeat_check(string key2)
