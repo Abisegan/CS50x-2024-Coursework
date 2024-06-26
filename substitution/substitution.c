@@ -45,8 +45,8 @@ int main(int argc, string argv[])
     }
     if(repeat == false)
     {
-         printf("key must not contain repeated characters");
-                return 1;
+        printf("key must not contain repeated characters");
+        return 1;
     }
     // get plain text
     string plaintext = get_string("plaintext: ");
