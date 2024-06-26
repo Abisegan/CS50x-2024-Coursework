@@ -58,6 +58,14 @@ int main(int argc, string argv[])
         {
             ciphertext[i] = key2[plaintext[i] - 'a'];
         }
+        else if (isupper(plaintext[i]))
+        {
+            ciphertext[i] = key2[plaintext[i] - 'A'];
+        }
+        else
+        {
+            ciphertext[i] = plaintext[i];
+        }
     }
     printf("%s\n",ciphertext);
     // print cipher text
