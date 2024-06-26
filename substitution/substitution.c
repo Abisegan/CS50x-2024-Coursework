@@ -1,6 +1,6 @@
 # include <cs50.h>
-# include <stdio.h>
 # include <ctype.h>
+# include <stdio.h>
 # include <string.h>
 bool alpha_check(string key2);
 bool repeat_check(string key2);
