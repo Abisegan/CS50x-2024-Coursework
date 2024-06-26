@@ -23,7 +23,6 @@ int main(int argc, string argv[])
 
 
     }
-    printf("%s\n",key);
      // validate key
     string key2 = key;
     bool alpha = alpha_check(key2);
