@@ -70,7 +70,7 @@ int main(int argc, string argv[])
             {
                 n = false;
                 i = 26;
-                j = 26;
+                j = 25;
             }
             else
             {
