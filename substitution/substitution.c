@@ -4,6 +4,7 @@
 # include <string.h>
 bool alpha_check(string key2);
 bool repeat_check(string key2);
+string cipher_text(string plaintext);
 
 
 int main(int argc, string argv[])
@@ -47,8 +48,9 @@ int main(int argc, string argv[])
                 return 1;
     }
     // get plain text
-    
+    string plaintext = get_string("plaintext: ");
     // enciper
+    ciphertext = cipher_text(plaintext);
     // print cipher text
 }
  bool repeat_check(string key2)
@@ -90,4 +92,7 @@ bool alpha_check(string key2)
     }
     return n;
 }
+string cipher_text(string plaintext)
+{
 
+}
