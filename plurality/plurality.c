@@ -95,7 +95,10 @@ void print_winner(void)
     }
     for (int j = 0; j < MAX; j++)
     {
-        if (Mvotes = candidates[i])
+        if (Mvotes = candidates[i].votes)
+        {
+            printf(")
+        }
     }
     return;
 }
