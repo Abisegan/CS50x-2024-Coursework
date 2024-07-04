@@ -1,6 +1,6 @@
 sort1 uses: TODO
 
-How do you know?: TODO
+How do you know?: Takes 6.519s to sort reversed list;
 
 sort2 uses: TODO
 
