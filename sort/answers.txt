@@ -4,8 +4,8 @@ How do you know?: Takes 6.519s to sort reversed list; Takes 1.351s to sort sorte
 
 sort2 uses: TODO
 
-How do you know?: 
+How do you know?: Takes 1.804s to sort reversed list; Takes 1.874s to sort sorted list
 
 sort3 uses: TODO
 
-How do you know?: TODO
+How do you know?: Takes 2.993s to sort reversed list; Takes s to sort sorted list
