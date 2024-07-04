@@ -68,7 +68,7 @@ bool vote(string name)
     // TODO
     for (int i = 0; i < MAX; i++)
     {
-        if 
+        if (candi)
     }
     return false;
 }
