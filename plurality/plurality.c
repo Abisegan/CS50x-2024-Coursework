@@ -95,7 +95,7 @@ void print_winner(void)
     }
     for (int j = 0; j < MAX; j++)
     {
-        if ()
+        if (Mvotes = candidates[i])
     }
     return;
 }
