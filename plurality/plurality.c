@@ -97,7 +97,7 @@ void print_winner(void)
     {
         if (Mvotes = candidates[i].votes)
         {
-            printf(")
+            printf("%s\n",candidates[i].name);
         }
     }
     return;
