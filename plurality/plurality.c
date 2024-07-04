@@ -68,7 +68,14 @@ bool vote(string name)
     // TODO
     for (int i = 0; i < MAX; i++)
     {
-        if (candidates[i])
+        if (strcmp(candidates[i], name) == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     return false;
 }
