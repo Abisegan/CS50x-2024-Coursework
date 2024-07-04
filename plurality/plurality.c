@@ -92,8 +92,7 @@ void print_winner(void)
         {
             Mvotes = candidates[i].votes;
         }
-
-
     }
+    for (int j = 0;)
     return;
 }
