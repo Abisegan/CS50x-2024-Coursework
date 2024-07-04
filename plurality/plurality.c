@@ -93,6 +93,9 @@ void print_winner(void)
             Mvotes = candidates[i].votes;
         }
     }
-    for (int j = 0;)
+    for (int j = 0; j < MAX; j++)
+    {
+        
+    }
     return;
 }
