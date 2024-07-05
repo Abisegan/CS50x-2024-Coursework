@@ -83,7 +83,7 @@ void print_winner(void)
 {
     // TODO
     int Mvotes = 0;
-    for (int i = 0; i < MAX; i++)
+    for (int i = 0; i <= MAX; i++)
     {
         if (Mvotes < candidates[i].votes)
         {
