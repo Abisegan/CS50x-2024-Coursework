@@ -66,7 +66,8 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    for (int i = 0; i <MAX-5; i++)
+
+    for ( int i = 0; i <MAX-5; i++)
     {
         if (strcmp(candidates[i].name, name) == 0 )
         {
