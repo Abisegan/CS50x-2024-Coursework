@@ -76,10 +76,6 @@ bool vote(string name)
         }
 
     }
-    if (strcmp(candidates[i].name, name) != 0 )
-    {
-        return false;
-    
     return false;
 }
 
