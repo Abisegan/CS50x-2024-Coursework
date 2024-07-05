@@ -67,7 +67,7 @@ bool vote(string name)
 {
     // TODO
     int i = 0;
-    for ( i = 0; i <MAX-5; i++)
+    for ( i = 0; i < MAX; i++)
     {
         if (strcmp(candidates[i].name, name) == 0 )
         {
