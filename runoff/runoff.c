@@ -142,9 +142,11 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
-    for(int i == 0; i < )
-    if (candidates[])
-    return;
+    for(int i == 0; i < candidate_count; i++)
+    {
+        if (candidates[])
+        return;
+    }
 }
 
 // Print the winner of the election, if there is one
