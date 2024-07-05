@@ -66,7 +66,7 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    for ( int i = 0; i < ; i++)
+    for ( int i = 0; i < candidate_count; i++)
     {
         if (strcmp(candidates[i].name, name) == 0 )
         {
@@ -83,14 +83,14 @@ void print_winner(void)
 {
     // TODO
     int Mvotes = 0;
-    for (int i = 0; i < MAX; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (Mvotes < candidates[i].votes)
         {
             Mvotes = candidates[i].votes;
         }
     }
-    for (int j = 0; j < MAX; j++)
+    for (int j = 0; j < candidate_count; j++)
     {
         if (Mvotes == candidates[j].votes)
         {
