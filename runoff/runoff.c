@@ -200,9 +200,9 @@ bool is_tie(int min)
     {
         if (candidates[i].eliminated == false)
         {
-            if (candidates[i].votes == min)
+            if (candidates[i].votes != min)
             {
-                i++;
+                
             }
             else
             {
