@@ -163,7 +163,7 @@ bool print_winner(void)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].vote >= voter_count / 2)
+        if (candidates[i].votes >= voter_count / 2)
         {
             printf("%s\n", candidates[i].name);
             return true;
@@ -179,9 +179,9 @@ int find_min(void)
     int min = candidate_count;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].eliminated == false && candidates[i].vote < min)
+        if (candidates[i].eliminated == false && candidates[i].votes < min)
         {
-            min = candidates[i].vote;
+            min = candidates[i].votes;
         }
         return min;
     }
@@ -194,7 +194,7 @@ bool is_tie(int min)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].eliminated == false && candidates[i].vote == min)
+        if (candidates[i].eliminated == false && candidates[i].votes == min)
         {
 
         }
