@@ -146,7 +146,7 @@ void tabulate(void)
     {
         if (candidates[i].eliminated == true)
         {
-           candidates[]
+           candidates[ preferences[voter][1]]
         }
         return;
     }
