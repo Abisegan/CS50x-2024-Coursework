@@ -146,7 +146,7 @@ void tabulate(void)
     {
         if (candidates[i].eliminated == true)
         {
-
+            
         }
         return;
     }
