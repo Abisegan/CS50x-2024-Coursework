@@ -176,7 +176,10 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
-    for (int i = 0; i < )
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].)
+    }
     return 0;
 }
 
