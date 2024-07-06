@@ -21,7 +21,7 @@ candidate candidates[MAX_CANDIDATES];
 
 // Numbers of voters and candidates
 int voter_count;
-int candidate_count;
+int  candidate_count;
 
 // Function prototypes
 bool vote(int voter, int rank, string name);
@@ -144,16 +144,14 @@ void tabulate(void)
     // TODO
     for(int i == 0; i < voter_count; i++)
     {
-        for(int j == 0; i < ; i++)
+        for(int j == 0; j <  candidate_count; j++)
         {
-            if (candidates[preferences[i][0]].eliminated == true)
+            if (candidates[preferences[i][j]].eliminated == false)
             {
-                candidates[preferences[i][1]].votes++;
+                candidates[preferences[i][j]].votes++;
+                break;
             }
-            else
-            {
-                candidates[preferences[i][0]].votes++;
-            }
+
             return;
         }
     }
@@ -163,6 +161,14 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].vote >= voter_count / 2)
+        {
+            printf("%s\n", candidates[i].name);
+            return true;
+        }
+    }
     return false;
 }
 
@@ -170,6 +176,7 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
+    for (int i = 0; i < )
     return 0;
 }
 
