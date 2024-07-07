@@ -62,7 +62,6 @@ int main(int argc, string argv[])
 }
 bool repeat_check(string key2)
 {
-    bool n;
     for (int i = 0; i < 26; i++)
     {
         for (int j = i + 1; j < 26; j++)
@@ -71,13 +70,9 @@ bool repeat_check(string key2)
             {
                 return false;
             }
-            else
-            {
-                r
-            }
         }
     }
-    return n;
+    return true;
 }
 bool alpha_check(string key2)
 {
