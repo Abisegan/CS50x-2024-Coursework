@@ -184,9 +184,7 @@ int find_min(void)
             {
                 min = candidates[i].votes;
             }
-
         }
-
     }
     return min;
 }
@@ -222,7 +220,6 @@ void eliminate(int min)
         if (candidates[i].votes == min)
         {
             candidates[i].eliminated = true;
-
         }
     }
     return;
