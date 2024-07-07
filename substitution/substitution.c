@@ -69,8 +69,8 @@ bool repeat_check(string key2)
         {
             if (key2[i] == key2[j])
             {
-                n = false;
-                i = 26;
+                return false;
+            
                 j = 26;
             }
             else
