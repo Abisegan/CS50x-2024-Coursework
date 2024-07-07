@@ -21,7 +21,7 @@ candidate candidates[MAX_CANDIDATES];
 
 // Numbers of voters and candidates
 int voter_count;
-int  candidate_count;
+int candidate_count;
 
 // Function prototypes
 bool vote(int voter, int rank, string name);
@@ -142,9 +142,9 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
-    for(int i = 0; i < voter_count; i++)
+    for (int i = 0; i < voter_count; i++)
     {
-        for(int j = 0; j <  candidate_count; j++)
+        for (int j = 0; j < candidate_count; j++)
         {
             if (candidates[preferences[i][j]].eliminated == false)
             {
@@ -194,7 +194,7 @@ bool is_tie(int min)
 {
     // TODO
     int i = 0;
-    while ( i < candidate_count)
+    while (i < candidate_count)
     {
         if (candidates[i].eliminated == false)
         {
@@ -219,7 +219,7 @@ bool is_tie(int min)
 void eliminate(int min)
 {
     // TODO
-    for ( int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes == min)
         {
