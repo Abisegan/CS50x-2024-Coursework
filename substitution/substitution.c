@@ -76,18 +76,12 @@ bool repeat_check(string key2)
 }
 bool alpha_check(string key2)
 {
-    bool n;
     for (int i = 0; i < 26; i++)
     {
-        if (isalpha(key2[i]))
+        if (!isalpha(key2[i]))
         {
-            n = true;
-        }
-        else
-        {
-            n = false;
-            i = 26;
+            return false;
         }
     }
-    return n;
+    return true;
 }
