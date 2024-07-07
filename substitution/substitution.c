@@ -62,7 +62,7 @@ int main(int argc, string argv[])
 }
 bool repeat_check(string key2)
 {
-    for (int i = 0; i < 26; i++)
+    for (int i = 0; i < 25; i++)
     {
         for (int j = i + 1; j < 26; j++)
         {
