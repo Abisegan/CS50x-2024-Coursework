@@ -70,12 +70,10 @@ bool repeat_check(string key2)
             if (key2[i] == key2[j])
             {
                 return false;
-            
-                j = 26;
             }
             else
             {
-                n = true;
+                r
             }
         }
     }
