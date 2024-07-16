@@ -101,15 +101,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int l = 0; l < width; l++)
         {
-            if (k = 0)
+            if (k == 0)
             {
-                if (l = 0)
+                if (l == 0)
                 {
                     image[k][l].rgbtRed = round((copy[k + 1][l].rgbtRed + copy[k][l + 1].rgbtRed + copy[k + 1][l + 1].rgbtRed)/3.0);
                     image[k][l].rgbtGreen = round((copy[k + 1][l].rgbtGreen + copy[k][l + 1].rgbtGreen + copy[k + 1][l + 1].rgbtGreen)/3.0);
                     image[k][l].rgbtBlue = round((copy[k + 1][l].rgbtBlue + copy[k][l + 1].rgbtBlue + copy[k + 1][l + 1].rgbtBlue)/3.0);
                 }
-                else if (l = width - 1)
+                else if (l == width - 1)
                 {
                     image[k][l].rgbtRed = round((copy[k + 1][l].rgbtRed + copy[k][l - 1].rgbtRed + copy[k + 1][l - 1].rgbtRed)/3.0);
                     image[k][l].rgbtGreen = round((copy[k + 1][l].rgbtGreen + copy[k][l - 1].rgbtGreen + copy[k + 1][l - 1].rgbtGreen)/3.0);
@@ -122,15 +122,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     image[k][l].rgbtBlue = round((copy[k][l - 1].rgbtBlue + copy[k][l + 1].rgbtBlue + copy[k + 1][l - 1].rgbtBlue + copy[k + 1][l].rgbtBlue + copy[k + 1][l + 1].rgbtBlue)/5.0);
                 }
             }
-            else if (k = height - 1)
+            else if (k == height - 1)
             {
-                if (l = 0)
+                if (l == 0)
                 {
                    image[k][l].rgbtRed = round((copy[k - 1][l].rgbtRed + copy[k - 1][l + 1].rgbtRed + copy[k][l + 1].rgbtRed)/3.0);
                     image[k][l].rgbtGreen = round((copy[k - 1][l].rgbtGreen + copy[k - 1][l + 1].rgbtGreen + copy[k][l + 1].rgbtGreen)/3.0);
                     image[k][l].rgbtBlue = round((copy[k - 1][l].rgbtBlue + copy[k - 1][l + 1].rgbtBlue + copy[k][l + 1].rgbtBlue)/3.0);
                 }
-                else if (l = width - 1)
+                else if (l == width - 1)
                 {
                     image[k][l].rgbtRed = round((copy[k - 1][l].rgbtRed + copy[k - 1][l - 1].rgbtRed + copy[k][l - 1].rgbtRed)/3.0);
                     image[k][l].rgbtGreen = round((copy[k - 1][l].rgbtGreen + copy[k - 1][l - 1].rgbtGreen + copy[k][l - 1].rgbtGreen)/3.0);
@@ -145,13 +145,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
             else
             {
-                if (l = 0)
+                if (l == 0)
                 {
                     image[k][l].rgbtRed = round((copy[k - 1][l].rgbtRed + copy[k + 1][l].rgbtRed + copy[k - 1][l + 1].rgbtRed + copy[k][l + 1].rgbtRed + copy[k + 1][l + 1].rgbtRed)/5.0);
                     image[k][l].rgbtGreen = round((copy[k - 1][l].rgbtGreen + copy[k + 1][l].rgbtGreen + copy[k - 1][l + 1].rgbtGreen + copy[k][l + 1].rgbtGreen + copy[k + 1][l + 1].rgbtGreen)/5.0);
                     image[k][l].rgbtBlue = round((copy[k - 1][l].rgbtBlue + copy[k + 1][l].rgbtBlue + copy[k - 1][l + 1].rgbtBlue + copy[k][l + 1].rgbtBlue + copy[k + 1][l + 1].rgbtBlue)/5.0);
                 }
-                else if (l = width - 1)
+                else if (l == width - 1)
                 {
                     image[k][l].rgbtRed = round((copy[k -1][l].rgbtRed + copy[k + 1][l].rgbtRed + copy[k - 1][l - 1].rgbtRed + copy[k][l - 1].rgbtRed + copy[k + 1][l - 1].rgbtRed)/5.0);
                     image[k][l].rgbtGreen = round((copy[k - 1][l].rgbtGreen + copy[k + 1][l].rgbtGreen + copy[k - 1][l - 1].rgbtGreen + copy[k][l - 1].rgbtGreen + copy[k + 1][l - 1].rgbtGreen)/5.0);
