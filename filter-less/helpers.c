@@ -100,7 +100,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if (m > 0 && n > 0 && m <= width && n <= height)
                     {
-                        
+                        image[k][l].rgbtRed = c
                     }
                 }
             }
