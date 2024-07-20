@@ -22,8 +22,8 @@ int main(int argc, char *argv[])
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && 0xe0 < buffer[3] > 0xef)
         {
-            FILE * fopen()
-            fwrite(buffer, 1, 512, card);
+            FILE *card1 = fopen(001)
+            fwrite(buffer, 1, 512, card1);
         }
     }
     // Create jpg from the data
