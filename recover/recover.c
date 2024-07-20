@@ -15,6 +15,8 @@ int main(int argc, char *argv[])
     {
         return 1;
     }
+    // Create a buffer for a block of data
+    uint8_t buffer[512];
     // While there's still data left to read from the memory card
     // Create jpg from the data
 
