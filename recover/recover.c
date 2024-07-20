@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
     }
     // Open the memory card
     FILE *card = fopen(argv[1], "r");
+    if (card)
     // While there's still data left to read from the memory card
     // Create jpg from the data
 
