@@ -20,7 +20,10 @@ int main(int argc, char *argv[])
     // While there's still data left to read from the memory card
     while (fread(buffer, 1, 512, card) == 512)
     {
-        
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && 0xe0 < buffer[3] >0xef)
+        {
+            fwrite(buffer, 1, 512, card)
+        }
     }
     // Create jpg from the data
 
