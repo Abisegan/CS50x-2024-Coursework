@@ -26,7 +26,12 @@ int main(int argc, char *argv[])
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             sprintf(name, "%03i.jpg", i);
-            fwrite(buffer, 1, 512, img);
+            
+            i++;
+        }
+        else
+        {
+
         }
     }
     // Create jpg from the data
