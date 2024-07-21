@@ -30,16 +30,16 @@ int main(int argc, char *argv[])
         {
             if (counter == 0)
             {
-                img = fopen(name, "w");
                 sprintf(name, "%03i.jpg", counter);
+                img = fopen(name, "w");
                 fwrite(buffer, 1, 512, img);
                 counter++;
             }
             else
             {
                 fclose(img);
-                img = fopen(name, "w");
                 sprintf(name, "%03i.jpg", counter);
+                img = fopen(name, "w");
                 fwrite(buffer, 1, 512, img);
                 counter++;
             }
