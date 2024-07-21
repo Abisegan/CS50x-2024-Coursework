@@ -4,16 +4,16 @@
 int main(int argc, char *argv[])
 {
     // Accept a single command-line argument
-    if (argc !== 2)
+    if (argc != 2)
     {
         printf("usage: ./recover FILE\n");
-        retuen 1;
+        return 1;
     }
     // Open the memory card
     FILE *card = fopen(argv[1], "r");
     if (card == NULL)
     {
-        printf("Could not open file.\n")
+        printf("Could not open file.\n");
         return 1;
     }
     // Create a buffer for a block of data
