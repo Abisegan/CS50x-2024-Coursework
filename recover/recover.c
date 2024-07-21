@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     // Create a buffer for a block of data
     uint8_t buffer[512];
     // While there's still data left to read from the memory card
-    char *name = malloc(8 * sizeof(char));
+    char name[8];
     int counter = 0;
     FILE *img = NULL;
     while (fread(buffer, 1, 512, card) == 512)
@@ -52,7 +52,6 @@ int main(int argc, char *argv[])
             }
         }
     }
-    free(name);
     fclose(card);
 
 
