@@ -35,6 +35,8 @@ int main(int argc, char *argv[])
         }
     }
     free(name);
+    fclose(card);
+    
     // Create jpg from the data
 
 }
