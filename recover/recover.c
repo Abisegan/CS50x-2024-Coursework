@@ -19,25 +19,37 @@ int main(int argc, char *argv[])
     uint8_t buffer[512];
     // While there's still data left to read from the memory card
     char *name = malloc(8 * sizeof(char));
-    int i = 0;
-    FILE *img = fopen(name, "w");
+    int counter = 0;
     while (fread(buffer, 1, 512, card) == 512)
     {
+         // Create jpg from the data
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            sprintf(name, "%03i.jpg", i);
-            fwrite(buffer, 1, 512, img);
-            i++;
+            if (counter == 0)
+            {
+                FILE *img = fopen(name, "w");
+                sprintf(name, "%03i.jpg", i);
+                fwrite(buffer, 1, 512, img);
+                counter++;
+            }
+            else
+            {
+                fclose(img);
+                FILE *img = fopen(name, "w");
+                sprintf(name, "%03i.jpg", i);
+                fwrite(buffer, 1, 512, img);
+                counter++;
+            }
         }
         else
         {
             fwrite(buffer, 1, 512, img);
         }
-        
+
     }
     free(name);
     fclose(card);
 
-    // Create jpg from the data
+
 
 }
