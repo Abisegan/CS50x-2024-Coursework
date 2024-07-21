@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
         }
     }
     fclose(card);
-
+    fclose(img);
 
 
 }
