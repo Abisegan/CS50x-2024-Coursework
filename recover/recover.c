@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -21,6 +22,7 @@ int main(int argc, char *argv[])
     // While there's still data left to read from the memory card
     char *name = malloc(8 * sizeof(char));
     int counter = 0;
+    FILE *img = NULL;
     while (fread(buffer, 1, 512, card) == 512)
     {
          // Create jpg from the data
@@ -28,16 +30,16 @@ int main(int argc, char *argv[])
         {
             if (counter == 0)
             {
-                FILE *img = fopen(name, "w");
-                sprintf(name, "%03i.jpg", i);
+                img = fopen(name, "w");
+                sprintf(name, "%03i.jpg", counter);
                 fwrite(buffer, 1, 512, img);
                 counter++;
             }
             else
             {
                 fclose(img);
-                FILE *img = fopen(name, "w");
-                sprintf(name, "%03i.jpg", i);
+                img = fopen(name, "w");
+                sprintf(name, "%03i.jpg", counter);
                 fwrite(buffer, 1, 512, img);
                 counter++;
             }
