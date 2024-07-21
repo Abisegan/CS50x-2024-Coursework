@@ -32,6 +32,11 @@ int main(int argc, char *argv[])
             {
                 sprintf(name, "%03i.jpg", counter);
                 img = fopen(name, "w");
+                if (img == NULL)
+                {
+                    printf("Could not open file.\n");
+                    return 1;
+                }
                 fwrite(buffer, 1, 512, img);
                 counter++;
             }
@@ -40,6 +45,11 @@ int main(int argc, char *argv[])
                 fclose(img);
                 sprintf(name, "%03i.jpg", counter);
                 img = fopen(name, "w");
+                if (img == NULL)
+                {
+                    printf("Could not open file.\n");
+                    return 1;
+                }
                 fwrite(buffer, 1, 512, img);
                 counter++;
             }
