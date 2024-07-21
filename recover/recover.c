@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
         }
         else
         {
-            if(counter != 0)
+            if (counter != 0)
             {
                 fwrite(buffer, 1, 512, img);
             }
@@ -64,8 +64,5 @@ int main(int argc, char *argv[])
     }
     fclose(card);
     fclose(img);
-
-
-
 }
 
