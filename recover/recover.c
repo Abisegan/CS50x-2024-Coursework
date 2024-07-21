@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     // While there's still data left to read from the memory card
     char *name = malloc(8 * sizeof(char));
     int i = 0;
-    FILE *img = fopen();
+    FILE *img = fopen(name, "w");
     while (fread(buffer, 1, 512, card) == 512)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
