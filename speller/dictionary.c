@@ -39,6 +39,10 @@ bool load(const char *dictionary)
     // open dictionary file
     char *lenth[LENTH];
     FILE *source = fopen(dictionary,"r");
+    if (sorce == NULL)
+    {
+        return 1;
+    }
     // read each word in the file
     while (fscanf(dictionary,"%s",) != EOF)
     {
