@@ -47,6 +47,7 @@ bool load(const char *dictionary)
     while (fscanf(dictionary,"%s",) != EOF)
     {
         // add each word in the list
+        node *n = malloc(sizeof(node));
     }
 
     // close the dictionary file
