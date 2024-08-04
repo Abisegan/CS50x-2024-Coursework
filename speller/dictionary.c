@@ -48,6 +48,11 @@ bool load(const char *dictionary)
     {
         // add each word in the list
         node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            return 1;
+        }
+        strcpy(n -> word)
     }
 
     // close the dictionary file
