@@ -54,7 +54,7 @@ bool load(const char *dictionary)
         }
         strcpy(n-> word, *word);
         n->next = NULL;
-        table[hash(n-> word)]
+        table[hash(n-> word)] = 
     }
 
     // close the dictionary file
