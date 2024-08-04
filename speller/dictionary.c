@@ -37,8 +37,9 @@ bool load(const char *dictionary)
 {
     // TODO
     // open dictionary file
-    FILE *source = fopen()
+    FILE *source = fopen(dictionary,"r");
     // read each word in the file
+    while ()
         // add each word in the list
     // close the dictionary file
     return false;
