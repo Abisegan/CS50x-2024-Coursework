@@ -52,7 +52,7 @@ bool load(const char *dictionary)
         {
             return 1;
         }
-        strcpy(n -> word,)
+        strcpy(n-> word, *word);
     }
 
     // close the dictionary file
