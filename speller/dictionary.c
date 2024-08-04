@@ -40,7 +40,7 @@ bool load(const char *dictionary)
     char *lenth[LENTH];
     FILE *source = fopen(dictionary,"r");
     // read each word in the file
-    while (fscanf(dictionary,"%s",) != 0)
+    while (fscanf(dictionary,"%s",) != EOF)
     {
         // add each word in the list
     }
