@@ -39,7 +39,6 @@ bool load(const char *dictionary)
     // open dictionary file
     FILE *source = fopen(dictionary,"r");
     // read each word in the file
-    char *buffer = malloc()
     while (fread( ,))
         // add each word in the list
     // close the dictionary file
