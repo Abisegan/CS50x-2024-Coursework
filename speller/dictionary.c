@@ -53,6 +53,7 @@ bool load(const char *dictionary)
             return 1;
         }
         strcpy(n-> word, *word);
+        n->next = NULL;
     }
 
     // close the dictionary file
