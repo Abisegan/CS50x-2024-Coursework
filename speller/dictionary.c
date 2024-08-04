@@ -40,7 +40,7 @@ bool load(const char *dictionary)
     char *lenth[LENTH];
     FILE *source = fopen(dictionary,"r");
     // read each word in the file
-    while (fread( ,))
+    while (fread(lenth,))
         // add each word in the list
     // close the dictionary file
     return false;
