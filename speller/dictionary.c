@@ -37,14 +37,14 @@ bool load(const char *dictionary)
 {
     // TODO
     // open dictionary file
-    char *lenth[LENTH];
+    char *word[LENTH + 1];
     FILE *source = fopen(dictionary,"r");
     if (sorce == NULL)
     {
         return 1;
     }
     // read each word in the file
-    while (fscanf(dictionary,"%s",) != EOF)
+    while (fscanf(dictionary,"%s", word) != EOF)
     {
         // add each word in the list
         node *n = malloc(sizeof(node));
@@ -52,7 +52,7 @@ bool load(const char *dictionary)
         {
             return 1;
         }
-        strcpy(n -> word)
+        strcpy(n -> word,)
     }
 
     // close the dictionary file
