@@ -44,7 +44,7 @@ bool load(const char *dictionary)
         return false;
     }
     // read each word in the file
-    while (fscanf(dictionary,"%s", word) != EOF)
+    while (fscanf(source,"%s", word) != EOF)
     {
         // add each word in the list
         node *n = malloc(sizeof(node));
@@ -67,7 +67,7 @@ unsigned int size(void)
 {
     // TODO
     FILE *source = fopen(dictionary, "r");
-    while(fscanf(di))
+    while(fscanf(source, "%s", ))
 
     return 0;
 }
