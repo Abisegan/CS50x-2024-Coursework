@@ -67,7 +67,7 @@ unsigned int size(void)
 {
     // TODO
     FILE *source = fopen(dictionary, "r");
-    while(fscanf())
+    while(fscanf(di))
 
     return 0;
 }
