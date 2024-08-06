@@ -66,14 +66,15 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
+    unsigned int n = 0;
     char *word[LENTH + 1];
     FILE *source = fopen(dictionary, "r");
     while(fscanf(source, "%s", word) != 0)
     {
-        
+        n++;
     }
 
-    return 0;
+    return n;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
