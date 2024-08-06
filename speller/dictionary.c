@@ -66,6 +66,9 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
+    FILE *source = fopen(dictionary, "r");
+    while(fscanf())
+
     return 0;
 }
 
