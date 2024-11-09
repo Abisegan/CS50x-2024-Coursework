@@ -16,12 +16,12 @@
 
         </thead>
         <tbody>
-            {% for transaction in transactions  %}
+            {% for stock in stocks_det  %}
                 <tr>
-                    <td>{{ transaction["symbol"]}}</td>
-                    <td>{{ transaction["shares"]}}</td>
-                    <td>{{ transaction["price"]}}</td>
-                    <td>{{ transaction["price"]}}</td>
+                    <td>{{ stocks_det["symbol"]}}</td>
+                    <td>{{ stocks_det["shares"]}}</td>
+                    <td>{{ stocks_det["price"]}}</td>
+                    <td>{{ stocks_det["price"]}}</td>
                 </tr>
             {% endfor %}
             <tr>
