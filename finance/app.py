@@ -38,6 +38,9 @@ def index():
     transactions =  db.execute(
             "SELECT symbol, SUM(shares) AS shares, price FROM transactions WHERE id = ? GROUP BY symbol", session["user_id"]
             )
+     cash = db.execute(
+            "SELECT cash FROM users WHERE id = ?", session["user_id"]
+        )[0]["cash"]
     return apology("TODO")
 
 
