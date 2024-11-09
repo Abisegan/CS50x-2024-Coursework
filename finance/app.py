@@ -42,7 +42,7 @@ def index():
             "SELECT cash FROM users WHERE id = ?", session["user_id"]
         )[0]["cash"]
     for stock in stocks_det:
-        
+        stock = stock["symbol"]
     return render_template("index.html", transactions = stocks_det, cash = cash)
 
 
