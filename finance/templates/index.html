@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block main %}
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <th>Symbols</th>
@@ -24,7 +24,7 @@
                     <td>{{ transaction["price"]}}</td>
                 </tr>
             {% endfor %}
-            <tr align="right">
+            <tr textalign="right">
                 <td>Cash</td>
                 <td>{{ cash }}</td>
             </tr>
