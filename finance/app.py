@@ -44,6 +44,7 @@ def index():
     for stock in stocks_det:
         stock_ud = lookup(stock["symbol"])
         stock["price"] = stock_ud["price"]
+        stock[""]
     return render_template("index.html", stocks_det = stocks_det, cash = cash)
 
 
