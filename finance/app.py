@@ -46,8 +46,8 @@ def index():
         stock_ud = lookup(stock["symbol"])
         stock["price"] = stock_ud["price"]
         stock["price_tot"] = stock_ud["price"] * stock["shares"]
-        total =+ stock["price_tot"]
-    return render_template("index.html", stocks_det = stocks_det, cash = cash)
+        total += stock["price_tot"]
+    return render_template("index.html", stocks_det = stocks_det, cash = cash, total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
