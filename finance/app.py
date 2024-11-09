@@ -194,17 +194,15 @@ def register():
 
         hash = generate_password_hash(request.form.get("password"))
         try:
-            db.execute(
+            register = db.execute(
                 "INSERT INTO users (username, hash) VALUES (?, ?)", request.form.get("username"), hash
                 )
 
         except:
             return apology("username already exists", 403)
 
-        rows = db.execute(
-            "SELECT * FROM users WHERE username = ?", request.form.get("username")
-        )
-        session["user_id"] = rows[0]["id"]
+
+        session["user_id"] = register
         return redirect("/")
     else:
         return render_template("register.html")
