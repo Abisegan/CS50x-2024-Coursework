@@ -43,7 +43,7 @@ def index():
         )[0]["cash"]
     for x in stocks_det:
         stock = lookup(x["symbol"])
-        stocks_det[""] = 
+        stocks_det["price"] = stock["price"]
     return render_template("index.html", transactions = stocks_det, cash = cash)
 
 
