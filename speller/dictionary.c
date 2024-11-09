@@ -1,9 +1,11 @@
 // Implements a dictionary's functionality
-
+#include "dictionary.h"
 #include <ctype.h>
 #include <stdbool.h>
-
-#include "dictionary.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
 
 // Represents a node in a hash table
 typedef struct node
@@ -13,15 +15,24 @@ typedef struct node
 } node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 26;
+const unsigned int N = 676;
 
 // Hash table
 node *table[N];
+int dict_size = 0;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
     // TODO
+    unsigned int hash_val = hash(word);
+    for (node *cursor = table[hash_val]; cursor != NULL; cursor = cursor->next)
+    {
+        if (strcasecmp(cursor->word, word) == 0)
+        {
+            return true;
+        }
+    }
     return false;
 }
 
@@ -29,7 +40,20 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    return toupper(word[0]) - 'A';
+    unsigned int f_letter;
+    unsigned int s_letter;
+    if (strlen(word) < 2)
+    {
+        f_letter = toupper(word[0]) - 'A';
+        s_letter = toupper(word[1]) - 'A';
+        return (f_letter * 26);
+    }
+    else
+    {
+        f_letter = toupper(word[0]) - 'A';
+        s_letter = toupper(word[1]) - 'A';
+        return (f_letter * 26) + s_letter;
+    }
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -37,14 +61,18 @@ bool load(const char *dictionary)
 {
     // TODO
     // open dictionary file
-    char *word[LENTH + 1];
-    FILE *source = fopen(dictionary,"r");
+    for (int i = 0; i < N; i++)
+    {
+        table[i] = NULL;
+    }
+    char word[LENGTH + 1];
+    FILE *source = fopen(dictionary, "r");
     if (source == NULL)
     {
         return false;
     }
     // read each word in the file
-    while (fscanf(source,"%s", word) != EOF)
+    while (fscanf(source, "%s", word) != EOF)
     {
         // add each word in the list
         node *n = malloc(sizeof(node));
@@ -52,10 +80,11 @@ bool load(const char *dictionary)
         {
             return false;
         }
-        strcpy(n-> word, *word);
-        n->next = NULL;
-        n->next = table[hash(n-> word)];
-        table[hash(n-> word)] = n;
+        unsigned int hash_val = hash(word);
+        strcpy(n->word, word);
+        n->next = table[hash_val];
+        table[hash_val] = n;
+        dict_size++;
     }
     // close the dictionary file
     fclose(source);
@@ -66,20 +95,22 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    unsigned int n = 0;
-    char *word[LENTH + 1];
-    FILE *source = fopen(dictionary, "r");
-    while(fscanf(source, "%s", word) != 0)
-    {
-        n++;
-    }
-
-    return n;
+    return dict_size;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
     // TODO
-    return false;
+    for (int i = 0; i < N; i++)
+    {
+        node *cursor = table[i];
+        while (cursor != NULL)
+        {
+            node *tmp = cursor;
+            cursor = cursor->next;
+            free(tmp);
+        }
+    }
+    return true;
 }

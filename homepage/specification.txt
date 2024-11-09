@@ -1,0 +1,9 @@
+HTML tags (<header>, <h1>, <nav>, <div>, <ul>, <li>, <main>,
+ <h2>, <p>, <h3>, <table>, <thead>, <tr>, <th>, <tbody>)
+
+CSS properties (display, width, height, margin, font-family,
+font-size, border-style, border-width, text-align, color, background-color)
+
+I used JavaScript to add interactivity by triggering an alert when clicking the navbar links
+ and I used Bootstrap for the navigation bar, table, and other components.
+
