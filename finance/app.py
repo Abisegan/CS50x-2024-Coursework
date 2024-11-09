@@ -41,10 +41,12 @@ def index():
     cash = db.execute(
             "SELECT cash FROM users WHERE id = ?", session["user_id"]
         )[0]["cash"]
+    total = cash
     for stock in stocks_det:
         stock_ud = lookup(stock["symbol"])
         stock["price"] = stock_ud["price"]
         stock["price_tot"] = stock_ud["price"] * stock["shares"]
+        total =+ stock["price_tot"]
     return render_template("index.html", stocks_det = stocks_det, cash = cash)
 
 
