@@ -173,6 +173,7 @@ def quote():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    session.clear()
     """Register user"""
     if request.method == "POST":
         # Ensure username was submitted
