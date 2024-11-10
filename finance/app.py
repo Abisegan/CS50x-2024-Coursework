@@ -201,6 +201,7 @@ def sell():
     if request.method == "GET":
         return render_template("sell.html")
     else:
-        symbols_ava = db.execute("SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0", session["user_id"])
+          symbols_ava = db.execute("SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0", session["user_id"])
+        for symbol in symbols_ava:
         return render_template("sell.html", symbols = symbols_ava)
 
