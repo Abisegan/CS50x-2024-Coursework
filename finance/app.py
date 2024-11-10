@@ -217,14 +217,12 @@ def sell():
         total_amount = shares * quote_det["price"]
 
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
-        if cash < total_amount:
-            return apology("cannot afford the number of shares at the current price", 403)
 
 
-        new_cash = cash - total_amount
+        new_cash = cash + total_amount
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
-        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, transaction_type) VALUES (?, ?, ?, ?, 'buy')", session["user_id"], quote_det["symbol"], shares, quote_det["price"])
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, transaction_type) VALUES (?, ?, ?, ?, 'se')", session["user_id"], quote_det["symbol"], shares, quote_det["price"])
         return redirect("/")
 
 
