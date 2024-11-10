@@ -92,7 +92,7 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    return apology("TODO")
+    transactions = db.execute()
 
 
 @app.route("/login", methods=["GET", "POST"])
