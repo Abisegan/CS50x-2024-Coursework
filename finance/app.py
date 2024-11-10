@@ -243,12 +243,8 @@ def sell():
 def change_password():
     """Change user password"""
     if request.method == "POST":
-        # Ensure username was submitted
-        if not request.form.get("username"):
-            return apology("must provide username", 403)
-
         # Ensure old password was submitted
-        elif not request.form.get("old_password"):
+        if not request.form.get("old_password"):
             return apology("must provide old_password", 403)
 
          # Ensure new password was submitted
