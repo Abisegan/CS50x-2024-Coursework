@@ -40,8 +40,8 @@ def index():
     total = cash
     for stock in stocks_det:
         stock_ud = lookup(stock["symbol"])
-        stock["price"] = stock_ud["price"]
-        stock["price_tot"] = stock_ud["price"] * stock["shares"]
+        stock["price"] = usd(stock_ud["price"])
+        stock["price_tot"] = usd(stock_ud["price"] * stock["shares"])
         total += stock["price_tot"]
 
     return render_template("index.html", stocks_det = stocks_det, cash = usd(cash), total = usd(total))
