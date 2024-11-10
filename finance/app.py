@@ -201,6 +201,25 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+        if request.method == "POST":
+        symbol = request.form.get("symbol")
+        if not symbol:
+            return apology("must provide symbol", 400)
+
+        quote_det = lookup(symbol)
+
+        if quote_det == None:
+            return apology("symbol does not exist", 400)
+
+        get_shares = request.form.get("shares")
+        if not get_shares:
+            return apology("must provide share count", 400)
+        shares = int(get_shares)
+        if shares <= 0:
+            return apology("input is not a positive integer", 400)
+
+        total_amount = shares * quote_det["price"]
+
 
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
