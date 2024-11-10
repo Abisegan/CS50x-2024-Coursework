@@ -198,7 +198,34 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    
+       if request.method == "POST":
+        symbol = request.form.get("symbol")
+        if not symbol:
+            return apology("must provide symbol", 403)
+
+        quote_det = lookup(symbol)
+
+        if quote_det == None:
+            return apology("symbol does not exist", 403)
+
+        shares = int(request.form.get("shares"))
+        if shares <= 0:
+            return apology("input is not a positive integer", 403)
+
+        total_amount = shares * quote_det["price"]
+
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
+        if cash < total_amount:
+            return apology("cannot afford the number of shares at the current price", 403)
+
+
+        new_cash = cash - total_amount
+
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, transaction_type) VALUES (?, ?, ?, ?, 'buy')", session["user_id"], quote_det["symbol"], shares, quote_det["price"])
+        return redirect("/")
+
+
     else:
         symbols_ava = db.execute("SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0", session["user_id"])
         return render_template("sell.html", symbols_ava = symbols_ava)
