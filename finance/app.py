@@ -215,7 +215,7 @@ def sell():
         if not get_shares:
             return apology("must provide share count", 400)
         shares = int(get_shares)
-        get_shares = db.execute("SELECT SUM(shares) AS shares FROM transactions WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0", session["user_id"])
+        get_shares = db.execute("SELECT SUM(shares) AS shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol HAVING SUM(shares) > 0", session["user_id"])
         if shares <= 0:
             return apology("input is not a positive integer", 400)
 
