@@ -210,7 +210,7 @@ def sell():
 
         shares = int(request.form.get("shares"))
         if not shares:
-            return apology("input is not a positive integer", 403)
+            return apology("must provide share count", 403)
         if shares <= 0:
             return apology("input is not a positive integer", 403)
 
