@@ -260,7 +260,7 @@ def change_password():
             return apology("must provide confirmation", 403)
 
 
-        elif request.form.get("password") != request.form.get("confirmation"):
+        elif request.form.get("new_password") != request.form.get("confirmation"):
             return apology("password do not match", 403)
 
 
