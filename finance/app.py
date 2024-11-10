@@ -96,6 +96,8 @@ def buy():
 def history():
     """Show history of transactions"""
     transactions = db.execute("SELECT * FROM transactions WHERE user_id = ? ", session["user_id"])
+    for transaction in transactions:
+        transaction["price"] = usd(transaction["price"])
     return render_template("history.html", transactions = transactions)
 
 
