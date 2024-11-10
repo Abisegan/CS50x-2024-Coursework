@@ -65,7 +65,7 @@ def buy():
         if not get_shares:
             return apology("must provide share count", 400)
         if not get_shares.isdigit():
-            return apology("input is not a positive integer", 400)
+            return apology("input is not a integer", 400)
         shares = int(get_shares)
         if shares <= 0:
             return apology("input is not a positive integer", 400)
