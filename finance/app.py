@@ -271,14 +271,7 @@ def change_password():
             return apology("invalid old password", 403)
 
         new_hash = generate_password_hash(request.form.get("new_password"))
-        try:
-            register = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", request.form.get("username"), hash)
-
-        except:
-            return apology("username already exists", 403)
-
-
-        session["user_id"] = register
+        db.execute("UPDATE users SET hash = ? WHERE id = ?", new_hash, session["user_id"])
         return redirect("/")
     else:
-        return render_template("register.html")
+        return render_template("change_password.html")
