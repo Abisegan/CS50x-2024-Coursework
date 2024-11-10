@@ -201,5 +201,5 @@ def sell():
     if request.method == "GET":
 
     else:
-        
+        symbols_ava = 
     return apology("TODO")
