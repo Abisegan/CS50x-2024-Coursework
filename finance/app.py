@@ -240,16 +240,20 @@ def sell():
 
 @app.route("/change_password", methods=["GET", "POST"])
 @login_required
-def register():
-    """Register user"""
+def change_password():
+    """Change user password"""
     if request.method == "POST":
         # Ensure username was submitted
         if not request.form.get("username"):
             return apology("must provide username", 403)
 
-        # Ensure password was submitted
-        elif not request.form.get("password"):
-            return apology("must provide password", 403)
+        # Ensure old password was submitted
+        elif not request.form.get("old_password"):
+            return apology("must provide old_password", 403)
+
+         # Ensure new password was submitted
+        elif not request.form.get("new_password"):
+            return apology("must provide new_password", 403)
 
         # Ensure confirmation was submitted
         elif not request.form.get("confirmation"):
