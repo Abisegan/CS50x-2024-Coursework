@@ -270,7 +270,7 @@ def change_password():
             return apology("password do not match", 403)
 
 
-        hash = generate_password_hash(request.form.get("password"))
+        new_hash = generate_password_hash(request.form.get("new_password"))
         try:
             register = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", request.form.get("username"), hash)
 
