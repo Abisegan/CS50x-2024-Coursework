@@ -207,9 +207,9 @@ def sell():
 
         if quote_det == None:
             return apology("symbol does not exist", 403)
-
-        shares = int(request.form.get("shares"))
-        if not shares:
+        get_shares = request.form.get("shares")
+        shares = int(get_shares)
+        if not get_shares:
             return apology("must provide share count", 403)
         if shares <= 0:
             return apology("input is not a positive integer", 403)
