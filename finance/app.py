@@ -254,7 +254,7 @@ def change_password():
          # Ensure new password was submitted
         elif not request.form.get("new_password"):
             return apology("must provide new_password", 403)
-
+        old_hash = 
         # Ensure confirmation was submitted
         elif not request.form.get("confirmation"):
             return apology("must provide confirmation", 403)
