@@ -239,8 +239,8 @@ def sell():
 
 
 @app.route("/change_password", methods=["GET", "POST"])
+@login_required
 def register():
-    session.clear()
     """Register user"""
     if request.method == "POST":
         # Ensure username was submitted
