@@ -210,7 +210,8 @@ def sell():
 
         if quote_det == None:
             return apology("symbol does not exist", 403)
-        shares_count = 
+        shares_count = db.execute("SELECT shares FROM transactions WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0", session["user_id"])
+
         get_shares = request.form.get("shares")
         if not get_shares:
             return apology("must provide share count", 403)
