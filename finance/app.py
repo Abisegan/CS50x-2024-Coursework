@@ -40,6 +40,7 @@ def index():
     total = cash
     for stock in stocks_det:
         stock_ud = lookup(stock["symbol"])
+        stock_temp1 =
         stock["price"] = usd(stock_ud["price"])
         stock_temp2 = stock_ud["price"] * stock["shares"]
         stock["price_tot"] = usd(stock_temp2)
