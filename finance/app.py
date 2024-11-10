@@ -82,13 +82,12 @@ def buy():
         new_cash = cash - total_amount
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
-        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, transaction_type) VALUES (?, ?, ?, ?, 'buy')", session["user_id"], quote_det["symbol"], shares, quote_det["price"])
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, transaction_type) VALUES (?, ?, ?, ?, 'buy')",
+                   session["user_id"], quote_det["symbol"], shares, quote_det["price"])
         return redirect("/")
-
 
     else:
         return render_template("buy.html")
-
 
 
 @app.route("/history")
@@ -98,7 +97,7 @@ def history():
     transactions = db.execute("SELECT * FROM transactions WHERE user_id = ? ", session["user_id"])
     for transaction in transactions:
         transaction["price"] = usd(transaction["price"])
-    return render_template("history.html", transactions = transactions)
+    return render_template("history.html", transactions=transactions)
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -122,7 +121,7 @@ def login():
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         # Ensure username exists and password is correct
-        if len(rows) != 1 or not check_password_hash( rows[0]["hash"], request.form.get("password")):
+        if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
             return apology("invalid username and/or password", 403)
 
         # Remember which user has logged in
@@ -159,13 +158,10 @@ def quote():
         if stock_det == None:
             return apology("symbol does not exist", 400)
 
-        return render_template("quoted.html", name = stock_det["name"], price = usd(stock_det["price"]), symbol = stock_det["symbol"])
-
+        return render_template("quoted.html", name=stock_det["name"], price=usd(stock_det["price"]), symbol=stock_det["symbol"])
 
     else:
         return render_template("quote.html")
-
-
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -185,18 +181,16 @@ def register():
         elif not request.form.get("confirmation"):
             return apology("must provide confirmation", 400)
 
-
         elif request.form.get("password") != request.form.get("confirmation"):
             return apology("password do not match", 400)
 
-
         hash = generate_password_hash(request.form.get("password"))
         try:
-            register = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", request.form.get("username"), hash)
+            register = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)",
+                                  request.form.get("username"), hash)
 
         except:
             return apology("username already exists", 400)
-
 
         session["user_id"] = register
         return redirect("/")
@@ -223,28 +217,26 @@ def sell():
         shares = int(get_shares)
         if shares <= 0:
             return apology("input is not a positive integer", 400)
-        ava_shares = db.execute("SELECT SUM(shares) AS shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol HAVING shares > 0", session["user_id"], symbol)[0]["shares"]
+        ava_shares = db.execute(
+            "SELECT SUM(shares) AS shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol HAVING shares > 0", session["user_id"], symbol)[0]["shares"]
         if shares > ava_shares:
             return apology("you do not own that many shares of the stock", 400)
 
-
-
         total_amount = shares * quote_det["price"]
 
-
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
-
 
         new_cash = cash + total_amount
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
-        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, transaction_type) VALUES (?, ?, ?, ?, 'sell')", session["user_id"], quote_det["symbol"], shares * (-1), quote_det["price"])
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, transaction_type) VALUES (?, ?, ?, ?, 'sell')",
+                   session["user_id"], quote_det["symbol"], shares * (-1), quote_det["price"])
         return redirect("/")
 
-
     else:
-        symbols_ava = db.execute("SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0", session["user_id"])
-        return render_template("sell.html", symbols = symbols_ava)
+        symbols_ava = db.execute(
+            "SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0", session["user_id"])
+        return render_template("sell.html", symbols=symbols_ava)
 
 
 @app.route("/change_password", methods=["GET", "POST"])
@@ -260,11 +252,9 @@ def change_password():
         elif not request.form.get("new_password"):
             return apology("must provide new_password", 400)
 
-
         # Ensure confirmation was submitted
         elif not request.form.get("confirmation"):
             return apology("must provide confirmation", 400)
-
 
         elif request.form.get("new_password") != request.form.get("confirmation"):
             return apology("password do not match", 400)
@@ -272,7 +262,7 @@ def change_password():
         rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
 
         # Ensure old password is correct
-        if not check_password_hash( rows[0]["hash"], request.form.get("old_password")):
+        if not check_password_hash(rows[0]["hash"], request.form.get("old_password")):
             return apology("invalid old password", 400)
 
         new_hash = generate_password_hash(request.form.get("new_password"))
