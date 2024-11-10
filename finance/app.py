@@ -201,5 +201,6 @@ def sell():
     if request.method == "GET":
 
     else:
-        symbols_ava = 
+        symbols_ava = db.execute("SELECT symbol, SUM(shares) AS shares, price FROM transactions WHERE user_id = ? GROUP BY symbol HAVING shares > 0", session["user_id"])
+
     return apology("TODO")
