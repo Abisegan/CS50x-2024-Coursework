@@ -219,7 +219,7 @@ def sell():
         if shares <= 0:
             return apology("input is not a positive integer", 403)
         if shares > shares_count:
-            return apology("input is not a positive integer", 403)
+            return apology("you do not own that many shares of the stock", 403)
 
         total_amount = shares * quote_det["price"]
 
