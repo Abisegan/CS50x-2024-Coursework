@@ -209,6 +209,8 @@ def sell():
             return apology("symbol does not exist", 403)
 
         shares = int(request.form.get("shares"))
+        if not shares:
+            return apology("input is not a positive integer", 403)
         if shares <= 0:
             return apology("input is not a positive integer", 403)
 
