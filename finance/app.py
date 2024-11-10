@@ -147,11 +147,11 @@ def quote():
     """Get stock quote."""
     if request.method == "POST":
         if not request.form.get("symbol"):
-            return apology("must provide symbol", 403)
+            return apology("must provide symbol", 400)
 
         stock_det = lookup(request.form.get("symbol"))
         if stock_det == None:
-            return apology("symbol does not exist", 403)
+            return apology("symbol does not exist", 400)
 
         return render_template("quoted.html", name = stock_det["name"], price = stock_det["price"], symbol = stock_det["symbol"])
 
@@ -169,19 +169,19 @@ def register():
     if request.method == "POST":
         # Ensure username was submitted
         if not request.form.get("username"):
-            return apology("must provide username", 403)
+            return apology("must provide username", 400)
 
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return apology("must provide password", 403)
+            return apology("must provide password", 400)
 
         # Ensure confirmation was submitted
         elif not request.form.get("confirmation"):
-            return apology("must provide confirmation", 403)
+            return apology("must provide confirmation", 400)
 
 
         elif request.form.get("password") != request.form.get("confirmation"):
-            return apology("password do not match", 403)
+            return apology("password do not match", 400)
 
 
         hash = generate_password_hash(request.form.get("password"))
@@ -189,7 +189,7 @@ def register():
             register = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", request.form.get("username"), hash)
 
         except:
-            return apology("username already exists", 403)
+            return apology("username already exists", 400)
 
 
         session["user_id"] = register
@@ -204,22 +204,22 @@ def sell():
     if request.method == "POST":
         symbol = request.form.get("symbol")
         if not symbol:
-            return apology("must provide symbol", 403)
+            return apology("must provide symbol", 400)
 
         quote_det = lookup(symbol)
 
         if quote_det == None:
-            return apology("symbol does not exist", 403)
+            return apology("symbol does not exist", 400)
         shares_count = db.execute("SELECT SUM(shares) AS shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", session["user_id"], symbol)[0]["shares"]
 
         get_shares = request.form.get("shares")
         if not get_shares:
-            return apology("must provide share count", 403)
+            return apology("must provide share count", 400)
         shares = int(get_shares)
         if shares <= 0:
-            return apology("input is not a positive integer", 403)
+            return apology("input is not a positive integer", 400)
         if shares > shares_count:
-            return apology("you do not own that many shares of the stock", 403)
+            return apology("you do not own that many shares of the stock", 400)
 
         total_amount = shares * quote_det["price"]
 
@@ -245,26 +245,26 @@ def change_password():
     if request.method == "POST":
         # Ensure old password was submitted
         if not request.form.get("old_password"):
-            return apology("must provide old_password", 403)
+            return apology("must provide old_password", 400)
 
          # Ensure new password was submitted
         elif not request.form.get("new_password"):
-            return apology("must provide new_password", 403)
+            return apology("must provide new_password", 400)
 
 
         # Ensure confirmation was submitted
         elif not request.form.get("confirmation"):
-            return apology("must provide confirmation", 403)
+            return apology("must provide confirmation", 400)
 
 
         elif request.form.get("new_password") != request.form.get("confirmation"):
-            return apology("password do not match", 403)
+            return apology("password do not match", 400)
         # Query database for id
         rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
 
         # Ensure old password is correct
         if not check_password_hash( rows[0]["hash"], request.form.get("old_password")):
-            return apology("invalid old password", 403)
+            return apology("invalid old password", 400)
 
         new_hash = generate_password_hash(request.form.get("new_password"))
         db.execute("UPDATE users SET hash = ? WHERE id = ?", new_hash, session["user_id"])
