@@ -35,7 +35,8 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    stocks_det =  db.execute("SELECT symbol, SUM(shares) AS shares, price FROM transactions WHERE user_id = ? GROUP BY symbol HAVING shares > 0", session["user_id"])
+    stocks_det = db.execute(
+        "SELECT symbol, SUM(shares) AS shares, price FROM transactions WHERE user_id = ? GROUP BY symbol HAVING shares > 0", session["user_id"])
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
     total = cash
     for stock in stocks_det:
@@ -46,7 +47,7 @@ def index():
         stock["price_tot"] = usd(stock_temp2)
         total += stock_temp2
 
-    return render_template("index.html", stocks_det = stocks_det, cash = usd(cash), total = usd(total))
+    return render_template("index.html", stocks_det=stocks_det, cash=usd(cash), total=usd(total))
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -77,7 +78,6 @@ def buy():
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
         if cash < total_amount:
             return apology("cannot afford the number of shares at the current price", 400)
-
 
         new_cash = cash - total_amount
 
