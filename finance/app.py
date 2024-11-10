@@ -35,12 +35,8 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    stocks_det =  db.execute(
-            "SELECT symbol, SUM(shares) AS shares, price FROM transactions WHERE user_id = ? GROUP BY symbol HAVING shares > 0", session["user_id"]
-            )
-    cash = db.execute(
-            "SELECT cash FROM users WHERE id = ?", session["user_id"]
-        )[0]["cash"]
+    stocks_det =  db.execute("SELECT symbol, SUM(shares) AS shares, price FROM transactions WHERE user_id = ? GROUP BY symbol HAVING shares > 0", session["user_id"])
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
     total = cash
     for stock in stocks_det:
         stock_ud = lookup(stock["symbol"])
@@ -72,21 +68,15 @@ def buy():
 
         total_amount = shares * quote_det["price"]
 
-        cash = db.execute(
-            "SELECT cash FROM users WHERE id = ?", session["user_id"]
-        )[0]["cash"]
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
         if cash < total_amount:
             return apology("cannot afford the number of shares at the current price", 403)
 
 
         new_cash = cash - total_amount
 
-        db.execute(
-            "UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"]
-        )
-        db.execute(
-                "INSERT INTO transactions (user_id, symbol, shares, price, transaction_type) VALUES (?, ?, ?, ?, 'buy')", session["user_id"], quote_det["symbol"], shares, quote_det["price"]
-        )
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, transaction_type) VALUES (?, ?, ?, ?, 'buy')", session["user_id"], quote_det["symbol"], shares, quote_det["price"])
         return redirect("/")
 
 
@@ -120,14 +110,10 @@ def login():
             return apology("must provide password", 403)
 
         # Query database for username
-        rows = db.execute(
-            "SELECT * FROM users WHERE username = ?", request.form.get("username")
-        )
+        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         # Ensure username exists and password is correct
-        if len(rows) != 1 or not check_password_hash(
-            rows[0]["hash"], request.form.get("password")
-        ):
+        if len(rows) != 1 or not check_password_hash( rows[0]["hash"], request.form.get("password")):
             return apology("invalid username and/or password", 403)
 
         # Remember which user has logged in
@@ -197,9 +183,7 @@ def register():
 
         hash = generate_password_hash(request.form.get("password"))
         try:
-            register = db.execute(
-                "INSERT INTO users (username, hash) VALUES (?, ?)", request.form.get("username"), hash
-                )
+            register = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", request.form.get("username"), hash)
 
         except:
             return apology("username already exists", 403)
