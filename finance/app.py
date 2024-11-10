@@ -237,3 +237,38 @@ def sell():
         symbols_ava = db.execute("SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0", session["user_id"])
         return render_template("sell.html", symbols = symbols_ava)
 
+
+@app.route("/change_password", methods=["GET", "POST"])
+def register():
+    session.clear()
+    """Register user"""
+    if request.method == "POST":
+        # Ensure username was submitted
+        if not request.form.get("username"):
+            return apology("must provide username", 403)
+
+        # Ensure password was submitted
+        elif not request.form.get("password"):
+            return apology("must provide password", 403)
+
+        # Ensure confirmation was submitted
+        elif not request.form.get("confirmation"):
+            return apology("must provide confirmation", 403)
+
+
+        elif request.form.get("password") != request.form.get("confirmation"):
+            return apology("password do not match", 403)
+
+
+        hash = generate_password_hash(request.form.get("password"))
+        try:
+            register = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", request.form.get("username"), hash)
+
+        except:
+            return apology("username already exists", 403)
+
+
+        session["user_id"] = register
+        return redirect("/")
+    else:
+        return render_template("register.html")
