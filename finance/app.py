@@ -54,25 +54,25 @@ def buy():
     if request.method == "POST":
         symbol = request.form.get("symbol")
         if not symbol:
-            return apology("must provide symbol", 403)
+            return apology("must provide symbol", 400)
 
         quote_det = lookup(symbol)
 
         if quote_det == None:
-            return apology("symbol does not exist", 403)
+            return apology("symbol does not exist", 400)
 
         get_shares = request.form.get("shares")
         if not get_shares:
-            return apology("must provide share count", 403)
+            return apology("must provide share count", 400)
         shares = int(get_shares)
         if shares <= 0:
-            return apology("input is not a positive integer", 403)
+            return apology("input is not a positive integer", 400)
 
         total_amount = shares * quote_det["price"]
 
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
         if cash < total_amount:
-            return apology("cannot afford the number of shares at the current price", 403)
+            return apology("cannot afford the number of shares at the current price", 400)
 
 
         new_cash = cash - total_amount
