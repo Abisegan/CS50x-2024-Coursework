@@ -17,7 +17,7 @@ app.jinja_env.filters["usd"] = usd
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
-# I created transactions table from rubber duck's suggested code
+# I create the transactions table from Rubber Duck's suggested code
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///finance.db")
 
@@ -82,7 +82,7 @@ def buy():
         new_cash = cash - total_amount
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
-        # I created transactions table from rubber duck's suggested code
+        # I create the transactions table from Rubber Duck's suggested code
         db.execute("INSERT INTO transactions (user_id, symbol, shares, price, transaction_type) VALUES (?, ?, ?, ?, 'buy')",
                    session["user_id"], quote_det["symbol"], shares, quote_det["price"])
         return redirect("/")
