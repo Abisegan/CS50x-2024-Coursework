@@ -11,7 +11,7 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-db = SQL("sqlite:///repair_shop.db")
+db = SQL("sqlite:///electro_dr.db")
 
 STATUSES = [
     "We Will Reach You",
