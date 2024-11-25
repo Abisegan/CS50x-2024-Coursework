@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <h1 class="dark_red">Welcome to Electro.Dr</h1>
+    <h3 class="dark_red">We give solution for your all electronics repair needs!</h3>
+    {% if not session["user_id"] %}
+        <h5>Login and book your order.</h5>
+    {% endif %}
+    <div class="container my-5">
+        <h2 class="text-center mb-4 dark_red">Available Devices for Repair</h2>
+        <div class="row g-4">
+            <!-- Device 1 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100">
+                    <img src="static/phone.jpg" class="card-img-top" alt="Phone">
+                    <div class="card-body">
+                        <h4 class="card-title">Phone</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- Device 2 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100">
+                    <img src="static/laptop.jpg" class="card-img-top" alt="Laptop">
+                    <div class="card-body">
+                        <h4 class="card-title">Laptop</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- Device 3 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100">
+                    <img src="static/tablet.jpg" class="card-img-top" alt="Tablet">
+                    <div class="card-body">
+                        <h4 class="card-title">Tablet</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- Device 4 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100">
+                    <img src="static/computer.jpg" class="card-img-top" alt="Desktop Computer">
+                    <div class="card-body">
+                        <h4 class="card-title">Desktop Computer</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100">
+                    <img src="static/tv.jpg" class="card-img-top" alt="TV">
+                    <div class="card-body">
+                        <h4 class="card-title">TV</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100">
+                    <img src="static/kitchen_appliances.jpg" class="card-img-top" alt="Kitchen Appliances">
+                    <div class="card-body">
+                        <h4 class="card-title">Kitchen Appliances</h4>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}
