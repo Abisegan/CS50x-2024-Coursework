@@ -155,23 +155,23 @@ def order():
     if request.method == "POST":
         device = request.form.get("device")
         if not device:
-            return apology("order.html", "you must select device", DEVICES)
+            return apology("order.html", "you must select device", list=DEVICES)
         location_met = request.form.get("location_met")
         location = None
 
         if not location_met:
-            return apology("order.html", "you must select one location methode", 403, DEVICES)
+            return apology("order.html", "you must select one location methode", list=DEVICES)
 
         if location_met == "link":
             location = request.form.get("location")
             if not location:
-                return apology("order.html", "you must provide location link", 403, DEVICES)
+                return apology("order.html", "you must provide location link", list=DEVICES)
 
         elif location_met == "coordinates":
             latitude = request.form.get("latitude")
             longitude = request.form.get("longitude")
             if not (latitude or longitude):
-                return apology("order.html", "you must provide location", 403, DEVICES)
+                return apology("order.html", "you must provide location", list=DEVICES)
 
             location = f"https://www.google.com/maps?q={f"{latitude},{longitude}"}"
 
@@ -187,24 +187,24 @@ def change_password():
     if request.method == "POST":
         old_password = request.form.get("old_password")
         if not old_password:
-            return apology("must provide old_password", 400)
+            return apology("must provide old_password")
 
         new_password = request.form.get("new_password")
         if not new_password:
-            return apology("must provide new_password", 400)
+            return apology("must provide new_password")
 
         confirmation = request.form.get("confirmation")
         if not confirmation:
-            return apology("must provide confirmation", 400)
+            return apology("must provide confirmation")
 
         if new_password != confirmation:
-            return apology("password do not match", 400)
+            return apology("password do not match")
 
         rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
         hash = rows[0]["hash"]
 
         if not check_password_hash(hash, old_password):
-            return apology("invalid old password", 400)
+            return apology("invalid old password")
 
         new_hash = generate_password_hash(new_password)
         db.execute("UPDATE users SET hash = ? WHERE id = ?", new_hash, session["user_id"])
