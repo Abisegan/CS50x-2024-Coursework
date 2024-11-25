@@ -155,7 +155,7 @@ def order():
     if request.method == "POST":
         device = request.form.get("device")
         if not device:
-            return apology("order.html", "you must select device", 403, DEVICES)
+            return apology("order.html", "you must select device", DEVICES)
         location_met = request.form.get("location_met")
         location = None
 
