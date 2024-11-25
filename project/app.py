@@ -31,11 +31,11 @@ DEVICES = [
 
 def apology(template, message, code=400, list = None):
     if list is None:
-        full_message = f"{message}. (Error{code})"
+        full_message = f"{message}. (Error:{code})"
         flash(full_message)
         return render_template(template)
     else:
-        full_message = f"{message}. (Error{code})"
+        full_message = f"{message}. (Error:{code})"
         flash(full_message)
         return render_template(template, devices = list)
 
@@ -67,17 +67,17 @@ def signup():
     if request.method == "POST":
         username = request.form.get("username")
         if not username:
-            return apology("signup.html", "must provide username", 467)
+            return apology("signup.html", "must provide username")
 
         password = request.form.get("password")
         if not password:
-            return apology("signup.html", "must provide password", 400)
+            return apology("signup.html", "must provide password")
 
         if not request.form.get("confirmation"):
-            return apology("signup.html.html", "must provide confirmation", 400)
+            return apology("signup.html.html", "must provide confirmation")
 
         if password != request.form.get("confirmation"):
-            return apology("signup.html", "password do not match", 400)
+            return apology("signup.html", "password do not match")
 
         hash = generate_password_hash(password)
         try:
@@ -85,7 +85,7 @@ def signup():
                                   username, hash, 'user')
 
         except:
-            return apology("signup.html", "username already exists", 400)
+            return apology("signup.html", "username already exists")
 
         user = db.execute("SELECT * FROM users WHERE id = ?", insert)[0]["role"]
 
@@ -105,17 +105,17 @@ def login():
 
         username = request.form.get("username")
         if not username:
-            return apology("login.html", "you must provide username", 403)
+            return apology("login.html", "you must provide username")
 
         password = request.form.get("password")
         if not password:
-            return apology("login.html", "you must provide password", 403)
+            return apology("login.html", "you must provide password")
 
         user = db.execute("SELECT * FROM users WHERE username = ?", username)
 
 
         if len(user) != 1 or not check_password_hash(user[0]["hash"], password):
-            return apology("login.html", "invalid username or password", 403)
+            return apology("login.html", "invalid username or password")
 
         session["user_id"] = user[0]["id"]
         session["role"] = user[0]["role"]
