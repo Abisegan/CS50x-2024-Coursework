@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Users
+{% endblock %}
+
+{% block main %}
+<h2 class="green">Welcome to Your Dashboard</h2>
+<a href="/order" class="btn btn-success mb-3">Book a Service</a>
+
+<h3 class="green">Your Bookings</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Device</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order["id"] }}</td>
+            <td>{{ order["device"] }}</td>
+            <td><a href="{{ order.location }}" target="_blank">Check Location</a></td>
+            <td>{{ order["status"] }}</td>
+            <td>{{ order["date"] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
