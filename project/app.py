@@ -187,24 +187,24 @@ def change_password():
     if request.method == "POST":
         old_password = request.form.get("old_password")
         if not old_password:
-            return apology("must provide old_password")
+            return apology("change_password.html", "must provide old_password")
 
         new_password = request.form.get("new_password")
         if not new_password:
-            return apology("must provide new_password")
+            return apology("change_password.html", "must provide new_password")
 
         confirmation = request.form.get("confirmation")
         if not confirmation:
-            return apology("must provide confirmation")
+            return apology("change_password.html", "must provide confirmation")
 
         if new_password != confirmation:
-            return apology("password do not match")
+            return apology("change_password.html", "password do not match")
 
         rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
         hash = rows[0]["hash"]
 
         if not check_password_hash(hash, old_password):
-            return apology("invalid old password")
+            return apology("change_password.html", "invalid old password")
 
         new_hash = generate_password_hash(new_password)
         db.execute("UPDATE users SET hash = ? WHERE id = ?", new_hash, session["user_id"])
