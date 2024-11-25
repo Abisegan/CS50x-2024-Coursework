@@ -140,14 +140,14 @@ def admin():
     else:
         orders = db.execute("SELECT * FROM orders ORDER BY user_id")
 
-        return render_template("/admin.html", statuses = STATUSES, orders = orders)
+        return render_template("admin.html", statuses = STATUSES, orders = orders)
 
 @app.route("/users")
 @login_required
 def users():
 
     orders = db.execute("SELECT * FROM orders WHERE user_id = ? ORDER BY id", session["user_id"])
-    return render_template("/users.html", orders = orders)
+    return render_template("users.html", orders = orders)
 
 
 @app.route("/order", methods=["GET", "POST"])
@@ -179,7 +179,7 @@ def order():
         db.execute("INSERT INTO orders (user_id, device, location, status) VALUES (?, ?, ?, ?)", session["user_id"], device, location, STATUSES[0])
         return redirect("/users")
     else:
-        return render_template("/order.html", devices=DEVICES)
+        return render_template("order.html", devices=DEVICES)
 
 @app.route("/change_password", methods=["GET", "POST"])
 @login_required
@@ -226,5 +226,4 @@ def logout():
 
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+
