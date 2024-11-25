@@ -1,0 +1,27 @@
+
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+nav .navbar-brand .Elec
+{
+    color: hwb(240 95% 3%);
+}
+nav .navbar-brand .Dr
+{
+    color: hsl(3, 96%, 50%);
+}
+nav .navbar-brand .tro
+{
+    color: #edb42f;
+}
+
+body {
+    background-color:rgb(127, 187, 222);
+  }
+
+
+.dark_red {
+    color:rgb(146, 31, 8)
+}
