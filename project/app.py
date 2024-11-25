@@ -31,11 +31,11 @@ DEVICES = [
 
 def apology(template, message, code=400, list = None):
     if list is None:
-        full_message = f"{message}. ({code} Error)"
+        full_message = f"{message}. (Error{code})"
         flash(full_message)
         return render_template(template)
     else:
-        full_message = f"{message}. ({code} Error)"
+        full_message = f"{message}. (Error{code})"
         flash(full_message)
         return render_template(template, devices = list)
 
