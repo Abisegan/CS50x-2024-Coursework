@@ -82,7 +82,7 @@ def signup():
         hash = generate_password_hash(password)
         try:
             insert = db.execute("INSERT INTO users (username, hash, role) VALUES (?, ?, ?)",
-                                  username, hash, 'admin')
+                                  username, hash, 'user')
 
         except:
             return apology("signup.html", "username already exists")
