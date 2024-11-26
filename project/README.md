@@ -148,29 +148,3 @@ This  CSS stylesheet includes custom styles for navigation bar branding, backgro
 
 This database contains the users and orders tables to store the information.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
