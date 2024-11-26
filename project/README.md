@@ -1,5 +1,5 @@
 
-# Electronic device repair booking web application
+# Electr.dr
 
 #### Video Demo:
 #### Description:
