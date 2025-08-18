@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Order
+{% endblock %}
+
+{% block main %}
+<script>
+    function getCoordinates() {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            document.getElementById("latitude").value = position.coords.latitude;
+            document.getElementById("longitude").value = position.coords.longitude;
+
+        });
+    }
+</script>
+
+
+
+
+<h2>Book a Service</h2>
+<form method="POST" action="/order">
+    <div class="mb-3">
+        <label class="form-label">Select Device</label>
+        <select class="form-control mx-auto w-auto" name="device">
+            <option disabled selected value="">Devices</option>
+            {% for device in devices %}
+                <option value="{{ device }}">{{ device }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <br>
+    <div class="mb-3" class="container text-center">
+        <div>
+            <label class="btn btn-outline-danger">
+                <input type="radio" name="location_met" value="link"> Submit Location Link
+            </label>
+            <input type="text" class="form-control mx-auto w-auto"  name="location" placeholder="Paste Google Maps Link">
+        </div>
+        <br>
+        <h6>OR</h6>
+        <div>
+            <label class="btn btn-outline-danger">
+                <input type="radio" name="location_met" value="coordinates" > Submit Coordinates
+            </label>
+            <br>
+            <input type="hidden" id="latitude" name="latitude">
+            <input type="hidden" id="longitude" name="longitude">
+            <button type="button" onclick="getCoordinates()" class="btn btn-dark">Detect Location</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}
