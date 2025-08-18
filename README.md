@@ -16,15 +16,15 @@ Always attempt the problems on your own first—this is where lasting learning h
 - **Pset0 – Scratch / Starting Off**
   - Scratch project (starting programming concept)
 - **Pset1 – C (Basics)**
-  - `mario.c`, `credit.c`
+  - `mario.c`, `credit.c`, `cash.c`
 - **Pset2 – Arrays & Strings**
-  - `readability.c`, `caesar.c`, `substitution.c`
+  -  `Scrabble`, `readability.c`, `caesar.c`, `substitution.c`,
 - **Pset3 – Algorithms**
-  - `plurality.c`, `tideman.c`
+  - `sort.c`, `plurality.c`, `runoff.c`
 - **Pset4 – Memory**
-  - `filter-less.c`, `filter-more.c`, `recover.c`
+  - `volume.c`, `filter-less.c`, `recover.c`
 - **Pset5 – Data Structures**
-  - `speller.c` (hash tables)
+  - `speller.c` (hash tables), `Inheritance.c`
 - **Pset6 – Python**
   - `hello.py`, `mario.py`, `credit.py`, `readability.py`, `dna.py`
 - **Pset7 – SQL**
